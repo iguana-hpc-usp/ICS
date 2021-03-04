@@ -10,7 +10,7 @@ apt install curl -y && curl -s https://raw.githubusercontent.com/iguana-hpc-usp/
 
 2. Download the virtual machine ready, just import it into VirtualBox.
 
-* [Host1](https://drive.google.com/file/d/1RvpZsCzN3P7N5o47-Ikoa1Ml_j34oStO/view?usp=sharing) - Click to download
+* [Host1](https://drive.google.com/file/d/1wARiMMaBKuAuOYtda9OYvD4P-0DuvYYD/view?usp=sharing) - Click to download
 
 (login: user | password: user )
 
