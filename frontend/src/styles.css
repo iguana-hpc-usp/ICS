@@ -1,0 +1,79 @@
+/* in the css file or in a style block */
+.code {
+  white-space: pre-wrap;
+  margin-top: 20px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.iconServer {
+  background: url('assets/server.png');
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  /* Other styles here */
+}
+
+.iconTask {
+  background: url('assets/tasks.png');
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  /* Other styles here */
+}
+
+.iconMax {
+  height: 20px;
+  width: 20px;
+}
+
+/* COMMON CHILD CSS */
+.card-header span {
+  font-size: 22px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.response {
+  font-size: 12px;
+}
+
+.ok {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.info {
+  color: #856404;
+  background-color: #ffcc3c;
+  border-color: #ffeeba;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}

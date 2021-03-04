@@ -1,0 +1,30 @@
+<div class="card-header text-center">
+  Current Virtual Nodes in the Cluster
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="justify-content-center">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input type="number" formControlName="srvNumber"
+               onkeydown="return false"
+               onclick="return false"
+               class="form-control" [ngClass]="{ 'is-invalid': submitted && f.srvNumber.errors }"
+        />
+      </div>
+      <div class="form-group col-md-1">
+        <button class="btn btn-primary mr-1" [disabled]="!f.srvNumber.errors && response.Name==='info'">OK</button>
+      </div>
+    </div>
+
+    <div class="form-row">
+
+      <div *ngIf="submitted && f.srvNumber.errors" class="invalid-feedback">
+        <div *ngIf="f.srvNumber.errors.required">Number of nodes is required</div>
+        <div *ngIf="f.srvNumber.errors.min">Nodes must be at least 0 number or more</div>
+        <div *ngIf="f.srvNumber.errors.generic">{{f.srvNumber.errors.generic}}</div>
+      </div>
+      <div *ngIf="response.Name" class="{{response.Name}} response">
+        {{response.Status}}
+        <app-mat-progress-bar *ngIf="response.Name==='info'"></app-mat-progress-bar>
+      </div>
+    </div>
+  </form>
+</div>

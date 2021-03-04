@@ -1,0 +1,26 @@
+<div>
+  <div *ngIf="response.Name" class="{{response.Name}} response text-center">
+    {{response.Status}}
+    <app-mat-progress-bar *ngIf="response.Name==='info'"></app-mat-progress-bar>
+  </div>
+  <table class="table table-striped">
+    <tr *ngFor="let c of clusters">
+      <td>
+        <ul>
+          <li [className]="c.Name==='master' ? 'master':''">
+              {{c.Name}} - {{c.MasterIP}}
+            <p>
+              <span class="connected">Last Check: {{c.LastActivity | slice:0:16}}</span>
+              <span *ngIf="hostInfo.Cluster.Id===c.Id" class="connected"> | (connected)</span>
+              <img *ngIf="c.Password" class="key" src="../../assets/key.png" />
+
+            <a *ngIf="hostInfo.Cluster.Id!==c.Id && hostInfo['IsMaster']"
+               href="#" (click)="connectToCluster(c);false;" class="connected">- Connect Now</a>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <div *ngIf="!(clusters)?.length"><span class="connected">*No master detected on the network</span></div>
+</div>

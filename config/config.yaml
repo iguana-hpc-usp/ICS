@@ -1,0 +1,29 @@
+### If empty, the system will attempt to detect your network parameters. ###
+##
+## HostPublicInterface ## Default: empty   			(Optional) Public interface to connect in the network
+## BackendPort         ## Default: 10001   			(Optional) Back door to inter-nodes communication
+## FrontendPort        ## Default: 8000    			(Optional) Port to get access to browser web page
+## OperationMode       ## Default: LOCAL   			(Optional) LOCAL, CLUSTER or MASTER
+## StartContainers     ## Default: 4       			(Optional) The number of containers to be started on init
+## ClusterName         ## Default: NONAME 		 	(Optional) Only NUMBERS and CHARACTERS
+## ClusterPassword     ## Default: user   		 	(Optional) password to connect in the cluster
+## HostUser            ## Default: user@user   		(Optional) Default User Host (Default login to Frontend)
+## HostPassword        ## Default: user    			(Optional) Default User Password
+## SelfRegistration    ## Default: On      			(Optional) Allow user self-registration
+## Debug               ## Default: Off     			(Optional) On or Off
+## Error               ## Default: Off  	   		(Optional) On or Off
+
+{
+	"PublicInterface": "",
+	"BackendPort": "",
+	"FrontendPort": "",
+	"StartContainers": "",
+	"OperationMode": "",
+	"ClusterName": "",
+	"ClusterPassword": "",
+	"HostUser": "",
+	"HostPassword": "",
+	"SelfRegistration": "",
+	"Debug": "",
+	"Error": ""
+}

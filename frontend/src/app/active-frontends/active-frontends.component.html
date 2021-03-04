@@ -1,0 +1,12 @@
+<table class="table table-striped">
+  <tr *ngFor="let h of hosts">
+    <td>
+      <ul>
+        <li [className]="h.Owner===hostInfo['Owner'] ? 'master':''">{{h.Owner}}
+          <p class="frontName">Last Activity: {{h.LastActivity | slice:0:16}}</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<div *ngIf="!(hosts)?.length"><span class="frontName">*No users logged into the system.</span></div>

@@ -1,0 +1,27 @@
+<div class="divTable">
+    <div class="divTableBody">
+        <div class="divTableRow" *ngIf="userSession.Module==='Admin'">
+            <div class="divTableCell"><mat-icon>person</mat-icon></div>
+            <div class="divTableCell"><a href="#" (click)="setRoute('view-user'); false;" style="margin-left: 20px;">Users</a></div>
+        </div>
+        <div class="divTableRow" *ngIf="userSession.Module==='Admin'">
+            <div class="divTableCell"><mat-icon>groups</mat-icon></div>
+            <div class="divTableCell"><a href="#"
+                                         (click)="setRoute('view-group'); false;" style="margin-left: 20px;">Groups</a></div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell"><mat-icon>format_list_numbered</mat-icon></div>
+            <div class="divTableCell"><a href="#" (click)="setRoute('view-exercise'); false;" style="margin-left: 20px;">Exercises</a></div>
+        </div>
+        <div class="divTableRow" *ngIf="userSession.Module==='Admin'">
+            <div class="divTableCell"><mat-icon>settings</mat-icon></div>
+            <div class="divTableCell"><a href="#"
+                                         (click)="setRoute('settings'); false;" style="margin-left: 20px;">Settings</a>
+            </div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell"><mat-icon>code</mat-icon></div>
+            <div class="divTableCell"><a href="#" (click)="setRoute('view-code'); false;" style="margin-left: 20px;">Try a Code</a></div>
+        </div>
+    </div>
+</div>

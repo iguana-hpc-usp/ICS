@@ -1,0 +1,34 @@
+<div class="card m-3">
+  <h6 class="card-header">
+    <div style="float: left">
+      <span>{{fe.Id.value ? "Edit":"Add"}} Group</span>
+    </div>
+    <div style="float: right">
+      <button class="btn-sm btn-success" (click)="setRoute('view-group')" style="margin-left: 20px;">Groups</button>
+    </div>
+  </h6>
+
+  <div class="col-md-6 group-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="Name">Group Name:</label>
+        <input type="text" formControlName="Name" placeholder="Name" name="Name" class="form-control" id="Name">
+        <div *ngIf="submitted && fe.Name.errors" class="error response">
+          <div *ngIf="fe.Name.errors.required">Field is required</div>
+          <div *ngIf="fe.Name.errors.minlength">Name must be at least 4 characters</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Name">Description:</label>
+        <input type="text" formControlName="Description" placeholder="Description"
+               name="Description" class="form-control" id="Description">
+      </div>
+
+      <div class="form-group">
+        <button class="btn-sm btn-success">{{fe.Id.value ? "Update":"Insert"}}</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div *ngFor="let n of nodes" class="nodes">
+    <div class="form-row text-center">
+        <b>{{n.Hostname}} </b>
+        <br />
+        <span class="resources">&nbsp;(Mem: {{n.Memory}}MB | vCPU: {{n.NumberOfCPUs}})</span>
+    </div>
+    <div class="form-row text-center">
+
+        <div class="form-group text-right col-md-1" *ngFor="let c of n.Container">
+
+            <ng-template #popContent>
+                IP: <b>{{c.IP}}</b>
+                <br />
+                vCPU: <b>{{c.Name==='master'? 'Available':'1'}}</b>
+                <br />
+                Status: <b><span [className]="c.State==='running' ? 'ok':'error'">{{c.State}}</span></b>
+            </ng-template>
+
+            <mat-icon class="icon"
+                 [ngbPopover]="popContent"
+                 container="body"
+                 triggers="mouseenter:mouseleave"
+                 popoverTitle="{{c.Name==='master'? 'Physical Node':'Virtual Node'}} {{c.Id}}">
+                {{c.Name==='master'? 'memory':'flip_to_front'}}
+            </mat-icon>
+        </div>
+    </div>
+</div>
+<div class="card-header resources">
+    Total cluster: vCPUs: {{vcpus}} | Mem: {{mem}}MB
+</div>

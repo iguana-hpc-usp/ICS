@@ -1,0 +1,13 @@
+<table class="table table-striped normal">
+  <tr>
+    <td><b>Position | UID | Concurrency | Command | Time</b>
+      <ul>
+        <ng-container *ngFor="let q of queues; let i = index">
+          <li class="process">
+            <span>{{q.Position}} | {{q.User}} | {{q.Concurrency === 'true' ? 'yes' : 'no' }} | {{q.Sequence}} | {{q.Count}}s</span>
+          </li>
+        </ng-container>
+      </ul>
+    </td>
+  </tr>
+</table>

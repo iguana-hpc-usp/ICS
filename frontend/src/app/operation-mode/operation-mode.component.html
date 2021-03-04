@@ -1,0 +1,14 @@
+<div class="card-body op-mode">
+  <mat-button-toggle-group #group="matButtonToggleGroup" [value]="hostInfo.OpMode" (click)="setOpMode(group.value)">
+    <mat-button-toggle value="MASTER" [disabled]="hostInfo['OpMode']==='MASTER'">MASTER</mat-button-toggle>
+    <mat-button-toggle value="NODE" [disabled]="hostInfo['OpMode']==='NODE'">NODE</mat-button-toggle>
+    <mat-button-toggle value="LOCAL" [disabled]="hostInfo['OpMode']==='LOCAL'">LOCAL</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<div class="response text-center" *ngIf="response.Name">
+  <div *ngIf="response.Name==='ok' || response.Name==='info'" class="{{response.Name}}">{{response.Status}}
+    <app-mat-progress-bar></app-mat-progress-bar>
+  </div>
+  <div *ngIf="response.Name==='error'" class="{{response.Name}}">{{response.Status}}</div>
+</div>
