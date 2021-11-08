@@ -299,6 +299,9 @@ export class CodeComponent implements OnInit {
     }
 
     onKeydownEvent(editor) {
+        //To autodetect de compiler language
+        this.setAutoParameters(this.code.Code);
+
         if (this.cleanDecorations == true) {
             this.editor.getModel().setValue(this.code.Code);
             this.cleanDecorations = false;
@@ -517,6 +520,9 @@ export class CodeComponent implements OnInit {
     }
 
     setAutoParameters(code) {
+        if (!code)
+            return;
+
         let c = 0;
         if (code.indexOf('mpi.h') !== -1) {
             this.setParameters('MPI');

@@ -6,7 +6,7 @@ import {EventEmitterService} from "../../../../_services/event-emitter.service";
 import {AuthStr, ParamStr, ResponseStr, UniversalDTOStr} from "../../../../_model/service";
 import {ExercisesStr} from "../../../../_model/exercises";
 import {CodeEmitterStr} from "../../../../_model/code";
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ClassicEditor from '@haifahrul/ckeditor5-build-rich';
 import {NgbDateStruct, NgbTimeStruct} from "@ng-bootstrap/ng-bootstrap";
 import {Subscription} from "rxjs";
 import {UtilControl} from "../../../../_control/util.control";
@@ -18,6 +18,34 @@ import {UtilControl} from "../../../../_control/util.control";
 })
 export class ExercisesEditComponent implements OnInit {
     public Editor = ClassicEditor;
+
+    config = {
+        toolbar: {
+            items: [
+                'heading', '|',
+                'alignment', '|',
+                'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                'link', '|',
+                'bulletedList', 'numberedList', 'todoList',
+                '-', // break point
+                'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+                'code', 'codeBlock', '|',
+                'Smiley', 'insertTable', '|',
+                'outdent', 'indent', '|',
+                'uploadImage', 'blockQuote', '|',
+                'undo', 'redo'
+            ],
+            shouldNotGroupWhenFull: true
+        },
+        language: 'id',
+        image: {
+            toolbar: [
+                'imageTextAlternative',
+                'imageStyle:full',
+                'imageStyle:side'
+            ]
+        },
+    }
 
     editForm: FormGroup;
     date: NgbDateStruct;

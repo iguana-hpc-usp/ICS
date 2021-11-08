@@ -5,7 +5,7 @@ import {Router} from "@angular/router";
 import {EventEmitterService} from "../../../_services/event-emitter.service";
 import {ParamStr, ResponseStr, UniversalDTOStr} from "../../../_model/service";
 import {MatDialog} from "@angular/material/dialog";
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ClassicEditor from '@haifahrul/ckeditor5-build-rich';
 import {ClassroomStr} from "../../../_model/classroom";
 import {UtilControl} from "../../../_control/util.control";
 
@@ -16,6 +16,34 @@ import {UtilControl} from "../../../_control/util.control";
 })
 export class ClassroomEditComponent implements OnInit {
     public Editor = ClassicEditor;
+
+    config = {
+        toolbar: {
+            items: [
+                'heading', '|',
+                'alignment', '|',
+                'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                'link', '|',
+                'bulletedList', 'numberedList', 'todoList',
+                '-', // break point
+                'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+                'code', 'codeBlock', '|',
+                'Smiley', 'insertTable', '|',
+                'outdent', 'indent', '|',
+                'uploadImage', 'blockQuote', '|',
+                'undo', 'redo'
+            ],
+            shouldNotGroupWhenFull: true,
+        },
+        language: 'id',
+        image: {
+            toolbar: [
+                'imageTextAlternative',
+                'imageStyle:full',
+                'imageStyle:side'
+            ]
+        },
+    }
 
     editForm: FormGroup;
 
@@ -33,7 +61,7 @@ export class ClassroomEditComponent implements OnInit {
         private router: Router,
         private _eventEmitter: EventEmitterService,
         private _util: UtilControl,
-    ){
+    ) {
         this.host.checkSessionID(this.constructor.name);
     }
 
@@ -66,7 +94,6 @@ export class ClassroomEditComponent implements OnInit {
 
         if (this.classroomId)
             this.getClassroom();
-
     }
 
     getClassroom() {

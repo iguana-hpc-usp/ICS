@@ -39,3 +39,7 @@ button {
 .Disabled {
     color: #9d1e15;
 }
+
+::ng-deep h1 {
+    font-size: 1.5rem !important;
+}

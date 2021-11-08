@@ -40,6 +40,7 @@
                         <div class="card-header" style="min-height: 141px;">
                             Description
                             <mat-divider></mat-divider>
+                            <br />
                             <div [innerHTML]="classroom.Description" class="description"></div>
                         </div>
                     </div>
@@ -86,7 +87,8 @@
                             <table class="table table-striped">
                                 <tr *ngFor="let u of users">
                                     <td>
-                                        <span class="description">{{u.Name}}: {{u.Module}} ({{u.Email}})</span>
+                                        <img src="../../../assets/{{u.Module}}.jpg" width="20px"/>
+                                        <span class="description">{{u.Module}} - {{u.Name}}: {{u.Email}}</span>
                                     </td>
                                 </tr>
                             </table>

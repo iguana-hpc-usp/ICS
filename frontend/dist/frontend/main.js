@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<ng-template #popContent>\n    <span class=\"{{clusterConnection.Name}}\">\n            Connection Status: <b>{{clusterConnection.Status}}</b></span>\n    <br /><div *ngIf=\"clusterConnection['Name']==='wait'\" class=\"response\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n</ng-template>\n\n\n<div>\n    <div class=\"main\">\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']==='ok' && hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onLocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']==='ok' && !hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onUnlocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']!=='ok' && hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onLocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']!=='ok' && !hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onUnlocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode==='NODE' && clusterConnection['Name']==='info'\" class=\"icon\"\n             src=\"../../assets/nodeWait.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode==='NODE' && clusterConnection['Name']==='ok'\" class=\"icon\"\n             src=\"../../assets/nodeOk.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n    </div>\n\n    <div class=\"mainSide\">\n        <div *ngIf=\"hostInfo.Cluster.Name\">\n            <a target=\"_blank\" class=\"text-link\"\n               href=\"http://{{this.hostInfo.Cluster.MasterIP}}:{{this.hostInfo.Cluster.PortFrontend}}\">Cluster login page\n            </a>\n        </div>\n        <div class=\"text-link\"\n              *ngIf=\"hostInfo.Cluster.Name\">Queue status: <b>{{hostInfo.Cluster.Queue}}</b>\n        </div>\n    </div>\n    <div class=\"mainSide\">\n        <div *ngIf=\"userSession.Module==='Admin' &&\n                  hostInfo.OpMode==='NODE' &&\n                  hostInfo.Cluster.MasterIP !=''\" class=\"exit\">\n            <button class=\"btn-sm btn-danger mr-1\" (click)=\"setOpMode();false;\">Exit Cluster</button>\n        </div>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<ng-template #popContent>\n    <span class=\"{{clusterConnection.Name}}\">\n            Connection Status: <b>{{clusterConnection.Status}}</b></span>\n    <br /><div *ngIf=\"clusterConnection['Name']==='wait'\" class=\"response\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n</ng-template>\n\n<div>\n    <div class=\"main\">\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']==='ok' && hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onLocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']==='ok' && !hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onUnlocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']!=='ok' && hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onLocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode!=='NODE' && clusterConnection['Name']!=='ok' && !hostInfo.Cluster.Password\" class=\"icon\"\n             src=\"../../assets/onUnlocked.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode==='NODE' && clusterConnection['Name']==='info'\" class=\"icon\"\n             src=\"../../assets/nodeWait.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n        <img *ngIf=\"hostInfo.OpMode==='NODE' && clusterConnection['Name']==='ok'\" class=\"icon\"\n             src=\"../../assets/nodeOk.png\"\n             [ngbPopover]=\"popContent\"\n             triggers=\"mouseenter:mouseleave\"\n             popoverTitle=\"Cluster {{hostInfo.Cluster.Name}} ({{hostInfo.Cluster.MasterIP}})\" />\n\n    </div>\n\n    <div class=\"mainSide\">\n        <div *ngIf=\"hostInfo.Cluster.Name\">\n            <a target=\"_blank\" class=\"text-link\"\n               href=\"http://{{this.hostInfo.Cluster.MasterIP}}:{{this.hostInfo.Cluster.PortFrontend}}\">Cluster login page\n            </a>\n        </div>\n        <div class=\"text-link\"\n              *ngIf=\"hostInfo.Cluster.Name\">Queue status: <b>{{hostInfo.Cluster.Queue}}</b>\n        </div>\n    </div>\n    <div class=\"mainSide\">\n        <div *ngIf=\"userSession.Module==='Admin' &&\n                  hostInfo.OpMode==='NODE' &&\n                  hostInfo.Cluster.MasterIP !=''\" class=\"exit\">\n            <button class=\"btn-sm btn-danger mr-1\" (click)=\"setOpMode();false;\">Exit Cluster</button>\n        </div>\n    </div>\n</div>\n\n\n\n");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<md-button class=\"md-fab md-fab-bottom-right\" aria-label=\"Add a category\">\n    <button type=\"button\" name=\"btnCompile\" (click)=\"onSubmitCode(); false;\" [disabled]=\"disabled\"\n            class=\"btn btn-primary\">{{btnCompile}}\n    </button>\n    <div class=\"btn-group\" ngbDropdown role=\"group\" aria-label=\"Button group with nested dropdown\">\n        <button (click)=\"false;\" class=\"btn btn-primary dropdown-toggle-split\" ngbDropdownToggle\n                [disabled]=\"disabled\"></button>\n        <div class=\"dropdown-menu\" ngbDropdownMenu>\n            <button (click)=\"onClick('Compile'); false;\" ngbDropdownItem>Compile</button>\n            <button (click)=\"onClick('Compile and Run'); false;\" ngbDropdownItem>Compile and Run</button>\n        </div>\n    </div>\n</md-button>\n\n<div class=\"codeButtons\">\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic1\" ngbDropdownToggle>Theme</button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n            <button (click)=\"setTheme('vs-dark'); false;\" ngbDropdownItem>Dark</button>\n            <button (click)=\"setTheme('vs'); false;\" ngbDropdownItem>Light</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic2\" ngbDropdownToggle>Font Size\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n            <button (click)=\"setFont('8'); false;\" ngbDropdownItem>8</button>\n            <button (click)=\"setFont('10'); false;\" ngbDropdownItem>10</button>\n            <button (click)=\"setFont('12'); false;\" ngbDropdownItem>12</button>\n            <button (click)=\"setFont('14'); false;\" ngbDropdownItem>14</button>\n            <button (click)=\"setFont('16'); false;\" ngbDropdownItem>16</button>\n            <button (click)=\"setFont('18'); false;\" ngbDropdownItem>18</button>\n            <button (click)=\"setFont('20'); false;\" ngbDropdownItem>20</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic3\" ngbDropdownToggle>MiniMap\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic3\">\n            <button (click)=\"setMiniMap('true'); false;\" ngbDropdownItem>Show</button>\n            <button (click)=\"setMiniMap('false'); false;\" ngbDropdownItem>Hide</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic4\" ngbDropdownToggle>Load Example\n            Code\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic4\">\n            <button (click)=\"getCodeExample('MPI'); false;\" ngbDropdownItem>MPI</button>\n            <button (click)=\"getCodeExample('OpenMP'); false;\" ngbDropdownItem>OpenMP</button>\n            <button (click)=\"getCodeExample('CUDA'); false;\" ngbDropdownItem>CUDA</button>\n            <button (click)=\"getCodeExample('OpenMP_MPI'); false;\" ngbDropdownItem>Hybrid OpenMP/MPI</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic5\" ngbDropdownToggle>Code Saving\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic5\">\n            <button (click)=\"codeTempCall('auto'); false;\" ngbDropdownItem>Auto (default)</button>\n            <button (click)=\"codeTempCall('none'); false;\" ngbDropdownItem>None</button>\n            <button (click)=\"codeTempCall('load'); false;\" ngbDropdownItem>Load last saved code</button>\n        </div>\n    </div>\n    <div ngbDropdown *ngIf=\"hostInfo.Queue == 'Off'\" class=\"d-inline-block\">\n        <button type=\"button\" class=\"btn btn-outline-secondary\"\n                (click)=\"onQueue()\"\n                ngbPopover=\"If turn on, you will wait for your turn in the queue, so your code will run without concurrency.\"\n                triggers=\"mouseenter:mouseleave\" popoverTitle=\"Queuing System\">\n            Queue {{queue?\"On\":\"Off\"}}\n        </button>\n    </div>\n\n</div>\n<div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n</div>\n\n<ngb-popover-window role=\"tooltip\" *ngIf=\"showUsers\" id=\"popUsers\"\n                    class=\"popover ng-star-inserted bs-popover-top\"\n                    style=\"will-change: transform; transform: translate(569px, 51px);\">\n    <div class=\"arrow\"></div>\n    <h3 class=\"popover-header ng-star-inserted\">\n        Users Online\n    </h3>\n    <div class=\"popover-body\">\n            <span *ngFor=\"let c of codePairActives.Users\"\n                  class=\"ng-star-inserted {{c.UserName===userTyping? 'typing' : 'online'}}\">\n        {{c.UserName===userTyping?userTyping+' is typing...' : c.UserName}}<br/>\n        </span>\n    </div>\n</ngb-popover-window>\n\n\n<ngx-monaco-editor\n        class=\"editor\"\n        [options]=\"editorOptions\"\n        [ngModelOptions]=\"{standalone: true}\"\n        [(ngModel)]=\"code.Code\"\n        (ngModelChange)=\"onChange($event)\"\n        (keydown)=\"onKeydownEvent($event)\"\n        (onInit)=\"onInit($event)\">\n</ngx-monaco-editor>\n\n<div class=\"card m-12 codeRun\">\n    <form [formGroup]=\"codeForm\" enctype=\"multipart/form-data\">\n\n        <div class=\"form-group\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-{{exercise['gId'] ? '8':'12'}} user-container\">\n\n\n                    <div #ResultsTab></div>\n\n                    <ul ngbNav #nav=\"ngbNav\" [(activeId)]=\"navActive\" class=\"nav-tabs\" [destroyOnHide]=\"false\">\n                        <li ngbDropdown [ngbNavItem]=\"1\">\n\n                            <a ngbNavLink ngbDropdownToggle>Parameters</a>\n                            <div ngbDropdownMenu>\n                                <button (click)=\"setManualParameters('MPI'); false;\" ngbDropdownItem>MPI</button>\n                                <button (click)=\"setManualParameters('OpenMP'); false;\" ngbDropdownItem>OpenMP</button>\n                                <button (click)=\"setManualParameters('CUDA'); false;\" ngbDropdownItem>CUDA</button>\n                                <div class=\"dropdown-divider\"></div>\n                                <button (click)=\"setManualParameters('OpenMP_MPI'); false;\" ngbDropdownItem>Hybrid\n                                    OpenMP/MPI\n                                </button>\n                                <div class=\"dropdown-divider\"></div>\n                                <button (click)=\"setManualParameters('Manual'); false;\" ngbDropdownItem>Manual</button>\n                            </div>\n                            <ng-template ngbNavContent>\n\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        Command (compile)\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"CompCmd\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.CompCmd.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.CompCmd.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.CompCmd.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        <a href=\"#\" ngbPopover=\"The binary and code file name must always be main.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Attention\">\n                                            Arguments (compile)\n                                        </a>\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"CompArgs\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.CompArgs.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.CompArgs.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.CompArgs.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        Command (execute)\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"ExecCmd\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.ExecCmd.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.ExecCmd.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.ExecCmd.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        <a href=\"#\" ngbPopover=\"The binary and code file name must always be main.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Attention\">\n                                            Arguments (execute)\n                                        </a>\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"ExecArgs\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.ExecArgs.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.ExecArgs.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.ExecArgs.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        <a href=\"#\" ngbPopover=\"You can add extra arguments for the execution.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Attention\">\n                                            Extra Arguments (execute)\n                                        </a>\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"ExtraArgs\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"/>\n                                    </div>\n                                </div>\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"2\">\n                            <a ngbNavLink>Files</a>\n                            <ng-template ngbNavContent>\n                                <div *ngIf=\"exercise.Id && !exercise.MaxFileSize && exerciseFiles?.length===0\"\n                                     class=\"card form-group col-md-6\">\n                                    No parameters were defined for the use of files in this exercise.\n                                </div>\n\n                                <div class=\"form-row codeRun\">\n\n                                    <div *ngIf=\"exercise.MaxFileSize || tryACode==='1'\" class=\"col-md-4 card\">\n                                        <a href=\"#\" ngbPopover=\"You can upload a file and use it in your code.\n                            To call the file, use the example shown in the box.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Upload a file\">\n                                            Add a file for this run <br/>\n                                        </a>\n                                        <span class=\"response\">(MaxFileSize: {{_util.formatBytes(exercise.MaxFileSize)}})</span>\n                                        <form enctype=\"multipart/form-data\">\n                                            <input class=\"btn-default\" type='file' [(ngModel)]=\"file\"\n                                                   data-max-size=\"10\"\n                                                   name=\"media\" #selectfile\n                                                   (click)=\"resetFormFile()\">\n                                            <br/>\n                                            <button type=\"button\" (click)=\"uploadFile(file)\">Upload</button>\n                                            <br/>\n                                            <progress [value]=progress.loaded [max]=progress.total></progress>\n                                            <div class=\"card-body\">\n                                                <div *ngIf=\"responseFile.Name\" class=\"{{responseFile.Name}}\">\n                                                    {{responseFile.Status}}\n                                                </div>\n                                            </div>\n                                        </form>\n                                        <hr/>\n                                        Files uploaded to the server:\n                                        <span *ngFor=\"let f of loadedFiles\">\n                                            <a href=\"#\"\n                                               (click)=\"setFileUploaded(f); false;\"\n                                               popoverTitle=\"Using a file\"\n                                               triggers=\"mouseenter:mouseleave\"\n                                               ngbPopover=\"Click to add this file in extra arguments.\">\n                                                    {{f}}\n                                            </a>\n                                            <br/>\n                                        </span>\n                                        <br/>1. Files are automatically deleted after logout.\n                                        <br/>2. To replace a file, upload another one with the same name.\n                                    </div>\n\n                                    <div *ngIf=\"exerciseFiles?.length > 0\" class=\"col-md-4 card\">\n                                        <mat-label>\n                                            <a href=\"#\" popoverTitle=\"This exercise has input files.\n                                You can call them using the example shown in the box.\"\n                                               triggers=\"mouseenter:mouseleave\" ngbPopover=\"\">\n                                                Add input files\n                                            </a>\n                                        </mat-label>\n\n\n                                        <mat-select [formControl]=\"files\" multiple [disabled]=\"disabled\"\n                                                    class=\"form-control\"\n                                                    (selectionChange)=\"setFileParameters('')\">\n                                            <mat-select-trigger class=\"selection\">\n                                                {{files.value ? files.value[0] : ''}}\n                                                <span *ngIf=\"files.value?.length > 1\">\n        (+{{files.value.length - 1}} {{files.value?.length === 2 ? 'other' : 'others'}})\n                                        </span>\n                                            </mat-select-trigger>\n                                            <mat-option *ngFor=\"let n of exerciseFiles\" [value]=\"n.FileName\">\n                                                {{n.FileName}}\n                                            </mat-option>\n                                        </mat-select>\n                                        <hr/>\n                                        Click the file to download:\n                                        <div *ngFor=\"let f of exerciseFiles\" class=\"files\">\n                                            <div class=\"form-row text-center\">\n                                                <a href=\"#\" (click)=\"download(f); false;\"\n                                                   popoverTitle=\"Download\"\n                                                   triggers=\"mouseenter:mouseleave\"\n                                                   ngbPopover=\"Click to download this file.\">\n                                                    {{f.FileName}}\n                                                </a>\n                                                <br/>\n                                            </div>\n                                        </div>\n\n                                    </div>\n\n                                    <div class=\"col-md-4 card\">\n                                        You can upload a file to the code via STDIN, example:\n                                        <code>\n                                            program < file.txt\n                                        </code>\n                                        <br/>or read an array from a file:\n                                        <code>\n                                            FILE * pFile;\n                                            <br/>\n                                            pFile = fopen (\"file.txt\",\"r\");\n                                            <br/>\n                                            fscanf(pFile, \"%d \", &lin);\n                                            <br/>\n                                            fscanf(pFile, \"%d\\n\", &col);\n                                            <br/>\n                                            fscanf(pFile, \"%lf\\n\", &limiar);\n                                            <br/>\n                                        </code>\n                                    </div>\n\n                                </div>\n\n\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"3\">\n                            <a ngbNavLink>Nodes <span class=\"response\">(MPI)</span></a>\n                            <ng-template ngbNavContent>\n\n                                <div class=\"form-group col-md-3\">\n                                    Number of process\n                                    <input type=\"number\" formControlName=\"NumberProc\"\n                                           (click)=\"setManualParameters('');\"\n                                           onkeydown=\"return false\"\n                                           onclick=\"return false\"\n                                           class=\"form-control\"\n                                           [ngClass]=\"{ 'is-invalid': submitted && fc.NumberProc.errors }\"/>\n                                    <div *ngIf=\"submitted && fc.NumberProc.errors\" class=\"invalid-feedback\">\n                                        <div *ngIf=\"fc.NumberProc.errors.required\">Number of process is required</div>\n                                        <div *ngIf=\"fc.NumberProc.errors.min\">Process must be at least 1 number</div>\n                                        <div *ngIf=\"fc.NumberProc.errors.generic\">{{f.numberProc.errors.generic}}</div>\n                                    </div>\n                                    <div *ngIf=\"msgOverLoad\" class=\"runTimeout\">{{msgOverLoad}}</div>\n                                </div>\n                                <div class=\"form-group col-md-3\">\n                                    <mat-label>\n                                        <a href=\"#\" ngbPopover=\"Select one or more nodes to run the code.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Cluster Nodes\">\n                                            Nodes\n                                        </a>\n                                    </mat-label>\n                                    <mat-select [formControl]=\"containers\" multiple [disabled]=\"disabled\"\n                                                class=\"form-control\"\n                                                (selectionChange)=\"setManualParameters('')\">\n                                        <mat-select-trigger class=\"selection\">\n                                            {{containers.value ? containers.value[0] : ''}}\n                                            <span *ngIf=\"containers.value?.length > 1\">\n        (+{{containers.value.length - 1}} {{containers.value?.length === 2 ? 'other' : 'others'}})\n                                    </span>\n                                        </mat-select-trigger>\n                                        <mat-option *ngFor=\"let n of nodes\" [value]=\"n\">{{n}}</mat-option>\n                                    </mat-select>\n                                </div>\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"4\">\n                            <a ngbNavLink>Results</a>\n                            <ng-template ngbNavContent>\n\n                                <div class=\"card m-3\" *ngIf=\"programStatus\">\n                                    <h6 class=\"card-header\">{{btnCompile}} ->| Program {{programStatus}} </h6>\n                                    <span class=\"queuePosition\">Queue Position: {{queueStatus}}</span>\n                                    <span class=\"runTimeout\">Running timeout: {{programTimeout}}</span>\n\n                                    <div *ngIf=\"sequence?.length > 1\">\n                                        <app-mat-progress-bar></app-mat-progress-bar>\n                                    </div>\n\n                                    <div class=\"card-body\">\n                                        <div *ngIf=\"response.Command\" class=\"serviceOk\">\n                                            {{command}}\n                                        </div>\n                                        <hr/>\n                                        <div *ngIf=\"response.Name\" class=\"{{response.Name}}\">\n                                            {{response.Status}}\n                                        </div>\n                                    </div>\n                                </div>\n\n                                <hr/>\n\n                                <div class=\"form-group\">\n                                    <ngx-monaco-editor class=\"editorResult\"\n                                                       [options]=\"resultOptions\"\n                                                       [ngModelOptions]=\"{standalone: true}\"\n                                                       [(ngModel)]=\"code.Result\">\n                                    </ngx-monaco-editor>\n\n                                </div>\n\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"5\">\n                            <a ngbNavLink>Special Tags</a>\n                            <ng-template ngbNavContent>\n                                <div class=\"card-body\" *ngIf=\"msgProcess\">\n                                    <table class=\"table table-striped\">\n                                        <tr *ngFor=\"let p of msgProcess | keyvalue\">\n                                            <td>\n                                                <span class='iconServer'></span>\n                                                <b>Node {{p.key}} (Number of process per node: {{p.value.length}})</b>\n                                                <ng-container *ngFor=\"let r of p.value\">\n                                                    <ul>\n                                                        <li>\n                                                            <span class='iconTask'></span>\n                                                            <span>{{r}}</span>\n                                                        </li>\n                                                    </ul>\n                                                </ng-container>\n                                            </td>\n                                        </tr>\n                                    </table>\n                                </div>\n\n                                <div class=\"card m-12\">\n                                    <div class=\"card-body\">\n                                        To view custom OpenMPI output by grouping processes with ranks and messages,\n                                        use the tags according to the template below:\n\n                                        <p>Example of use:</p>\n\n                                        <code>printf(\"message: &#123;M&#125;%s&#123;M&#125; from processor: &#123;P&#125;%s&#123;P&#125;,\n                                            rank: &#123;R&#125;%d&#123;R&#125; out of %d processors\\n\",\n                                            \"Hello World\", processor_name, world_rank, world_size);</code>\n                                    </div>\n                                </div>\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"6\" (click)=\"getSysInfo(); false;\">\n                            <a ngbNavLink>SysInfo</a>\n                            <ng-template ngbNavContent>\n                                <div *ngIf=\"loadSysInfo===0\">\n                                    <app-mat-progress-bar></app-mat-progress-bar>\n                                </div>\n                                <div class=\"card-body\">\n\n                                    <div class=\"col-md-6 user-container\">\n                                        <div>\n                                            <div style=\"float: left; width: 30px;\">\n                                                <mat-icon mat-list-icon>computer</mat-icon>\n                                            </div>\n                                            <div>\n                                                <b>Kernel and compiler versions</b>\n                                            </div>\n                                            <hr/>\n                                            <div *ngFor=\"let s of sysInfo\">\n                                                <b>{{s.Name}}:</b>&nbsp;<i>{{s.Value}}</i><br/>\n                                            </div>\n                                        </div>\n                                    </div>\n\n                                </div>\n                            </ng-template>\n                        </li>\n\n                    </ul>\n                    <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n                </div>\n                <div class=\"col-md-4 user-container\" *ngIf=\"exercise['gId']\">\n                    Group Chat\n                    <mat-divider></mat-divider>\n                    <div style=\"overflow-y: scroll; min-height: 100px; height: 300px;\">\n                        <div *ngFor=\"let m of chatList index as i\">\n                            <div class=\"{{0 === i % 2 ? 'chat' : 'chat darker'}} {{userId === m.IdUser ? 'user' : ''}}\">\n                                <mat-icon class=\"{{0 === i % 2 ? 'chatIcon-right' : 'chatIcon'}}\" mat-list-icon>\n                                    account_circle\n                                </mat-icon>\n                                <p style=\"width: 100%; margin-left: 10px;\">{{m.Text}}</p>\n                                <span class=\"{{0 === i % 2 ? 'time-right' : 'time-right'}} {{userId === m.IdUser ? 'time-user' : ''}}\">{{m.Name}}</span>\n                            </div>\n                        </div>\n                    </div>\n                    <form (ngSubmit)=\"sendMsgChat()\">\n                        <div class=\"form-group\">\n                            <input id=\"chatMsg\" [(ngModel)]=\"chatMsg\"\n                                   placeholder=\"type message and press enter\"\n                                   class=\"form-control\" style=\"max-width: 70%;\" autofocus\n                                   [ngModelOptions]=\"{standalone: true}\">\n                        </div>\n                        <input class=\"btn-primary\" type=\"submit\" value=\"add\" style=\"display: none\">\n                    </form>\n\n                </div>\n            </div>\n        </div>\n\n\n    </form>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<md-button class=\"md-fab md-fab-bottom-right\" aria-label=\"Add a category\">\n    <button type=\"button\" name=\"btnCompile\" (click)=\"onSubmitCode(); false;\" [disabled]=\"disabled\"\n            class=\"btn btn-primary\">{{btnCompile}}\n    </button>\n    <div class=\"btn-group\" ngbDropdown role=\"group\" aria-label=\"Button group with nested dropdown\">\n        <button (click)=\"false;\" class=\"btn btn-primary dropdown-toggle-split\" ngbDropdownToggle\n                [disabled]=\"disabled\"></button>\n        <div class=\"dropdown-menu\" ngbDropdownMenu>\n            <button (click)=\"onClick('Compile'); false;\" ngbDropdownItem>Compile</button>\n            <button (click)=\"onClick('Compile and Run'); false;\" ngbDropdownItem>Compile and Run</button>\n        </div>\n    </div>\n</md-button>\n\n<div class=\"codeButtons\">\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic1\" ngbDropdownToggle>Theme</button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n            <button (click)=\"setTheme('vs-dark'); false;\" ngbDropdownItem>Dark</button>\n            <button (click)=\"setTheme('vs'); false;\" ngbDropdownItem>Light</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic2\" ngbDropdownToggle>Font Size\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n            <button (click)=\"setFont(8); false;\" ngbDropdownItem>8</button>\n            <button (click)=\"setFont(10); false;\" ngbDropdownItem>10</button>\n            <button (click)=\"setFont(12); false;\" ngbDropdownItem>12</button>\n            <button (click)=\"setFont(14); false;\" ngbDropdownItem>14</button>\n            <button (click)=\"setFont(16); false;\" ngbDropdownItem>16</button>\n            <button (click)=\"setFont(18); false;\" ngbDropdownItem>18</button>\n            <button (click)=\"setFont(20); false;\" ngbDropdownItem>20</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic3\" ngbDropdownToggle>MiniMap\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic3\">\n            <button (click)=\"setMiniMap('true'); false;\" ngbDropdownItem>Show</button>\n            <button (click)=\"setMiniMap('false'); false;\" ngbDropdownItem>Hide</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic4\" ngbDropdownToggle>Load Example\n            Code\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic4\">\n            <button (click)=\"getCodeExample('MPI'); false;\" ngbDropdownItem>MPI</button>\n            <button (click)=\"getCodeExample('OpenMP'); false;\" ngbDropdownItem>OpenMP</button>\n            <button (click)=\"getCodeExample('CUDA'); false;\" ngbDropdownItem>CUDA</button>\n            <button (click)=\"getCodeExample('OpenMP_MPI'); false;\" ngbDropdownItem>Hybrid OpenMP/MPI</button>\n        </div>\n    </div>\n    <div ngbDropdown class=\"d-inline-block\">\n        <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic5\" ngbDropdownToggle>Code Saving\n        </button>\n        <div ngbDropdownMenu aria-labelledby=\"dropdownBasic5\">\n            <button (click)=\"codeTempCall('auto'); false;\" ngbDropdownItem>Auto (default)</button>\n            <button (click)=\"codeTempCall('none'); false;\" ngbDropdownItem>None</button>\n            <button (click)=\"codeTempCall('load'); false;\" ngbDropdownItem>Load last saved code</button>\n        </div>\n    </div>\n    <div ngbDropdown *ngIf=\"hostInfo.Queue == 'Off'\" class=\"d-inline-block\">\n        <button type=\"button\" class=\"btn btn-outline-secondary\"\n                (click)=\"onQueue()\"\n                ngbPopover=\"If turn on, you will wait for your turn in the queue, so your code will run without concurrency.\"\n                triggers=\"mouseenter:mouseleave\" popoverTitle=\"Queuing System\">\n            Queue {{queue?\"On\":\"Off\"}}\n        </button>\n    </div>\n\n</div>\n<div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n</div>\n\n<ng-template #popContent>\n   <span *ngFor=\"let cpu of codePairUsers\">\n       {{cpu.UserName}} <br />\n    </span>\n</ng-template>\n\n<ngx-monaco-editor *ngIf=\"codeInGroup==1\"\n        [ngbPopover]=\"popContent\"\n        triggers=\"mouseenter:mouseleave\"\n        popoverTitle=\"Users Online in the Editor\"\n        class=\"editor\"\n        [options]=\"editorOptions\"\n        [ngModelOptions]=\"{standalone: true}\"\n        [(ngModel)]=\"code.Code\"\n        (ngModelChange)=\"onChange($event)\"\n        (keydown)=\"onKeydownEvent($event)\"\n        (onInit)=\"onInit($event)\">\n</ngx-monaco-editor>\n\n<ngx-monaco-editor *ngIf=\"codeInGroup==0\"\n        class=\"editor\"\n        [options]=\"editorOptions\"\n        [ngModelOptions]=\"{standalone: true}\"\n        [(ngModel)]=\"code.Code\"\n        (ngModelChange)=\"onChange($event)\"\n        (keydown)=\"onKeydownEvent($event)\"\n        (onInit)=\"onInit($event)\">\n</ngx-monaco-editor>\n\n<div class=\"card m-12 codeRun\">\n    <form [formGroup]=\"codeForm\" enctype=\"multipart/form-data\">\n\n        <div class=\"form-group\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-{{exercise['gId'] ? '8':'12'}} user-container\">\n\n\n                    <div #ResultsTab></div>\n\n                    <ul ngbNav #nav=\"ngbNav\" [(activeId)]=\"navActive\" class=\"nav-tabs\" [destroyOnHide]=\"false\">\n                        <li ngbDropdown [ngbNavItem]=\"1\">\n\n                            <a ngbNavLink ngbDropdownToggle>Parameters</a>\n                            <div ngbDropdownMenu>\n                                <button (click)=\"setManualParameters('MPI'); false;\" ngbDropdownItem>MPI</button>\n                                <button (click)=\"setManualParameters('OpenMP'); false;\" ngbDropdownItem>OpenMP</button>\n                                <button (click)=\"setManualParameters('CUDA'); false;\" ngbDropdownItem>CUDA</button>\n                                <div class=\"dropdown-divider\"></div>\n                                <button (click)=\"setManualParameters('OpenMP_MPI'); false;\" ngbDropdownItem>Hybrid\n                                    OpenMP/MPI\n                                </button>\n                                <div class=\"dropdown-divider\"></div>\n                                <button (click)=\"setManualParameters('Manual'); false;\" ngbDropdownItem>Manual</button>\n                            </div>\n                            <ng-template ngbNavContent>\n\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        Command (compile)\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"CompCmd\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.CompCmd.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.CompCmd.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.CompCmd.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        <a href=\"#\" ngbPopover=\"The binary and code file name must always be main.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Attention\">\n                                            Arguments (compile)\n                                        </a>\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"CompArgs\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.CompArgs.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.CompArgs.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.CompArgs.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        Command (execute)\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"ExecCmd\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.ExecCmd.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.ExecCmd.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.ExecCmd.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        <a href=\"#\" ngbPopover=\"The binary and code file name must always be main.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Attention\">\n                                            Arguments (execute)\n                                        </a>\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"ExecArgs\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && fc.ExecArgs.errors }\"/>\n                                        <div *ngIf=\"submitted && fc.ExecArgs.errors\" class=\"error response\">\n                                            <div *ngIf=\"fc.ExecArgs.errors.required\">Field is required</div>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"form-row codeRun\">\n                                    <div class=\"col-md-6\">\n                                        <a href=\"#\" ngbPopover=\"You can add extra arguments for the execution.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Attention\">\n                                            Extra Arguments (execute)\n                                        </a>\n                                    </div>\n                                    <div class=\"col-md-9\">\n                                        <input type=\"text\" formControlName=\"ExtraArgs\" (keyup)=\"updateParameters()\"\n                                               class=\"form-control\"/>\n                                    </div>\n                                </div>\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"2\">\n                            <a ngbNavLink>Files</a>\n                            <ng-template ngbNavContent>\n                                <div *ngIf=\"!exercise.MaxFileSize && exerciseFiles?.length===0\"\n                                     class=\"card form-group col-md-6\">\n                                    No parameters were defined for the use of files in this exercise.\n                                </div>\n\n                                <div class=\"form-row codeRun\">\n\n                                    <div *ngIf=\"exercise.MaxFileSize || tryACode==='1'\" class=\"col-md-4 card\">\n                                        <a href=\"#\" ngbPopover=\"You can upload a file and use it in your code.\n                            To call the file, use the example shown in the box.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Upload a file\">\n                                            Add a file for this run <br/>\n                                        </a>\n                                        <span class=\"response\">(MaxFileSize: {{_util.formatBytes(exercise.MaxFileSize)}})</span>\n                                        <form enctype=\"multipart/form-data\">\n                                            <input class=\"btn-default\" type='file'\n                                                   data-max-size=\"10\"\n                                                   name=\"media\" #selectfile\n                                                   (click)=\"resetFormFile()\">\n                                            <br/>\n                                            <button type=\"button\" (click)=\"uploadFile()\">Upload</button>\n                                            <br/>\n                                            <progress [value]=progress.loaded [max]=progress.total></progress>\n                                            <div class=\"card-body\">\n                                                <div *ngIf=\"responseFile.Name\" class=\"{{responseFile.Name}}\">\n                                                    {{responseFile.Status}}\n                                                </div>\n                                            </div>\n                                        </form>\n\n                                        <hr/>\n                                        <span *ngIf=\"fileCodeExecution?.length!==0\">\n                                            Files uploaded to the server:\n                                        </span>\n                                        <span *ngFor=\"let p of fileCodeExecution\">\n                                        <a href=\"#\" (click)=\"setFileCodeExecution(p); false\"\n                                           ngbPopover=\"Click to add the filename in extra arguments.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Add in Extra Arguments\">\n                                            {{p}}\n                                        </a>\n                                            <br/>\n\n                                        </span>\n                                        <br/>\n                                        <span>Files uploaded to the server:\n                                                <br/>1. Files are automatically deleted after logout.\n                                                <br/>2. To replace a file, upload another one with the same name.\n                                        </span>\n\n                                    </div>\n\n                                    <div *ngIf=\"exerciseFiles?.length > 0\" class=\"col-md-4 card\">\n                                        <mat-label>\n                                            <a href=\"#\" popoverTitle=\"This exercise has input files.\n                                You can call them using the example shown in the box.\"\n                                               triggers=\"mouseenter:mouseleave\" ngbPopover=\"\">\n                                                Add input files\n                                            </a>\n                                        </mat-label>\n\n\n                                        <mat-select [formControl]=\"files\" multiple [disabled]=\"disabled\"\n                                                    class=\"form-control\"\n                                                    (selectionChange)=\"setFileParameters('')\">\n                                            <mat-select-trigger class=\"selection\">\n                                                {{files.value ? files.value[0] : ''}}\n                                                <span *ngIf=\"files.value?.length > 1\">\n        (+{{files.value.length - 1}} {{files.value?.length === 2 ? 'other' : 'others'}})\n                                        </span>\n                                            </mat-select-trigger>\n                                            <mat-option *ngFor=\"let n of exerciseFiles\" [value]=\"n.FileName\">\n                                                {{n.FileName}}\n                                            </mat-option>\n                                        </mat-select>\n                                        <hr/>\n                                        Click the file to download:\n                                        <div *ngFor=\"let f of exerciseFiles\" class=\"files\">\n                                            <div class=\"form-row text-center\">\n                                                <a href=\"#\" (click)=\"download(f); false;\"\n                                                   popoverTitle=\"Download\"\n                                                   triggers=\"mouseenter:mouseleave\"\n                                                   ngbPopover=\"Click to download this file.\">\n                                                    {{f.FileName}}\n                                                </a>\n                                                <br/>\n                                            </div>\n                                        </div>\n\n                                    </div>\n\n                                    <div class=\"col-md-4 card\">\n                                        You can upload a file to the code via STDIN, example:\n                                        <code>\n                                            program < file.txt\n                                        </code>\n                                        <br/>or read an array from a file:\n                                        <code>\n                                            FILE * pFile;\n                                            <br/>\n                                            pFile = fopen (\"file.txt\",\"r\");\n                                            <br/>\n                                            fscanf(pFile, \"%d \", &lin);\n                                            <br/>\n                                            fscanf(pFile, \"%d\\n\", &col);\n                                            <br/>\n                                            fscanf(pFile, \"%lf\\n\", &limiar);\n                                            <br/>\n                                        </code>\n                                    </div>\n\n                                </div>\n\n\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"3\">\n                            <a ngbNavLink>Nodes <span class=\"response\">(MPI)</span></a>\n                            <ng-template ngbNavContent>\n\n                                <div class=\"form-group col-md-3\">\n                                    Number of process\n                                    <input type=\"number\" formControlName=\"NumberProc\"\n                                           (click)=\"setManualParameters('');\"\n                                           onkeydown=\"return false\"\n                                           onclick=\"return false\"\n                                           class=\"form-control\"\n                                           [ngClass]=\"{ 'is-invalid': submitted && fc.NumberProc.errors }\"/>\n                                    <div *ngIf=\"submitted && fc.NumberProc.errors\" class=\"invalid-feedback\">\n                                        <div *ngIf=\"fc.NumberProc.errors.required\">Number of process is required</div>\n                                        <div *ngIf=\"fc.NumberProc.errors.min\">Process must be at least 1 number</div>\n                                        <div *ngIf=\"fc.NumberProc.errors.generic\">{{fc.numberProc.errors.generic}}</div>\n                                    </div>\n                                    <div *ngIf=\"msgOverLoad\" class=\"runTimeout\">{{msgOverLoad}}</div>\n                                </div>\n                                <div class=\"form-group col-md-3\">\n                                    <mat-label>\n                                        <a href=\"#\" ngbPopover=\"Select one or more nodes to run the code.\"\n                                           triggers=\"mouseenter:mouseleave\" popoverTitle=\"Cluster Nodes\">\n                                            Nodes\n                                        </a>\n                                    </mat-label>\n                                    <mat-select [formControl]=\"containers\" multiple [disabled]=\"disabled\"\n                                                class=\"form-control\"\n                                                (selectionChange)=\"setManualParameters('')\">\n                                        <mat-select-trigger class=\"selection\">\n                                            {{containers.value ? containers.value[0] : ''}}\n                                            <span *ngIf=\"containers.value?.length > 1\">\n        (+{{containers.value.length - 1}} {{containers.value?.length === 2 ? 'other' : 'others'}})\n                                    </span>\n                                        </mat-select-trigger>\n                                        <mat-option *ngFor=\"let n of nodes\" [value]=\"n\">{{n}}</mat-option>\n                                    </mat-select>\n                                </div>\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"4\">\n                            <a ngbNavLink>Results</a>\n                            <ng-template ngbNavContent>\n\n                                <div class=\"card m-3\" *ngIf=\"programStatus\">\n                                    <h6 class=\"card-header\">{{btnCompile}} ->| Program {{programStatus}} </h6>\n                                    <span class=\"queuePosition\">Queue Position: {{queueStatus}}</span>\n                                    <span class=\"runTimeout\">Running timeout: {{programTimeout}}</span>\n\n                                    <div *ngIf=\"sequence?.length > 1\">\n                                        <app-mat-progress-bar></app-mat-progress-bar>\n                                    </div>\n\n                                    <div class=\"card-body\">\n                                        <div *ngIf=\"response.Command\" class=\"serviceOk\">\n                                            {{command}}\n                                        </div>\n                                        <hr/>\n                                        <div *ngIf=\"response.Name\" class=\"{{response.Name}}\">\n                                            {{response.Status}}\n                                        </div>\n                                    </div>\n                                </div>\n\n                                <hr/>\n\n                                <div class=\"form-group\">\n                                    <ngx-monaco-editor class=\"editorResult\"\n                                                       [options]=\"resultOptions\"\n                                                       [ngModelOptions]=\"{standalone: true}\"\n                                                       [(ngModel)]=\"code.Result\">\n                                    </ngx-monaco-editor>\n\n                                </div>\n\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"5\">\n                            <a ngbNavLink>Special Tags</a>\n                            <ng-template ngbNavContent>\n                                <div class=\"card-body\" *ngIf=\"msgProcess\">\n                                    <table class=\"table table-striped\">\n                                        <tr *ngFor=\"let p of msgProcess | keyvalue\">\n                                            <td>\n                                                <span class='iconServer'></span>\n                                                <b>Node {{p.key}} (Number of process per node: {{p.value.length}})</b>\n                                                <ng-container *ngFor=\"let r of p.value\">\n                                                    <ul>\n                                                        <li>\n                                                            <span class='iconTask'></span>\n                                                            <span>{{r}}</span>\n                                                        </li>\n                                                    </ul>\n                                                </ng-container>\n                                            </td>\n                                        </tr>\n                                    </table>\n                                </div>\n\n                                <div class=\"card m-12\">\n                                    <div class=\"card-body\">\n                                        To view custom OpenMPI output by grouping processes with ranks and messages,\n                                        use the tags according to the template below:\n\n                                        <p>Example of use:</p>\n\n                                        <code>printf(\"message: &#123;M&#125;%s&#123;M&#125; from processor: &#123;P&#125;%s&#123;P&#125;,\n                                            rank: &#123;R&#125;%d&#123;R&#125; out of %d processors\\n\",\n                                            \"Hello World\", processor_name, world_rank, world_size);</code>\n                                    </div>\n                                </div>\n                            </ng-template>\n                        </li>\n\n                        <li [ngbNavItem]=\"6\" (click)=\"getSysInfo(); false;\">\n                            <a ngbNavLink>SysInfo</a>\n                            <ng-template ngbNavContent>\n                                <table class=\"table table-striped\">\n                                    <tr *ngFor=\"let p of sysInfo\">\n                                        <td>\n                                            <b>{{p.Name}}:</b> {{p.Value}}\n                                        </td>\n                                    </tr>\n                                </table>\n                            </ng-template>\n                        </li>\n\n                    </ul>\n                    <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n                </div>\n                <div class=\"col-md-4 user-container\" *ngIf=\"exercise['gId']\">\n                    Group Chat\n                    <mat-divider></mat-divider>\n                    <div style=\"overflow-y: scroll; min-height: 100px; height: 300px;\">\n                        <div *ngFor=\"let m of chatList index as i\">\n                            <div class=\"{{0 === i % 2 ? 'chat' : 'chat darker'}} {{userId === m.IdUser ? 'user' : ''}}\">\n                                <mat-icon class=\"{{0 === i % 2 ? 'chatIcon-right' : 'chatIcon'}}\" mat-list-icon>\n                                    account_circle\n                                </mat-icon>\n                                <p style=\"width: 100%; margin-left: 10px;\">{{m.Text}}</p>\n                                <span class=\"{{0 === i % 2 ? 'time-right' : 'time-right'}} {{userId === m.IdUser ? 'time-user' : ''}}\">{{m.Name}}</span>\n                            </div>\n                        </div>\n                    </div>\n                    <form (ngSubmit)=\"sendMsgChat()\">\n                        <div class=\"form-group\">\n                            <input id=\"chatMsg\" [(ngModel)]=\"chatMsg\"\n                                   placeholder=\"type message and press enter\"\n                                   class=\"form-control\" style=\"max-width: 70%;\" autofocus\n                                   [ngModelOptions]=\"{standalone: true}\">\n                        </div>\n                        <input class=\"btn-primary\" type=\"submit\" value=\"add\" style=\"display: none\">\n                    </form>\n\n                </div>\n            </div>\n        </div>\n\n\n    </form>\n</div>\n\n");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} Classroom</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-classroom')\" style=\"margin-left: 20px;\">Classroom</button>\n    </div>\n  </h6>\n  <br />\n  <div class=\"col-md-12 group-container\">\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n\n      <div class=\"form-group\">\n        <label for=\"Name\">Name:</label>\n        <input class=\"text\" type=\"text\" formControlName=\"Name\" name=\"Name\" id=\"Name\">\n        <div *ngIf=\"submitted && fe.Name.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Name.errors.required\">Field Name is required</div>\n          <div *ngIf=\"fe.Name.errors.minlength\">Name field must have a minimum of 5 characters</div>\n          <div *ngIf=\"fe.Name.errors.maxlength\">Name must be a maximum of 50 characters</div>\n        </div>\n      </div>\n\n\n      <div class=\"form-group\">\n        <label for=\"KeyAccess\">Self-registration Key:</label>\n        <input class=\"text\" type=\"text\" min=\"0\" max=\"60\" formControlName=\"KeyAccess\"\n               name=\"KeyAccess\" id=\"KeyAccess\">\n        <div *ngIf=\"submitted && fe.KeyAccess.errors\" class=\"error response\">\n          <div *ngIf=\"fe.KeyAccess.errors.maxlength\">The key must be up to 60 characters long</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"MaxStudents\">Maximum Number of Students:</label>\n        <input class=\"number\" type=\"number\" min=\"0\" max=\"1000\" formControlName=\"MaxStudents\"\n               name=\"MaxStudents\" id=\"MaxStudents\">\n        <div *ngIf=\"submitted && fe.MaxStudents.errors\" class=\"error response\">\n          <div *ngIf=\"fe.MaxStudents.errors.max\">The maximum number of students allowed is 100</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Name\">Description:</label>\n        <ckeditor [editor]=\"Editor\" formControlName=\"Description\"></ckeditor>\n      </div>\n\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">{{fe.Id.value? \"Update\":\"Insert\"}}</button>\n      </div>\n    </form>\n\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} Classroom</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute()\" style=\"margin-left: 20px;\">Classroom</button>\n    </div>\n  </h6>\n  <br />\n  <div class=\"col-md-12 group-container\">\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n\n      <div class=\"form-group\">\n        <label for=\"Name\">Name:</label>\n        <input class=\"text\" type=\"text\" formControlName=\"Name\" name=\"Name\" id=\"Name\">\n        <div *ngIf=\"submitted && fe.Name.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Name.errors.required\">Field Name is required</div>\n          <div *ngIf=\"fe.Name.errors.minlength\">Name field must have a minimum of 5 characters</div>\n          <div *ngIf=\"fe.Name.errors.maxlength\">Name must be a maximum of 50 characters</div>\n        </div>\n      </div>\n\n\n      <div class=\"form-group\">\n        <label for=\"KeyAccess\">Self-registration Key:</label>\n        <input class=\"text\" type=\"text\" min=\"0\" max=\"60\" formControlName=\"KeyAccess\"\n               name=\"KeyAccess\" id=\"KeyAccess\">\n        <div *ngIf=\"submitted && fe.KeyAccess.errors\" class=\"error response\">\n          <div *ngIf=\"fe.KeyAccess.errors.maxlength\">The key must be up to 60 characters long</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"MaxStudents\">Maximum Number of Students:</label>\n        <input class=\"number\" type=\"number\" min=\"0\" max=\"1000\" formControlName=\"MaxStudents\"\n               name=\"MaxStudents\" id=\"MaxStudents\">\n        <div *ngIf=\"submitted && fe.MaxStudents.errors\" class=\"error response\">\n          <div *ngIf=\"fe.MaxStudents.errors.max\">The maximum number of students allowed is 100</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Name\">Description:</label>\n        <ckeditor [editor]=\"Editor\" [config]=\"config\" formControlName=\"Description\"></ckeditor>\n      </div>\n\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">{{fe.Id.value? \"Update\":\"Insert\"}}</button>\n      </div>\n    </form>\n\n  </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -149,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span *ngIf=\"notSel===1\">Classroom</span>\n            <span class=\"{{classroom.Enabled ? 'Enabled':'Disabled'}}\">\n            {{classroom.Name}} ({{classroom.Enabled ? \"Enabled\":\"Disabled\"}})\n            </span>\n        </div>\n        <div style=\"float: right\" *ngIf=\"classroom.Name && (userSession.Module==='Admin' ||\n                           classroom.Module==='Lecture' ||\n                           classroom.IdUser==userSession.Id)\">\n            <button\n                    class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"disableClassroom()\">\n                {{classroom.Enabled ? \"Disable\":\"Enable\"}}\n            </button>\n            <button\n                    class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"editClassroom()\">Edit\n            </button>\n        </div>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n        <div *ngIf=\"notSel===1 \">\n            Please, select one classroom.\n        </div>\n\n        <div *ngIf=\"notSel===0 && loadC===0\">\n            <app-mat-progress-bar></app-mat-progress-bar>\n        </div>\n\n        <div *ngIf=\"(!classroom && loadC===1)\">\n            No records found.\n        </div>\n\n        <div class=\"form-group\" *ngIf=\"(classroom && loadC===1)\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header\" style=\"min-height: 141px;\">\n                            Description\n                            <mat-divider></mat-divider>\n                            <div [innerHTML]=\"classroom.Description\" class=\"description\"></div>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header\" style=\"min-height: 141px;\">\n                            <p class=\"description\" *ngIf=\"classroom.Module || userSession.Module==='Admin'\">Self-registration key: {{classroom.KeyAccess}}</p>\n\n                            <div class=\"col-md-12 user-container\" *ngIf=\"!classroom.Module && userSession.Module!=='Admin'\">\n                                <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n\n                                    <div class=\"form-row\">\n                                        <div class=\"form-group col-md-6\">\n                                            <label for=\"KeyAccess\">Self-registration key:</label>\n                                            <input type=\"text\" formControlName=\"KeyAccess\" placeholder=\"KeyAccess\"\n                                                   name=\"KeyAccess\" class=\"form-control\" id=\"KeyAccess\">\n                                        </div>\n                                        <div class=\"form-group col-md-6\">\n                                            <button class=\"btn-sm btn-success\">Insert Key</button>\n                                        </div>\n                                    </div>\n\n                                    <div *ngIf=\"submitted && fe.KeyAccess.errors\" class=\"error response\">\n                                        <div *ngIf=\"fe.KeyAccess.errors.maxlength\">The key must be up to 60 characters\n                                            long\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n\n\n                            <p class=\"description\">Maximum number of students: {{classroom.MaxStudents}}</p>\n                            Members\n                            <mat-divider></mat-divider>\n                            <div *ngIf=\"loadM===0\">\n                                <app-mat-progress-bar></app-mat-progress-bar>\n                            </div>\n\n                            <div *ngIf=\"(!classroom && loadM===1)\">\n                                No members found.\n                            </div>\n                            <table class=\"table table-striped\">\n                                <tr *ngFor=\"let u of users\">\n                                    <td>\n                                        <span class=\"description\">{{u.Name}}: {{u.Module}} ({{u.Email}})</span>\n                                    </td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span *ngIf=\"notSel===1\">Classroom</span>\n            <span class=\"{{classroom.Enabled ? 'Enabled':'Disabled'}}\">\n            {{classroom.Name}} ({{classroom.Enabled ? \"Enabled\":\"Disabled\"}})\n            </span>\n        </div>\n        <div style=\"float: right\" *ngIf=\"classroom.Name && (userSession.Module==='Admin' ||\n                           classroomModule==='Lecture' ||\n                           classroom.IdUser==userSession.Id)\">\n            <button\n                    class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"disableClassroom()\">\n                {{classroom.Enabled ? \"Disable\":\"Enable\"}}\n            </button>\n            <button\n                    class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"editClassroom()\">Edit\n            </button>\n        </div>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n        <div *ngIf=\"notSel===1 \">\n            Please, select one classroom.\n        </div>\n\n        <div *ngIf=\"notSel===0 && loadC===0\">\n            <app-mat-progress-bar></app-mat-progress-bar>\n        </div>\n\n        <div *ngIf=\"(!classroom && loadC===1)\">\n            No records found.\n        </div>\n\n        <div class=\"form-group\" *ngIf=\"(classroom && loadC===1)\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header\" style=\"min-height: 141px;\">\n                            Description\n                            <mat-divider></mat-divider>\n                            <br />\n                            <div [innerHTML]=\"classroom.Description\" class=\"description\"></div>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header\" style=\"min-height: 141px;\">\n                            <p class=\"description\" *ngIf=\"classroomModule || userSession.Module==='Admin'\">Self-registration key: {{classroom.KeyAccess}}</p>\n\n                            <div class=\"col-md-12 user-container\" *ngIf=\"!classroomModule && userSession.Module!=='Admin'\">\n                                <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n\n                                    <div class=\"form-row\">\n                                        <div class=\"form-group col-md-6\">\n                                            <label for=\"KeyAccess\">Self-registration key:</label>\n                                            <input type=\"text\" formControlName=\"KeyAccess\" placeholder=\"KeyAccess\"\n                                                   name=\"KeyAccess\" class=\"form-control\" id=\"KeyAccess\">\n                                        </div>\n                                        <div class=\"form-group col-md-6\">\n                                            <button class=\"btn-sm btn-success\">Insert Key</button>\n                                        </div>\n                                    </div>\n\n                                    <div *ngIf=\"submitted && fe.KeyAccess.errors\" class=\"error response\">\n                                        <div *ngIf=\"fe.KeyAccess.errors.maxlength\">The key must be up to 60 characters\n                                            long\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n\n\n                            <p class=\"description\">Maximum number of students: {{classroom.MaxStudents}}</p>\n                            Members\n                            <mat-divider></mat-divider>\n                            <div *ngIf=\"loadM===0\">\n                                <app-mat-progress-bar></app-mat-progress-bar>\n                            </div>\n\n                            <div *ngIf=\"(!classroom && loadM===1)\">\n                                No members found.\n                            </div>\n                            <table class=\"table table-striped\">\n                                <tr *ngFor=\"let u of users\">\n                                    <td>\n                                        <img src=\"../../../assets/{{u.Module}}.jpg\" width=\"20px\"/>\n                                        <span class=\"description\">{{u.Module}} - {{u.Name}}: {{u.Email}}</span>\n                                    </td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n\n");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Answer: {{exercise.Title}} {{answer.Name?'('+answer.Name+')':''}}</span>\n      <br />\n      <span *ngIf=\"(exercise.ExIsExpired >= 0)\"\n            class=\"time\" style=\"font-size: 12px;\">Time to finish: {{countDown}}\n            </span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-answer')\" style=\"margin-left: 20px;\">Answers</button>\n    </div>\n  </h6>\n\n  <div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n  </div>\n\n  <div class=\"col-md-12 group-container\" [ngClass]=\"backgroundColor\">\n\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n      <br />\n      <ul ngbNav #nav=\"ngbNav\" class=\"nav-tabs\" [(activeId)]=\"navActive\" [destroyOnHide]=\"false\">\n        <li [ngbNavItem]=\"1\">\n          <a ngbNavLink>Content</a>\n          <ng-template ngbNavContent>\n            <div class=\"card m-12\">\n              <h6 class=\"card-header\">Exercise description</h6>\n              <div class=\"card-body\">\n                <div [innerHTML]=\"exercise.Content\"></div>\n              </div>\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"2\">\n          <a ngbNavLink>Coding</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group code\">\n              <app-code></app-code>\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"3\">\n          <a ngbNavLink>Diff</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group\">\n              <div class=\"diff\">\n                <div class=\"diffAdmin\">Admin Result</div>\n                <div class=\"diffUser\">Your Result:\n                  <button (click)=\"false\" *ngIf=\"diff\" [ngClass]=\"(diff=='EQUAL')?'btn-sm btn btn-success':'btn-sm btn btn-danger'\">\n                    {{diff}}\n                  </button>\n                </div>\n              </div>\n\n              <ngx-monaco-diff-editor\n                      [options]=\"resultOptions\"\n                      [originalModel]=\"originalModel\"\n                      [modifiedModel]=\"modifiedModel\">\n\n              </ngx-monaco-diff-editor>\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"Comment\">Comment:</label>\n              <textarea class=\"text\" type=\"text\" formControlName=\"Comment\" name=\"Comment\" id=\"Comment\"></textarea>\n            </div>\n\n          </ng-template>\n        </li>\n\n      </ul>\n      <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n      <div class=\"form-group\">\n        <br /><button *ngIf=\"!Score && exercise.ExIsExpired > 0 && exercise.MaxSubmissions > TotalEx\"\n                      class=\"btn-sm btn-success\">Submit</button>\n      </div>\n\n    </form>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Answer: {{exercise.Title}} {{answerName?'('+answerName+')':''}}</span>\n      <br />\n      <span *ngIf=\"(exIsExpired >= 0)\"\n            class=\"time\" style=\"font-size: 12px;\">Time to finish: {{countDown}}\n            </span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-answer')\" style=\"margin-left: 20px;\">Answers</button>\n    </div>\n  </h6>\n\n  <div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n  </div>\n\n  <div class=\"col-md-12 group-container\">\n\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n      <br />\n      <ul ngbNav #nav=\"ngbNav\" class=\"nav-tabs\" [(activeId)]=\"navActive\" [destroyOnHide]=\"false\">\n        <li [ngbNavItem]=\"1\">\n          <a ngbNavLink>Content</a>\n          <ng-template ngbNavContent>\n            <div class=\"card m-12\">\n              <h6 class=\"card-header\">Exercise description</h6>\n              <div class=\"card-body\">\n                <div [innerHTML]=\"exercise.Content\"></div>\n              </div>\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"2\">\n          <a ngbNavLink>Coding</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group code\">\n              <app-code></app-code>\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"3\">\n          <a ngbNavLink>Diff</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group\">\n              <div class=\"diff\">\n                <div class=\"diffAdmin\">Admin Result</div>\n                <div class=\"diffUser\">Your Result:\n                  <button (click)=\"false\" *ngIf=\"diff\" [ngClass]=\"(diff=='EQUAL')?'btn-sm btn btn-success':'btn-sm btn btn-danger'\">\n                    {{diff}}\n                  </button>\n                </div>\n              </div>\n\n              <ngx-monaco-diff-editor\n                      [options]=\"resultOptions\"\n                      [originalModel]=\"originalModel\"\n                      [modifiedModel]=\"modifiedModel\">\n\n              </ngx-monaco-diff-editor>\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"Comment\">Comment:</label>\n              <textarea class=\"text\" type=\"text\" formControlName=\"Comment\" name=\"Comment\" id=\"Comment\"></textarea>\n            </div>\n\n          </ng-template>\n        </li>\n\n      </ul>\n      <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n      <div class=\"form-group\">\n        <br /><button *ngIf=\"!Score && exIsExpired > 0 && exercise.MaxSubmissions > TotalEx\"\n                      class=\"btn-sm btn-success\">Submit</button>\n      </div>\n\n    </form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>Last Exercise Answers: {{exercise.Title}}</span>\n            <br/>\n            <span *ngIf=\"(exercise.ExIsExpired >= 0)\"\n                  class=\"time\" style=\"font-size: 12px;\">Time to finish: {{_util.countdown(exercise.CountDown)}}\n            </span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-exercise')\" style=\"margin-left: 20px;\">\n                Exercises\n            </button>\n            <button *ngIf=\"(userSession.Module==='User' && totalAnswers < exercise.MaxSubmissions\n                                        && exercise.ExIsExpired >= 0 && !score)\n            || (  (userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer')\n                   && exercise.ExIsExpired >= 0 && !score\n               )\" class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addAnswer()\">\n                Add\n            </button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(answersUser?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n        <div *ngIf=\"userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer' \" class=\"buttonMenu\">\n\n            <div ngbDropdown class=\"d-inline-block\">\n                <button class=\"btn-sm btn-success\" (click)=\"checkSimilarity(); false;\" style=\"margin-left: 20px;\">Check\n                    Similarity\n                </button>\n            </div>\n            <div ngbDropdown class=\"d-inline-block\">\n                <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic2\" ngbDropdownToggle>Export\n                    Results\n                </button>\n                <div ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n                    <button (click)=\"download('allExec'); false;\" ngbDropdownItem disabled>All Executions</button>\n                    <button (click)=\"download('lastExec'); false;\" ngbDropdownItem>Last Executions</button>\n                    <button (click)=\"download('allCode'); false;\" ngbDropdownItem disabled>All Codes</button>\n                    <button (click)=\"download('lastCode'); false;\" ngbDropdownItem>Last Codes</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"example-container mat-elevation-z8 \">\n\n        <table mat-table\n               [dataSource]=\"dataSource\" multiTemplateDataRows\n               class=\"mat-elevation-z8\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.Id}}</td>\n            </ng-container>\n\n            <!-- Title Column -->\n            <ng-container matColumnDef=\"Name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name/Group</th>\n                <td mat-cell *matCellDef=\"let row;let i = dataIndex;\">\n                    <a *ngIf=\"row.gId && (userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer')\"\n                       href=\"#\" (click)=\"getHistoryGroup(row.gId); false;\"\n                       placement=\"top\" ngbTooltip=\"Click to show the group history\">\n                        {{row.gId ? row.gName : row.Name}}\n                    </a>\n                    <a *ngIf=\"!row.gId || (row.gId && userSession.Module!=='Admin' && module!=='Assistant' && module!=='Lecturer')\">\n                        {{row.gId ? row.gName : row.Name}}\n                    </a>\n                </td>\n            </ng-container>\n\n            <!-- ExpirationDate Column -->\n            <ng-container matColumnDef=\"Date\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Submission</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.Date}}</td>\n            </ng-container>\n\n            <!-- Status Column -->\n            <ng-container matColumnDef=\"Status\">\n                <th mat-header-cell *matHeaderCellDef> Last Result</th>\n                <td mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button data-html=\"true\" id=\"button\" placement=\"top\" [ngbTooltip]=\"htmlContent\"\n                            [ngClass]=\"(element.Status=='EQUAL')?'btn-sm btn btn-success':'btn-sm btn btn-danger'\">\n                        {{element.Status}}\n                    </button>\n                </td>\n            </ng-container>\n\n            <!-- Score Time Column -->\n            <ng-container matColumnDef=\"Score\">\n                <th mat-header-cell *matHeaderCellDef> Score / Feedback</th>\n                <td mat-cell *matCellDef=\"let row;let i = dataIndex;\">\n                    <a *ngIf=\"userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer'\"\n                       href=\"#\" (click)=\"changeScore(i, row); false;\"\n                       placement=\"top\" ngbTooltip=\"Click to change\">\n                        {{row.Score ? row.Score:\"No\"}}/{{row.Feedback ? \"Yes\":\"No\"}}\n                    </a>\n                    <a *ngIf=\"userSession.Module!=='Admin' && module!=='Assistant' && module!=='Lecturer'\"\n                       href=\"#\" (click)=\"showFeedback(i); false;\"\n                       placement=\"top\" ngbTooltip=\"Click to show the feedback\">\n                        {{row.Score ? row.Score:\"No\"}}/{{row.Feedback ? \"Yes\":\"No\"}}\n                    </a>\n                </td>\n            </ng-container>\n\n            <!-- Response Time Column -->\n            <ng-container matColumnDef=\"TotalEx\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Attempts Number</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.TotalEx}}</td>\n            </ng-container>\n\n            <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->\n            <ng-container matColumnDef=\"expandedDetail\">\n                <td mat-cell *matCellDef=\"let element;let r = dataIndex;\" [attr.colspan]=\"displayedColumns.length\">\n                    <div class=\"element-detail\"\n                         [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\">\n\n\n                        <table mat-table [dataSource]=\"element.run\" matSort>\n\n                            <!-- Index Column -->\n                            <ng-container matColumnDef=\"Index2\">\n                                <mat-header-cell *matHeaderCellDef> #</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row;let i = index\"> {{i+1}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Name Column -->\n                            <ng-container matColumnDef=\"Name2\">\n                                <mat-header-cell *matHeaderCellDef> Submitted by</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.Name}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Date Column -->\n                            <ng-container matColumnDef=\"Date2\">\n                                <mat-header-cell *matHeaderCellDef> Submission</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.Date}}</mat-cell>\n                            </ng-container>\n\n                            <!-- CheckCount Column -->\n                            <ng-container matColumnDef=\"CheckCount2\">\n                                <mat-header-cell *matHeaderCellDef> Code Analysis</mat-header-cell>\n                                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                                    <a href=\"#\" (click)=\"showList(element.CheckList); false;\">\n                                        <mat-progress-bar id=\"checkBar\"\n                                                          placement=\"top\" ngbTooltip=\"Click to see code analysis\"\n                                                          mode=\"determinate\"\n                                                          value=\"{{element.CheckCount}}\"></mat-progress-bar>\n                                    </a>\n                                </mat-cell>\n                            </ng-container>\n\n                            <!-- ExecTime Column -->\n                            <ng-container matColumnDef=\"ExecTime2\">\n                                <mat-header-cell *matHeaderCellDef> Response Time</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.ExecTime}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Events Column -->\n                            <ng-container matColumnDef=\"History2\">\n                                <mat-header-cell *matHeaderCellDef mat-sort-header> Events</mat-header-cell>\n                                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                                    <a href=\"#\" (click)=\"showEvents(element.Id); false;\"\n                                       placement=\"top\" ngbTooltip=\"Click to see the exercise events\">\n                                        {{element.History}}\n                                    </a>\n                                </mat-cell>\n                            </ng-container>\n\n                            <!-- Status Column -->\n                            <ng-container matColumnDef=\"Status2\">\n                                <mat-header-cell *matHeaderCellDef> Status</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.Status}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Action Column -->\n                            <ng-container matColumnDef=\"Action2\">\n                                <mat-header-cell *matHeaderCellDef> Action</mat-header-cell>\n                                <mat-cell *matCellDef=\"let element;let i = index\" class=\"action-link\">\n                                    <div style=\"word-wrap: break-word;\">\n                                        <button mat-icon-button\n                                                *ngIf=\"userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer'\"\n                                                (click)=\"deleteAnswer(element.Id, element.Name, r, i); false;\"\n                                                placement=\"top\" ngbTooltip=\"Delete exercise answer\">\n                                            <mat-icon>delete</mat-icon>\n                                        </button>\n                                        <button mat-icon-button\n                                                (click)=\"editAnswer(element); false;\"\n                                                placement=\"top\" ngbTooltip=\"Show exercise answer\">\n                                            <mat-icon>code</mat-icon>\n                                        </button>\n                                    </div>\n                                </mat-cell>\n                            </ng-container>\n\n                            <mat-header-row class=\"header2\" *matHeaderRowDef=\"displayedColumns2\"></mat-header-row>\n                            <mat-row *matRowDef=\"let row; columns: displayedColumns2;\">\n                            </mat-row>\n                        </table>\n\n                    </div>\n                </td>\n            </ng-container>\n\n            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n            <tr mat-row *matRowDef=\"let element; columns: displayedColumns;\"\n                class=\"element-row\"\n                [class.example-expanded-row]=\"expandedElement === element\"\n                (click)=\"expandedElement = element\">\n            </tr>\n            <tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr>\n\n        </table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>Last Exercise Answers: {{exercise.Title}}</span>\n            <br/>\n            <span *ngIf=\"(exIsExpired >= 0)\"\n                  class=\"time\" style=\"font-size: 12px;\">Time to finish: {{countDown}}\n            </span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-exercise')\" style=\"margin-left: 20px;\">\n                Exercises\n            </button>\n            <button *ngIf=\"(userSession.Module==='User' && totalAnswers < exercise.MaxSubmissions\n                                        && exIsExpired >= 0 && !score)\n            || (  (userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer')\n                   && exIsExpired >= 0 && !score\n               )\" class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addAnswer()\">\n                Add\n            </button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(answers?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($any($event.target).value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n        <div *ngIf=\"userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer' \" class=\"buttonMenu\">\n\n            <div ngbDropdown class=\"d-inline-block\">\n                <button class=\"btn-sm btn-success\" (click)=\"checkSimilarity(); false;\" style=\"margin-left: 20px;\">Check\n                    Similarity\n                </button>\n            </div>\n            <div ngbDropdown class=\"d-inline-block\">\n                <button class=\"btn btn-outline-secondary\" (click)=\"false;\" id=\"dropdownBasic2\" ngbDropdownToggle>Export\n                    Results\n                </button>\n                <div ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n                    <button (click)=\"download('allExec'); false;\" ngbDropdownItem disabled>All Executions</button>\n                    <button (click)=\"download('lastExec'); false;\" ngbDropdownItem>Last Executions</button>\n                    <button (click)=\"download('allCode'); false;\" ngbDropdownItem disabled>All Codes</button>\n                    <button (click)=\"download('lastCode'); false;\" ngbDropdownItem>Last Codes</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"example-container mat-elevation-z8 \">\n\n        <table mat-table\n               [dataSource]=\"dataSource\" multiTemplateDataRows\n               class=\"mat-elevation-z8\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.Id}}</td>\n            </ng-container>\n\n            <!-- Title Column -->\n            <ng-container matColumnDef=\"Name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name/Group</th>\n                <td mat-cell *matCellDef=\"let row;let i = dataIndex;\">\n                    <a *ngIf=\"row.gId && (userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer')\"\n                       href=\"#\" (click)=\"getHistoryGroup(row.gId); false;\"\n                       placement=\"top\" ngbTooltip=\"Click to show the group history\">\n                        {{row.gId ? row.gName : row.Name}}\n                    </a>\n                    <a *ngIf=\"!row.gId || (row.gId && userSession.Module!=='Admin' && module!=='Assistant' && module!=='Lecturer')\">\n                        {{row.gId ? row.gName : row.Name}}\n                    </a>\n                </td>\n            </ng-container>\n\n            <!-- ExpirationDate Column -->\n            <ng-container matColumnDef=\"Date\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Submission</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.Date}}</td>\n            </ng-container>\n\n            <!-- Status Column -->\n            <ng-container matColumnDef=\"Status\">\n                <th mat-header-cell *matHeaderCellDef> Last Result</th>\n                <td mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button data-html=\"true\" id=\"button\" placement=\"top\"\n                            [ngClass]=\"(element.Status=='EQUAL')?'btn-sm btn btn-success':'btn-sm btn btn-danger'\">\n                        {{element.Status}}\n                    </button>\n                </td>\n            </ng-container>\n\n            <!-- Score Time Column -->\n            <ng-container matColumnDef=\"Score\">\n                <th mat-header-cell *matHeaderCellDef> Score / Feedback</th>\n                <td mat-cell *matCellDef=\"let row;let i = dataIndex;\">\n                    <a *ngIf=\"userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer'\"\n                       href=\"#\" (click)=\"changeScore(i, row); false;\"\n                       placement=\"top\" ngbTooltip=\"Click to change\">\n                        {{row.Score ? row.Score:\"No\"}}/{{row.Feedback ? \"Yes\":\"No\"}}\n                    </a>\n                    <a *ngIf=\"userSession.Module!=='Admin' && module!=='Assistant' && module!=='Lecturer'\"\n                       href=\"#\" (click)=\"showFeedback(i); false;\"\n                       placement=\"top\" ngbTooltip=\"Click to show the feedback\">\n                        {{row.Score ? row.Score:\"No\"}}/{{row.Feedback ? \"Yes\":\"No\"}}\n                    </a>\n                </td>\n            </ng-container>\n\n            <!-- Response Time Column -->\n            <ng-container matColumnDef=\"TotalEx\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Attempts Number</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.TotalEx}}</td>\n            </ng-container>\n\n            <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->\n            <ng-container matColumnDef=\"expandedDetail\">\n                <td mat-cell *matCellDef=\"let element;let r = dataIndex;\" [attr.colspan]=\"displayedColumns.length\">\n                    <div class=\"element-detail\"\n                         [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\">\n\n\n                        <table mat-table [dataSource]=\"element.run\" matSort>\n\n                            <!-- Index Column -->\n                            <ng-container matColumnDef=\"Index2\">\n                                <mat-header-cell *matHeaderCellDef> #</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row;let i = index\"> {{i+1}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Name Column -->\n                            <ng-container matColumnDef=\"Name2\">\n                                <mat-header-cell *matHeaderCellDef> Submitted by</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.Name}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Date Column -->\n                            <ng-container matColumnDef=\"Date2\">\n                                <mat-header-cell *matHeaderCellDef> Submission</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.Date}}</mat-cell>\n                            </ng-container>\n\n                            <!-- CheckCount Column -->\n                            <ng-container matColumnDef=\"CheckCount2\">\n                                <mat-header-cell *matHeaderCellDef> Code Analysis</mat-header-cell>\n                                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                                    <a href=\"#\" (click)=\"showList(element.CheckList); false;\">\n                                        <mat-progress-bar id=\"checkBar\"\n                                                          placement=\"top\" ngbTooltip=\"Click to see code analysis\"\n                                                          mode=\"determinate\"\n                                                          value=\"{{element.CheckCount}}\"></mat-progress-bar>\n                                    </a>\n                                </mat-cell>\n                            </ng-container>\n\n                            <!-- ExecTime Column -->\n                            <ng-container matColumnDef=\"ExecTime2\">\n                                <mat-header-cell *matHeaderCellDef> Response Time</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.ExecTime}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Events Column -->\n                            <ng-container matColumnDef=\"History2\">\n                                <mat-header-cell *matHeaderCellDef mat-sort-header> Events</mat-header-cell>\n                                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                                    <a href=\"#\" (click)=\"showEvents(element.Id); false;\"\n                                       placement=\"top\" ngbTooltip=\"Click to see the exercise events\">\n                                        {{element.History}}\n                                    </a>\n                                </mat-cell>\n                            </ng-container>\n\n                            <!-- Status Column -->\n                            <ng-container matColumnDef=\"Status2\">\n                                <mat-header-cell *matHeaderCellDef> Status</mat-header-cell>\n                                <mat-cell *matCellDef=\"let row\"> {{row.Status}}</mat-cell>\n                            </ng-container>\n\n                            <!-- Action Column -->\n                            <ng-container matColumnDef=\"Action2\">\n                                <mat-header-cell *matHeaderCellDef> Action</mat-header-cell>\n                                <mat-cell *matCellDef=\"let element;let i = index\" class=\"action-link\">\n                                    <div style=\"word-wrap: break-word;\">\n                                        <button mat-icon-button\n                                                *ngIf=\"userSession.Module==='Admin' || module==='Assistant' || module==='Lecturer'\"\n                                                (click)=\"deleteAnswer(element.Id, element.Name, r, i); false;\"\n                                                placement=\"top\" ngbTooltip=\"Delete exercise answer\">\n                                            <mat-icon>delete</mat-icon>\n                                        </button>\n                                        <button mat-icon-button\n                                                (click)=\"editAnswer(element); false;\"\n                                                placement=\"top\" ngbTooltip=\"Show exercise answer\">\n                                            <mat-icon>code</mat-icon>\n                                        </button>\n                                    </div>\n                                </mat-cell>\n                            </ng-container>\n\n                            <mat-header-row class=\"header2\" *matHeaderRowDef=\"displayedColumns2\"></mat-header-row>\n                            <mat-row *matRowDef=\"let row; columns: displayedColumns2;\">\n                            </mat-row>\n                        </table>\n\n                    </div>\n                </td>\n            </ng-container>\n\n            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n            <tr mat-row *matRowDef=\"let element; columns: displayedColumns;\"\n                class=\"element-row\"\n                [class.example-expanded-row]=\"expandedElement === element\"\n                (click)=\"expandedElement = element\">\n            </tr>\n            <tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr>\n\n        </table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} Exercise</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-exercise')\" style=\"margin-left: 20px;\">Exercises</button>\n    </div>\n  </h6>\n  <br />\n  <div class=\"col-md-12 group-container\">\n    <div *ngIf=\"!fe.Id.value\">\n      <span class=\"alert-info\">Fill in the contents and parameters first, then click the Insert button to enable Groups, Files, and Code.</span>\n      <br />\n      <br />\n    </div>\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n\n      <ul ngbNav #nav=\"ngbNav\" class=\"nav-tabs\" [destroyOnHide]=\"false\">\n        <li [ngbNavItem]=\"1\">\n          <a ngbNavLink>Content</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group\">\n              <label for=\"Title\">Title:</label>\n              <input class=\"text\" type=\"text\" formControlName=\"Title\" name=\"Title\" id=\"Title\">\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"Content\">Content:</label>\n              <ckeditor [editor]=\"Editor\" formControlName=\"Content\"></ckeditor>\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"2\">\n          <a ngbNavLink>Parameters</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group\">\n              <label for=\"Date\">Expiration Date: </label>\n\n              <div class=\"form-group\">\n                <div class=\"input-group\">\n                  <input class=\"date\" placeholder=\"yyyy-mm-dd\"\n                         name=\"dp\" formControlName=\"Date\" ngbDatepicker #d=\"ngbDatepicker\">\n                  <div class=\"input-group-append\">\n                    <button class=\"btn btn-outline-secondary\" (click)=\"d.toggle()\" type=\"button\">\n                      <img class=\"icon\" src=\"../../assets/calendar.png\" />\n                    </button>\n                  </div>\n                </div>\n                <ngb-timepicker formControlName=\"Time\"></ngb-timepicker>\n              </div>\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"MaxSubmissions\">Maximum Number of Submissions:</label>\n              <input class=\"number\" type=\"number\" min=\"0\" max=\"1000\" formControlName=\"MaxSubmissions\"\n                     name=\"MaxSubmissions\" id=\"MaxSubmissions\">\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"MaxTimeout\">Maximum Timeout (seconds):</label>\n              <input class=\"number\" type=\"number\" min=\"0\" max=\"1000\" formControlName=\"MaxTimeout\"\n                     name=\"MaxTimeout\" id=\"MaxTimeout\">\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"MaxFileSize\">Maximum file size that the student can use with input (bytes). <br />Leave zero to disable:</label>\n              <input class=\"number\" type=\"number\" formControlName=\"MaxFileSize\"\n                     name=\"MaxFileSize\" id=\"MaxFileSize\"\n                     (click)=\"getInputMaxFileSize($event)\"\n                     (keyup)=\"getInputMaxFileSize($event)\">{{maxFileSize}}\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"4\" [disabled]=\"!exerciseId\">\n          <a ngbNavLink>Groups</a>\n          <ng-template ngbNavContent>\n\n            <exercises-app-groups [exerciseId]=\"exerciseId\"\n                          *ngIf=\"exerciseId\"></exercises-app-groups>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"5\" [disabled]=\"!exerciseId\">\n          <a ngbNavLink>Files</a>\n          <ng-template ngbNavContent>\n            <exercises-app-files [exerciseId]=\"exerciseId\"\n                                 *ngIf=\"exerciseId\"></exercises-app-files>\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"6\" [disabled]=\"!fe.Id.value\">\n          <a ngbNavLink (click)=\"updateCodeTab()\">Code</a>\n          <ng-template ngbNavContent>\n            <div class=\"form-group code\">\n              <app-code></app-code>\n            </div>\n          </ng-template>\n        </li>\n      </ul>\n      <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">{{exerciseId? \"Update\":\"Insert\"}}</button>\n      </div>\n      <div *ngIf=\"submitted && fe.Title.errors\" class=\"error response\">\n        <div *ngIf=\"fe.Title.errors.required\">Title is required</div>\n        <div *ngIf=\"fe.Name.errors.minlength\">Title field must have a minimum of 5 characters</div>\n        <div *ngIf=\"fe.Title.errors.maxlength\">Title must be up to 100 characters long</div>\n      </div>\n      <div *ngIf=\"submitted && fe.Date.errors\" class=\"error response\">\n        <div *ngIf=\"fe.Date.errors.required\">Date is required</div>\n      </div>\n      <div *ngIf=\"submitted && fe.Time.errors\" class=\"error response\">\n        <div *ngIf=\"fe.Time.errors.required\">Time is required</div>\n      </div>\n      <div *ngIf=\"submitted && fe.MaxTimeout.errors\" class=\"error response\">\n        <div *ngIf=\"fe.MaxTimeout.errors.required\">MaxTimeout is required</div>\n      </div>\n      <div *ngIf=\"submitted && fe.MaxSubmissions.errors\" class=\"error response\">\n        <div *ngIf=\"fe.MaxSubmissions.errors.required\">MaxSubmissions is required</div>\n      </div>\n    </form>\n\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} Exercise</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-exercise')\" style=\"margin-left: 20px;\">Exercises</button>\n    </div>\n  </h6>\n  <br />\n  <div class=\"col-md-12 group-container\">\n    <div *ngIf=\"!fe.Id.value\">\n      <span class=\"alert-info\">Fill in the contents and parameters first, then click the Insert button to enable Groups, Files, and Code.</span>\n      <br />\n      <br />\n    </div>\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n\n      <ul ngbNav #nav=\"ngbNav\" class=\"nav-tabs\" [destroyOnHide]=\"false\">\n        <li [ngbNavItem]=\"1\">\n          <a ngbNavLink>Content</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group\">\n              <label for=\"Title\">Title:</label>\n              <input class=\"text\" type=\"text\" formControlName=\"Title\" name=\"Title\" id=\"Title\">\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"Content\">Content:</label>\n              <ckeditor [editor]=\"Editor\" [config]=\"config\" formControlName=\"Content\"></ckeditor>\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"2\">\n          <a ngbNavLink>Parameters</a>\n          <ng-template ngbNavContent>\n\n            <div class=\"form-group\">\n              <label for=\"Date\">Expiration Date: </label>\n\n              <div class=\"form-group\">\n                <div class=\"input-group\">\n                  <input class=\"date\" placeholder=\"yyyy-mm-dd\"\n                         name=\"dp\" formControlName=\"Date\" ngbDatepicker #d=\"ngbDatepicker\">\n                  <div class=\"input-group-append\">\n                    <button class=\"btn btn-outline-secondary\" (click)=\"d.toggle()\" type=\"button\">\n                      <img class=\"icon\" src=\"../../assets/calendar.png\" />\n                    </button>\n                  </div>\n                </div>\n                <ngb-timepicker formControlName=\"Time\"></ngb-timepicker>\n              </div>\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"MaxSubmissions\">Maximum Number of Submissions:</label>\n              <input class=\"number\" type=\"number\" min=\"0\" max=\"1000\" formControlName=\"MaxSubmissions\"\n                     name=\"MaxSubmissions\" id=\"MaxSubmissions\">\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"MaxTimeout\">Maximum Timeout (seconds):</label>\n              <input class=\"number\" type=\"number\" min=\"0\" max=\"1000\" formControlName=\"MaxTimeout\"\n                     name=\"MaxTimeout\" id=\"MaxTimeout\">\n            </div>\n\n            <div class=\"form-group\">\n              <label for=\"MaxFileSize\">Maximum file size that the student can use with input (bytes). <br />Leave zero to disable:</label>\n              <input class=\"number\" type=\"number\" formControlName=\"MaxFileSize\"\n                     name=\"MaxFileSize\" id=\"MaxFileSize\"\n                     (click)=\"getInputMaxFileSize($event)\"\n                     (keyup)=\"getInputMaxFileSize($event)\">{{maxFileSize}}\n            </div>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"4\" [disabled]=\"!exerciseId\">\n          <a ngbNavLink>Groups</a>\n          <ng-template ngbNavContent>\n\n            <exercises-app-groups [exerciseId]=\"exerciseId\"\n                          *ngIf=\"exerciseId\"></exercises-app-groups>\n\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"5\" [disabled]=\"!exerciseId\">\n          <a ngbNavLink>Files</a>\n          <ng-template ngbNavContent>\n            <exercises-app-files [exerciseId]=\"exerciseId\"\n                                 *ngIf=\"exerciseId\"></exercises-app-files>\n          </ng-template>\n        </li>\n\n        <li [ngbNavItem]=\"6\" [disabled]=\"!fe.Id.value\">\n          <a ngbNavLink (click)=\"updateCodeTab()\">Code</a>\n          <ng-template ngbNavContent>\n            <div class=\"form-group code\">\n              <app-code></app-code>\n            </div>\n          </ng-template>\n        </li>\n      </ul>\n      <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">{{exerciseId? \"Update\":\"Insert\"}}</button>\n      </div>\n      <div *ngIf=\"submitted && fe.Title.errors\" class=\"error response\">\n        <div *ngIf=\"fe.Title.errors.required\">Title is required</div>\n        <div *ngIf=\"fe.Name.errors.minlength\">Title field must have a minimum of 5 characters</div>\n        <div *ngIf=\"fe.Title.errors.maxlength\">Title must be up to 100 characters long</div>\n      </div>\n      <div *ngIf=\"submitted && fe.Date.errors\" class=\"error response\">\n        <div *ngIf=\"fe.Date.errors.required\">Date is required</div>\n      </div>\n      <div *ngIf=\"submitted && fe.Time.errors\" class=\"error response\">\n        <div *ngIf=\"fe.Time.errors.required\">Time is required</div>\n      </div>\n      <div *ngIf=\"submitted && fe.MaxTimeout.errors\" class=\"error response\">\n        <div *ngIf=\"fe.MaxTimeout.errors.required\">MaxTimeout is required</div>\n      </div>\n      <div *ngIf=\"submitted && fe.MaxSubmissions.errors\" class=\"error response\">\n        <div *ngIf=\"fe.MaxSubmissions.errors.required\">MaxSubmissions is required</div>\n      </div>\n    </form>\n\n  </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div *ngIf=\"load===0 && exerciseId\">\n  <app-mat-progress-bar></app-mat-progress-bar>\n</div>\n\n<div *ngIf=\"!exerciseId\">Save the exercise first to enter a group.</div>\n\n<div *ngIf=\"exerciseId\" class=\"m-12\">\n\n  <form *ngIf=\"exerciseId\" enctype=\"multipart/form-data\" (ngSubmit)=\"uploadFile(file)\">\n    <div class=\"form-row\">\n      <div class=\"form-group col-md-3\">\n        <input #inputFile class=\"btn-sm btn-primary\" type='file' [(ngModel)]=\"file\" name=\"media\" #selectfile >\n      </div>\n      <div class=\"form-group col-md-3\">\n        <button class=\"btn-sm btn-primary\" mat-raised-button type=\"button\" (click)=\"uploadFile(file)\">Upload</button>\n      </div>\n      <div class=\"form-group col-md-3\">\n        <progress [value]=progress.loaded  [max]=progress.total></progress>\n      </div>\n    </div>\n\n  </form>\n\n  <div *ngIf=\"(files?.length <= 0 && load===1)\">\n    No records found.\n  </div>\n\n  <div class=\"example-container mat-elevation-z8 \">\n\n    <mat-table [dataSource]=\"dataSource\" class=\"table table-striped\" matSort>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"Id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"Name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.FileName}} </mat-cell>\n      </ng-container>\n\n      <!-- Size Column -->\n      <ng-container matColumnDef=\"Size\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Size </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{_util.formatBytes(row.Size)}} </mat-cell>\n      </ng-container>\n\n      <!-- Action Column -->\n      <ng-container matColumnDef=\"Action\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <div>\n            <button mat-icon-button\n                    (click)=\"delete(element); false;\">\n              <mat-icon>delete</mat-icon>\n            </button>\n          </div>\n          <div>\n            <button placement=\"top\" ngbTooltip=\"Click to download\"\n                    mat-icon-button\n                    (click)=\"download(element); false;\">\n              <mat-icon>save_alt</mat-icon>\n            </button>\n          </div>\n        </mat-cell>\n      </ng-container>\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n    Files are inserted or deleted after choice. You don't need to click the Update button.\n\n  </div>\n\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div *ngIf=\"load===0 && exerciseId\">\n  <app-mat-progress-bar></app-mat-progress-bar>\n</div>\n\n<div *ngIf=\"!exerciseId\">Save the exercise first to enter a group.</div>\n\n<div *ngIf=\"exerciseId\" class=\"m-12\">\n\n  <form *ngIf=\"exerciseId\" enctype=\"multipart/form-data\" (ngSubmit)=\"uploadFile()\">\n    <div class=\"form-row\">\n      <div class=\"form-group col-md-3\">\n        <input #inputFile class=\"btn-sm btn-primary\" type='file' name=\"media\" #selectfile >\n      </div>\n      <div class=\"form-group col-md-3\">\n        <button class=\"btn-sm btn-primary\" mat-raised-button type=\"button\" (click)=\"uploadFile()\">Upload</button>\n      </div>\n      <div class=\"form-group col-md-3\">\n        <progress [value]=progress.loaded  [max]=progress.total></progress>\n      </div>\n    </div>\n\n  </form>\n\n  <div *ngIf=\"(files?.length <= 0 && load===1)\">\n    No records found.\n  </div>\n\n  <div class=\"example-container mat-elevation-z8 \">\n\n    <mat-table [dataSource]=\"dataSource\" class=\"table table-striped\" matSort>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"Id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"Name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.FileName}} </mat-cell>\n      </ng-container>\n\n      <!-- Size Column -->\n      <ng-container matColumnDef=\"Size\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Size </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{_util.formatBytes(row.Size)}} </mat-cell>\n      </ng-container>\n\n      <!-- Action Column -->\n      <ng-container matColumnDef=\"Action\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <div>\n            <button mat-icon-button\n                    (click)=\"delete(element); false;\">\n              <mat-icon>delete</mat-icon>\n            </button>\n          </div>\n          <div>\n            <button placement=\"top\" ngbTooltip=\"Click to download\"\n                    mat-icon-button\n                    (click)=\"download(element); false;\">\n              <mat-icon>save_alt</mat-icon>\n            </button>\n          </div>\n        </mat-cell>\n      </ng-container>\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n    Files are inserted or deleted after choice. You don't need to click the Update button.\n\n  </div>\n\n</div>\n");
 
 /***/ }),
 
@@ -214,7 +214,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"load===0\">\n  <app-mat-progress-bar></app-mat-progress-bar>\n</div>\n\n<div class=\"col-md-6 group-container\">\n  <div *ngIf=\"!exerciseId\">Save the exercise first to enter a group.</div>\n\n  <form  [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n\n    <mat-chip-list #chipList aria-label=\"Member selection\">\n\n      <div class=\"form-group\">\n\n        <mat-chip\n                *ngFor=\"let member of members\"\n                [selectable]=\"selectable\"\n                [removable]=\"removable\"\n                (removed)=\"remove(member)\">\n          {{member.Name}}\n          <mat-icon matChipRemove *ngIf=\"removable\">X</mat-icon>\n        </mat-chip>\n      </div>\n      <div class=\"form-group\">\n\n        <input\n                placeholder=\"New group...\"\n                #memberInput\n                [formControl]=\"memberCtrl\"\n                [matAutocomplete]=\"auto\"\n                [matChipInputFor]=\"chipList\"\n                [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                [matChipInputAddOnBlur]=\"addOnBlur\"\n                (matChipInputTokenEnd)=\"add(member)\">\n      </div>\n    </mat-chip-list>\n    <div class=\"form-group\">\n      Members are automatically inserted or deleted in the group once selected. You don't need to click the Update button.\n      <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n        <mat-option *ngFor=\"let member of filteredMembers | async\" [value]=\"member\">\n          {{member.Name}}\n        </mat-option>\n      </mat-autocomplete>\n    </div>\n\n  </form>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"load===0\">\n  <app-mat-progress-bar></app-mat-progress-bar>\n</div>\n\n<div class=\"col-md-6 group-container\">\n  <div *ngIf=\"!exerciseId\">Save the exercise first to enter a group.</div>\n\n  <form  [formGroup]=\"editForm\">\n\n    <mat-chip-list #chipList aria-label=\"Member selection\">\n\n      <div class=\"form-group\">\n\n        <mat-chip\n                *ngFor=\"let member of members\"\n                [selectable]=\"selectable\"\n                [removable]=\"removable\"\n                (removed)=\"remove(member)\">\n          {{member.Name}}\n          <mat-icon matChipRemove *ngIf=\"removable\">X</mat-icon>\n        </mat-chip>\n      </div>\n      <div class=\"form-group\">\n\n        <input\n                placeholder=\"New group...\"\n                #memberInput\n                [formControl]=\"memberCtrl\"\n                [matAutocomplete]=\"auto\"\n                [matChipInputFor]=\"chipList\"\n                [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                [matChipInputAddOnBlur]=\"addOnBlur\"\n                (matChipInputTokenEnd)=\"add(memberInput)\">\n      </div>\n    </mat-chip-list>\n    <div class=\"form-group\">\n      Members are automatically inserted or deleted in the group once selected. You don't need to click the Update button.\n      <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n        <mat-option *ngFor=\"let member of filteredMembers | async\" [value]=\"member\">\n          {{member.Name}}\n        </mat-option>\n      </mat-autocomplete>\n    </div>\n\n  </form>\n</div>\n");
 
 /***/ }),
 
@@ -227,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Exercises</span>\n    </div>\n\n    <div style=\"float: right\">\n      <button\n              class=\"btn-sm btn-primary\" style=\"width:120px\" (click)=\"setKey()\">Exercise Key\n      </button>\n    </div>\n\n    <div style=\"float: right\">\n      <button *ngIf=\"userSession.Module==='Admin' || module==='Lecturer' || module==='Assistant'\"\n              class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addExercise()\">Add</button>\n    </div>\n  </h6>\n\n  <div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n  </div>\n\n  <div *ngIf=\"(exercises?.length <= 0 && load===1)\">\n    No records found.\n  </div>\n\n  <div class=\"filter\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter: \">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8 \">\n\n    <mat-table [dataSource]=\"dataSource\" class=\"table table-striped\" matSort>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"Id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"Title\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.hasGroup ? row.Title+\" (\"+row.hasGroup+\")\" : row.Title}} </mat-cell>\n      </ng-container>\n\n      <!-- MaxSubmissions Column -->\n      <ng-container matColumnDef=\"MaxSubmissions\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>\n          <span placement=\"top\"\n                ngbTooltip=\"Maximum Number of Submissions / Timeout\">MNS/T</span>\n        </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.MaxSubmissions}}/{{row.MaxTimeout}}s </mat-cell>\n      </ng-container>\n\n      <!-- Date Column -->\n      <ng-container matColumnDef=\"Date\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Expiration Date </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">\n          <div style=\"word-wrap: break-word;\"> {{row.Date}}<br />\n            <span *ngIf=\"row.IsExpired < 0\" class=\"expired\">[expired]</span>\n            <span *ngIf=\"row.IsExpired > 0 && row.IsExpired <= 86400\" class=\"Notexpired\">[expires soon!]</span>\n            <span *ngIf=\"row.IsExpired > 86400\" class=\"Notexpired\">[about {{(row.IsExpired/60/60/24).toFixed(0)}} day(s)]</span>\n          </div>\n        </mat-cell>\n      </ng-container>\n\n      <!-- Response Time Column -->\n      <ng-container matColumnDef=\"ExecTime\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>\n                    <span placement=\"top\"\n                          ngbTooltip=\"Admin Response Time\">RT</span>\n        </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.ExecTime}} </mat-cell>\n      </ng-container>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"CheckCount\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>\n          <span placement=\"top\"\n                ngbTooltip=\"Admin Code Analysis\">Code Analysis</span>\n          </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <a href=\"#\" placement=\"top\" ngbTooltip=\"Click to see code analysis\"\n             (click)=\"showList(element.CheckList); false;\">\n            <mat-progress-bar id=\"checkBar\" mode=\"determinate\" value=\"{{element.CheckCount}}\"></mat-progress-bar>\n          </a>\n        </mat-cell>\n      </ng-container>\n\n      <!-- Delivered Column -->\n      <ng-container matColumnDef=\"Answers\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Delivered </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <div style=\"word-wrap: break-word;\">\n            <span *ngIf=\"userSession.Module!=='Admin'\">{{element.Name}}</span>\n            <button placement=\"top\" ngbTooltip=\"{{element.cAnswers}} exercise answers\"\n                    mat-icon-button (click)=\"viewAnswer(element, element.IsExpired)\">\n              <mat-icon>list</mat-icon> ({{element.cAnswers}})\n            </button>\n          </div>\n        </mat-cell>\n      </ng-container>\n\n      <!-- Action Column -->\n      <ng-container *ngIf=\"userSession.Module==='Admin' || module==='Lecturer' || module==='Assistant'\" matColumnDef=\"Action\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <div style=\"word-wrap: break-word;\">\n            <button mat-icon-button\n                    (click)=\"deleteExercise(element)\">\n              <mat-icon>delete</mat-icon>\n            </button>\n\n            <button mat-icon-button\n                    (click)=\"editExercise(element)\">\n              <mat-icon>edit</mat-icon>\n            </button>\n          </div>\n        </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n\n    <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Exercises</span>\n    </div>\n\n    <div style=\"float: right\">\n      <button\n              class=\"btn-sm btn-primary\" style=\"width:110px\" (click)=\"setKey()\">Exercise Key\n      </button>\n    </div>\n\n    <div style=\"float: right\">\n      <button *ngIf=\"userSession.Module==='Admin' || module==='Lecturer' || module==='Assistant'\"\n              class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addExercise()\">Add</button>\n    </div>\n  </h6>\n\n  <div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n  </div>\n\n  <div *ngIf=\"(exercises?.length <= 0 && load===1)\">\n    No records found.\n  </div>\n\n  <div class=\"filter\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($any($event.target).value)\" placeholder=\"Filter: \">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8 \">\n\n    <mat-table [dataSource]=\"dataSource\" class=\"table table-striped\" matSort>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"Id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"Title\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.hasGroup ? row.Title+\" (\"+row.hasGroup+\")\" : row.Title}} </mat-cell>\n      </ng-container>\n\n      <!-- MaxSubmissions Column -->\n      <ng-container matColumnDef=\"MaxSubmissions\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>\n          <span placement=\"top\"\n                ngbTooltip=\"Maximum Number of Submissions / Timeout\">MNS/T</span>\n        </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.MaxSubmissions}}/{{row.MaxTimeout}}s </mat-cell>\n      </ng-container>\n\n      <!-- Date Column -->\n      <ng-container matColumnDef=\"Date\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Expiration Date </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">\n          <div style=\"word-wrap: break-word;\"> {{row.Date}}<br />\n            <span *ngIf=\"row.IsExpired < 0\" class=\"expired\">[expired]</span>\n            <span *ngIf=\"row.IsExpired > 0 && row.IsExpired <= 86400\" class=\"Notexpired\">[expires soon!]</span>\n            <span *ngIf=\"row.IsExpired > 86400\" class=\"Notexpired\">[about {{(row.IsExpired/60/60/24).toFixed(0)}} day(s)]</span>\n          </div>\n        </mat-cell>\n      </ng-container>\n\n      <!-- Response Time Column -->\n      <ng-container matColumnDef=\"ExecTime\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>\n                    <span placement=\"top\"\n                          ngbTooltip=\"Admin Response Time\">RT</span>\n        </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.ExecTime}} </mat-cell>\n      </ng-container>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"CheckCount\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>\n          <span placement=\"top\"\n                ngbTooltip=\"Admin Code Analysis\">Code Analysis</span>\n          </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <a href=\"#\" placement=\"top\" ngbTooltip=\"Click to see code analysis\"\n             (click)=\"showList(element.CheckList); false;\">\n            <mat-progress-bar id=\"checkBar\" mode=\"determinate\" value=\"{{element.CheckCount}}\"></mat-progress-bar>\n          </a>\n        </mat-cell>\n      </ng-container>\n\n      <!-- Delivered Column -->\n      <ng-container matColumnDef=\"Answers\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Delivered </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <div style=\"word-wrap: break-word;\">\n            <span *ngIf=\"userSession.Module!=='Admin'\">{{element.Name}}</span>\n            <button placement=\"top\" ngbTooltip=\"{{element.cAnswers}} exercise answers\"\n                    mat-icon-button (click)=\"viewAnswer(element, element.IsExpired)\">\n              <mat-icon>list</mat-icon> ({{element.cAnswers}})\n            </button>\n          </div>\n        </mat-cell>\n      </ng-container>\n\n      <!-- Action Column -->\n      <ng-container *ngIf=\"userSession.Module==='Admin' || module==='Lecturer' || module==='Assistant'\" matColumnDef=\"Action\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <div style=\"word-wrap: break-word;\">\n            <button mat-icon-button\n                    (click)=\"deleteExercise(element)\">\n              <mat-icon>delete</mat-icon>\n            </button>\n\n            <button mat-icon-button\n                    (click)=\"editExercise(element)\">\n              <mat-icon>edit</mat-icon>\n            </button>\n          </div>\n        </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n\n    <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Group Members: {{groupName}}</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-group')\" style=\"margin-left: 20px;\">Groups</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 group-container\">\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"hidden\">\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\" readonly>\n      </div>\n\n      <mat-chip-list #chipList aria-label=\"Member selection\">\n\n        <div class=\"form-group\">\n\n          <mat-chip\n                  *ngFor=\"let member of members\"\n                  [selectable]=\"selectable\"\n                  [removable]=\"removable\"\n                  (removed)=\"remove(member)\">\n            {{member.Name}}\n            <mat-icon matChipRemove *ngIf=\"removable\">X</mat-icon>\n          </mat-chip>\n        </div>\n        <div class=\"form-group\">\n\n          <input\n                  placeholder=\"New member...\"\n                  #memberInput\n                  [formControl]=\"memberCtrl\"\n                  [matAutocomplete]=\"auto\"\n                  [matChipInputFor]=\"chipList\"\n                  [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                  [matChipInputAddOnBlur]=\"addOnBlur\"\n                  (matChipInputTokenEnd)=\"add(member)\">\n        </div>\n      </mat-chip-list>\n      <div class=\"form-group\">\n\n        <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n          <mat-option *ngFor=\"let member of filteredMembers | async\" [value]=\"member\">\n            {{member.Name}}\n          </mat-option>\n        </mat-autocomplete>\n      </div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">Update</button>\n      </div>\n    </form>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Group Members: {{groupName}}</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-group')\" style=\"margin-left: 20px;\">Groups</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 group-container\">\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"hidden\">\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\" readonly>\n      </div>\n\n      <mat-chip-list #chipList aria-label=\"Member selection\">\n\n        <div class=\"form-group\">\n\n          <mat-chip\n                  *ngFor=\"let member of members\"\n                  [selectable]=\"selectable\"\n                  [removable]=\"removable\"\n                  (removed)=\"remove(member)\">\n            {{member.Name}}\n            <mat-icon matChipRemove *ngIf=\"removable\">X</mat-icon>\n          </mat-chip>\n        </div>\n        <div class=\"form-group\">\n\n          <input\n                  placeholder=\"New member...\"\n                  #memberInput\n                  [formControl]=\"memberCtrl\"\n                  [matAutocomplete]=\"auto\"\n                  [matChipInputFor]=\"chipList\"\n                  [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                  [matChipInputAddOnBlur]=\"addOnBlur\"\n                  (matChipInputTokenEnd)=\"add(memberInput)\">\n        </div>\n      </mat-chip-list>\n      <div class=\"form-group\">\n\n        <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n          <mat-option *ngFor=\"let member of filteredMembers | async\" [value]=\"member\">\n            {{member.Name}}\n          </mat-option>\n        </mat-autocomplete>\n      </div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">Update</button>\n      </div>\n    </form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -266,7 +266,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Groups</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addGroup()\">Add</button>\n    </div>\n  </h6>\n\n  <div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n  </div>\n\n  <div *ngIf=\"(groups?.length <= 0 && load===1)\">\n    No records found.\n  </div>\n\n  <div class=\"filter\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter: \">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8 \">\n\n    <mat-table [dataSource]=\"dataSource\" matSort>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"Id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n      </ng-container>\n\n      <!-- Name Column -->\n      <ng-container matColumnDef=\"Name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n      </ng-container>\n\n      <!-- Name Column -->\n      <ng-container matColumnDef=\"KeyAccess\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Self-registration Key </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.KeyAccess}} </mat-cell>\n      </ng-container>\n\n      <!-- Action Column -->\n      <ng-container matColumnDef=\"Action\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <button mat-icon-button (click)=\"addMembers(element)\" style=\"margin-left: 20px;\"\n                  ngbPopover=\"Click to add or delete users\"\n                  triggers=\"mouseenter:mouseleave\"\n                  popoverTitle=\"Members\">\n            <mat-icon>groups</mat-icon>\n            ({{element.mCount}})\n          </button>\n          <button mat-icon-button (click)=\"deleteGroup(element)\">\n            <mat-icon>delete</mat-icon>\n          </button>\n          <button mat-icon-button (click)=\"editGroup(element)\" style=\"margin-left: 20px;\">\n            <mat-icon>edit</mat-icon>\n          </button>\n        </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n\n    <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Groups</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addGroup()\">Add</button>\n    </div>\n  </h6>\n\n  <div *ngIf=\"load===0\">\n    <app-mat-progress-bar></app-mat-progress-bar>\n  </div>\n\n  <div *ngIf=\"(groups?.length <= 0 && load===1)\">\n    No records found.\n  </div>\n\n  <div class=\"filter\">\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($any($event.target).value)\" placeholder=\"Filter: \">\n    </mat-form-field>\n  </div>\n\n  <div class=\"example-container mat-elevation-z8 \">\n\n    <mat-table [dataSource]=\"dataSource\" matSort>\n\n      <!-- ID Column -->\n      <ng-container matColumnDef=\"Id\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n      </ng-container>\n\n      <!-- Name Column -->\n      <ng-container matColumnDef=\"Name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n      </ng-container>\n\n      <!-- Name Column -->\n      <ng-container matColumnDef=\"KeyAccess\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Self-registration Key </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.KeyAccess}} </mat-cell>\n      </ng-container>\n\n      <!-- Action Column -->\n      <ng-container matColumnDef=\"Action\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n          <button mat-icon-button (click)=\"addMembers(element)\" style=\"margin-left: 20px;\"\n                  ngbPopover=\"Click to add or delete users\"\n                  triggers=\"mouseenter:mouseleave\"\n                  popoverTitle=\"Members\">\n            <mat-icon>groups</mat-icon>\n            ({{element.mCount}})\n          </button>\n          <button mat-icon-button (click)=\"deleteGroup(element)\">\n            <mat-icon>delete</mat-icon>\n          </button>\n          <button mat-icon-button (click)=\"editGroup(element)\" style=\"margin-left: 20px;\">\n            <mat-icon>edit</mat-icon>\n          </button>\n        </mat-cell>\n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n      </mat-row>\n    </mat-table>\n\n    <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -279,7 +279,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} User</span>\n    </div>\n    <div style=\"float: right\" *ngIf=\"userSession.Module==='Admin'\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-user-classroom')\" style=\"margin-left: 20px;\">Users</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 user-container\">\n    <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"form-group\">\n      </div>\n\n      <div class=\"error\" *ngIf=\"ForceChangePass==='1'\">Attention, before using the system, you must change the password.</div>\n      <hr />\n      <div class=\"form-group\">\n        <input *ngIf=\"ForceChangePass!=='1'\" type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\">\n        <div *ngIf=\"submitted && fe.Name.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Name.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.Name.errors.minlength\">Name must be at least 4 characters</div>\n          <div *ngIf=\"fe.Name.errors.maxlength\">Name must be a maximum of 60 characters</div>\n        </div>\n      </div>\n\n      <div class=\"error\" *ngIf=\"fe.Id.value===1\">Attention, the Admin password and email must be changed in the Settings module.\n        The change here is not definitive.</div>\n\n      <div class=\"form-group\">\n        <input type=\"password\" formControlName=\"Password\" placeholder=\"Password\" name=\"Password\" class=\"form-control\" id=\"Password\">\n        <div *ngIf=\"submitted && fe.Password.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Password.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.Password.errors.minlength\">Password must be at least 4 characters</div>\n          <div *ngIf=\"fe.Password.errors.maxlength\">Password must be a maximum of 50 characters</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <input type=\"password\" formControlName=\"CPassword\" placeholder=\"Confirm Password\" name=\"CPassword\" class=\"form-control\" id=\"CPassword\">\n        <div *ngIf=\"submitted && fe.CPassword.errors\" class=\"error response\">\n          <div *ngIf=\"fe.CPassword.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.CPassword.errors.minlength\">Password must be at least 4 characters</div>\n          <div *ngIf=\"fe.CPassword.errors.maxlength\">Password must be a maximum of 50 characters</div>\n          <div *ngIf=\"fe.CPassword.errors.mismatch\">The passwords are different</div>\n        </div>\n      </div>\n\n      <div *ngIf=\"ForceChangePass!=='1'\" class=\"form-group\">\n        <input type=\"text\" formControlName=\"Email\" placeholder=\"Email\" name=\"Email\" class=\"form-control\" id=\"Email\">\n        <div *ngIf=\"submitted && fe.Email.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Email.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.Email.errors.maxlength\">Email must be a maximum of 100 characters</div>\n          <div *ngIf=\"fe.Email.errors.email\">Please enter a valid email</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\" *ngIf=\"userSession.Module==='Admin'\">\n        <label for=\"Module\">Module:</label>\n        <select formControlName=\"Module\" placeholder=\"Module\" name=\"Module\" class=\"form-control\" id=\"Module\">\n          <option value=\"Lecturer\">Lecturer</option>\n          <option value=\"Student\">Student</option>\n          <option value=\"Assistant\">Assistant</option>\n        </select>\n        <div *ngIf=\"submitted && fe.Module.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Module.errors.required\">Field is required</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\" *ngIf=\"fe.Id.value\">\n        <label for=\"ForceChangePass\">Force password change at next login?</label>\n        <select formControlName=\"ForceChangePass\" placeholder=\"ForceChangePass\"\n                name=\"ForceChangePass\" class=\"form-control\" id=\"ForceChangePass\">\n          <option value=\"1\">Yes</option>\n          <option value=\"0\">No</option>\n        </select>\n      </div>\n\n      <div class=\"form-group\">\n        <button [disabled]=\"disabled\" class=\"btn-sm btn-success\">{{fe.Id.value ? \"Update\":\"Insert\"}}</button>\n      </div>\n    </form>\n\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} User</span>\n    </div>\n    <div style=\"float: right\" *ngIf=\"userSession.Module==='Admin'\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-user-classroom')\" style=\"margin-left: 20px;\">Users</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 user-container\">\n    <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"form-group\">\n      </div>\n\n      <hr />\n      <div class=\"form-group\">\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\">\n        <div *ngIf=\"submitted && fe.Name.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Name.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.Name.errors.minlength\">Name must be at least 4 characters</div>\n          <div *ngIf=\"fe.Name.errors.maxlength\">Name must be a maximum of 60 characters</div>\n        </div>\n      </div>\n\n      <div class=\"error\" *ngIf=\"fe.Id.value===1\">Attention, the Admin password and email must be changed in the Settings module.\n        The change here is not definitive.</div>\n\n      <div class=\"form-group\">\n        <input type=\"password\" formControlName=\"Password\" placeholder=\"Password\" name=\"Password\" class=\"form-control\" id=\"Password\">\n        <div *ngIf=\"submitted && fe.Password.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Password.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.Password.errors.minlength\">Password must be at least 4 characters</div>\n          <div *ngIf=\"fe.Password.errors.maxlength\">Password must be a maximum of 50 characters</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <input type=\"password\" formControlName=\"CPassword\" placeholder=\"Confirm Password\" name=\"CPassword\" class=\"form-control\" id=\"CPassword\">\n        <div *ngIf=\"submitted && fe.CPassword.errors\" class=\"error response\">\n          <div *ngIf=\"fe.CPassword.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.CPassword.errors.minlength\">Password must be at least 4 characters</div>\n          <div *ngIf=\"fe.CPassword.errors.maxlength\">Password must be a maximum of 50 characters</div>\n          <div *ngIf=\"fe.CPassword.errors.mismatch\">The passwords are different</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <input type=\"text\" formControlName=\"Email\" placeholder=\"Email\" name=\"Email\" class=\"form-control\" id=\"Email\">\n        <div *ngIf=\"submitted && fe.Email.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Email.errors.required\">Field is required</div>\n          <div *ngIf=\"fe.Email.errors.maxlength\">Email must be a maximum of 100 characters</div>\n          <div *ngIf=\"fe.Email.errors.email\">Please enter a valid email</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\" *ngIf=\"userSession.Module==='Admin'\">\n        <label for=\"Module\">Module:</label>\n        <select formControlName=\"Module\" placeholder=\"Module\" name=\"Module\" class=\"form-control\" id=\"Module\">\n          <option value=\"Lecturer\">Lecturer</option>\n          <option value=\"Student\">Student</option>\n          <option value=\"Assistant\">Assistant</option>\n        </select>\n        <div *ngIf=\"submitted && fe.Module.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Module.errors.required\">Field is required</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\" *ngIf=\"fe.Id.value\">\n        <label for=\"ForceChangePass\">Force password change at next login?</label>\n        <select formControlName=\"ForceChangePass\" placeholder=\"ForceChangePass\"\n                name=\"ForceChangePass\" class=\"form-control\" id=\"ForceChangePass\">\n          <option value=\"1\">Yes</option>\n          <option value=\"0\">No</option>\n        </select>\n      </div>\n\n      <div class=\"form-group\">\n        <button [disabled]=\"disabled\" class=\"btn-sm btn-success\">{{fe.Id.value ? \"Update\":\"Insert\"}}</button>\n      </div>\n    </form>\n\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -292,7 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Classroom Members</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-user-classroom')\" style=\"margin-left: 20px;\">Users</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 group-container\">\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"hidden\">\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\" readonly>\n      </div>\n\n      <mat-chip-list #chipList aria-label=\"Member selection\">\n\n        <div class=\"form-group\">\n\n          <mat-chip\n                  *ngFor=\"let member of members\"\n                  [selectable]=\"selectable\">\n            {{member.Name}}\n          </mat-chip>\n        </div>\n        <div class=\"form-group\">\n\n          <input\n                  placeholder=\"New member...\"\n                  #memberInput\n                  [formControl]=\"memberCtrl\"\n                  [matAutocomplete]=\"auto\"\n                  [matChipInputFor]=\"chipList\"\n                  [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                  [matChipInputAddOnBlur]=\"addOnBlur\"\n                  (matChipInputTokenEnd)=\"add(member)\">\n        </div>\n      </mat-chip-list>\n      <div class=\"form-group\">\n\n        <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n          <mat-option *ngFor=\"let member of filteredMembers | async\" [value]=\"member\">\n            {{member.Name}}\n          </mat-option>\n        </mat-autocomplete>\n      </div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">Update</button>\n      </div>\n    </form>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>Classroom Members</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-user-classroom')\" style=\"margin-left: 20px;\">Users</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 group-container\">\n    <form [formGroup]=\"editForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"hidden\">\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\" readonly>\n      </div>\n\n      <mat-chip-list #chipList aria-label=\"Member selection\">\n\n        <div class=\"form-group\">\n\n          <mat-chip\n                  *ngFor=\"let member of members\"\n                  [selectable]=\"selectable\">\n            {{member.Name}}\n          </mat-chip>\n        </div>\n        <div class=\"form-group\">\n\n          <input\n                  placeholder=\"New member...\"\n                  #memberInput\n                  [formControl]=\"memberCtrl\"\n                  [matAutocomplete]=\"auto\"\n                  [matChipInputFor]=\"chipList\"\n                  [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                  [matChipInputAddOnBlur]=\"addOnBlur\"\n                  (matChipInputTokenEnd)=\"add(memberInput)\">\n        </div>\n      </mat-chip-list>\n      <div class=\"form-group\">\n\n        <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n          <mat-option *ngFor=\"let member of filteredMembers | async\" [value]=\"member\">\n            {{member.Name}}\n          </mat-option>\n        </mat-autocomplete>\n      </div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">Update</button>\n      </div>\n    </form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -305,7 +305,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>Users</span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-primary\" (click)=\"addUser()\">New</button>\n        </div>\n        <div style=\"float: right; width: 50px;\">\n            <button class=\"btn-sm btn-primary\" (click)=\"joinUser()\">Join</button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(users?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n    </div>\n\n    <div class=\"mat-elevation-z8 \">\n\n        <mat-table [dataSource]=\"dataSource\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n            </ng-container>\n\n            <!-- Name Column -->\n            <ng-container matColumnDef=\"Name\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n            </ng-container>\n\n            <!-- Email Column -->\n            <ng-container matColumnDef=\"Email\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Email}} </mat-cell>\n            </ng-container>\n\n            <!-- Module Column -->\n            <ng-container matColumnDef=\"Module\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Module </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Module}} </mat-cell>\n            </ng-container>\n\n            <!-- Action Column -->\n            <ng-container matColumnDef=\"Action\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button *ngIf=\"(element.Module!=='Lecturer' && module==='Assistant')\n                    || module==='Lecturer' || userSession.Module==='Admin'\" mat-icon-button (click)=\"deleteUser(element)\">\n                        <mat-icon>delete</mat-icon>\n                    </button>\n                    <button *ngIf=\"(element.Module!=='Lecturer' && module==='Assistant')\n                    || module==='Lecturer' || userSession.Module==='Admin'\" mat-icon-button (click)=\"editUser(element)\" style=\"margin-left: 20px;\">\n                        <mat-icon>edit</mat-icon>\n                    </button>\n                </mat-cell>\n            </ng-container>\n\n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n            </mat-row>\n        </mat-table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>Users</span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-primary\" (click)=\"addUser()\">New</button>\n        </div>\n        <div style=\"float: right; width: 50px;\">\n            <button class=\"btn-sm btn-primary\" (click)=\"joinUser()\">Join</button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(users?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($any($event.target).value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n    </div>\n\n    <div class=\"mat-elevation-z8 \">\n\n        <mat-table [dataSource]=\"dataSource\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n            </ng-container>\n\n            <!-- Name Column -->\n            <ng-container matColumnDef=\"Name\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n            </ng-container>\n\n            <!-- Email Column -->\n            <ng-container matColumnDef=\"Email\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Email}} </mat-cell>\n            </ng-container>\n\n            <!-- Module Column -->\n            <ng-container matColumnDef=\"Module\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Module </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Module}} </mat-cell>\n            </ng-container>\n\n            <!-- Action Column -->\n            <ng-container matColumnDef=\"Action\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button *ngIf=\"(element.Module!=='Lecturer' && module==='Assistant')\n                    || module==='Lecturer' || userSession.Module==='Admin'\" mat-icon-button (click)=\"deleteUser(element)\">\n                        <mat-icon>delete</mat-icon>\n                    </button>\n                    <button *ngIf=\"(element.Module!=='Lecturer' && module==='Assistant')\n                    || module==='Lecturer' || userSession.Module==='Admin'\" mat-icon-button (click)=\"editUser(element)\" style=\"margin-left: 20px;\">\n                        <mat-icon>edit</mat-icon>\n                    </button>\n                </mat-cell>\n            </ng-container>\n\n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n            </mat-row>\n        </mat-table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -318,7 +318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"myGroup\">\n    <mat-form-field appearance=\"fill\" *ngIf=\"(userSession.Id || userSession.Module==='Admin') && classroom?.length > 0\">\n        <mat-label>Classroom</mat-label>\n        <mat-select formControlName=\"classroomControl\"\n                    (selectionChange)=\"onChange()\"\n                    [compareWith]=\"compareObjects\"\n                    required [(ngModel)]=\"classSelected\">\n            <mat-option *ngFor=\"let c of classroom\" [value]=\"c\">\n                {{c.Name}}\n            </mat-option>\n        </mat-select>\n        <mat-hint *ngIf=\"classroom?.length <= 0\">No registered classroom.</mat-hint>\n    </mat-form-field>\n</form>\n\n<div class=\"divTable\" [ngClass]=\"{'emptyClassroom': classroom?.length <= 0, 'hasClassroom': classroom?.length > 0}\">\n    <div class=\"divTableBody\">\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id\">\n\n            <div class=\"divTableCell\">\n                <mat-icon>info</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"onChange(); false;\"\n                                         style=\"margin-left: 20px;\">Info</a></div>\n        </div>\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id && (classSelected.Module==='Assistant'\n                                                        || classSelected.Module==='Lecturer'\n                                                        || userSession.Module==='Admin'\n                                                        || classSelected.IdUser==userSession.Id)\">\n            <div class=\"divTableCell\">\n                <mat-icon>person</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-user-classroom'); false;\"\n                                         style=\"margin-left: 20px;\">Users</a>\n            </div>\n        </div>\n\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id && (classSelected.Module==='Assistant'\n                                                        || classSelected.Module==='Lecturer'\n                                                        || userSession.Module==='Admin'\n                                                        || classSelected.IdUser==userSession.Id)\">\n            <div class=\"divTableCell\">\n                <mat-icon>group</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-group'); false;\"\n                                         style=\"margin-left: 20px;\">Groups</a>\n            </div>\n        </div>\n\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id\">\n            <div class=\"divTableCell\">\n                <mat-icon>format_list_numbered</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-exercise'); false;\"\n                                         style=\"margin-left: 20px;\">Exercises</a></div>\n        </div>\n\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id\">\n            <div class=\"divTableCell\">\n                <mat-icon>code</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-code'); false;\"\n                                         style=\"margin-left: 20px;\">Try a Code</a></div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"myGroup\">\n    <mat-form-field appearance=\"fill\" *ngIf=\"(userSession.Id || userSession.Module==='Admin') && classroom?.length > 0\">\n        <mat-label>Classroom</mat-label>\n        <mat-select formControlName=\"classroomControl\"\n                    (selectionChange)=\"onChange()\"\n                    [compareWith]=\"compareObjects\"\n                    required [(ngModel)]=\"classSelected\">\n            <mat-option *ngFor=\"let c of classroom\" [value]=\"c\">\n                {{c.Name}}\n            </mat-option>\n        </mat-select>\n        <mat-hint *ngIf=\"classroom?.length <= 0\">No registered classroom.</mat-hint>\n    </mat-form-field>\n</form>\n\n<div class=\"divTable\" [ngClass]=\"{'emptyClassroom': classroom?.length <= 0, 'hasClassroom': classroom?.length > 0}\">\n    <div class=\"divTableBody\">\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id\">\n\n            <div class=\"divTableCell\">\n                <mat-icon>info</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"onChange(); false;\"\n                                         style=\"margin-left: 20px;\">Info</a></div>\n        </div>\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id && (userModule==='Assistant'\n                                                        || userModule==='Lecturer'\n                                                        || userSession.Module==='Admin'\n                                                        || classSelected.IdUser==userSession.Id)\">\n            <div class=\"divTableCell\">\n                <mat-icon>person</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-user-classroom'); false;\"\n                                         style=\"margin-left: 20px;\">Users</a>\n            </div>\n        </div>\n\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id && (userModule==='Assistant'\n                                                        || userModule==='Lecturer'\n                                                        || userSession.Module==='Admin'\n                                                        || classSelected.IdUser==userSession.Id)\">\n            <div class=\"divTableCell\">\n                <mat-icon>group</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-group'); false;\"\n                                         style=\"margin-left: 20px;\">Groups</a>\n            </div>\n        </div>\n\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id\">\n            <div class=\"divTableCell\">\n                <mat-icon>format_list_numbered</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-exercise'); false;\"\n                                         style=\"margin-left: 20px;\">Exercises</a></div>\n        </div>\n\n        <div class=\"divTableRow\" *ngIf=\"classSelected.Id\">\n            <div class=\"divTableCell\">\n                <mat-icon>code</mat-icon>\n            </div>\n            <div class=\"divTableCell\"><a href=\"#\" (click)=\"setRoute('view-code'); false;\"\n                                         style=\"margin-left: 20px;\">Try a Code</a></div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -331,7 +331,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} Classroom</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-classroom-manager')\" style=\"margin-left: 20px;\">Classroom</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 user-container\">\n    <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"form-group\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Name\">Name:</label>\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\">\n        <div *ngIf=\"submitted && fe.Name.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Name.errors.required\">Field Name is required</div>\n          <div *ngIf=\"fe.Name.errors.minlength\">Name field must have a minimum of 5 characters</div>\n          <div *ngIf=\"fe.Name.errors.maxlength\">Name must be a maximum of 50 characters</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"IdUser\">Owner:</label>\n        <select formControlName=\"IdUser\" placeholder=\"Owner\" name=\"IdUser\" class=\"form-control\" id=\"IdUser\">\n          <option *ngFor=\"let u of users\" [value]=\"u.Id\">{{u.Name}}</option>\n        </select>\n        <div *ngIf=\"submitted && fe.IdUser.errors\" class=\"error response\">\n          <div *ngIf=\"fe.IdUser.errors.required\">Field Owner is required</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Description\">Description:</label>\n        <ckeditor [editor]=\"Editor\" formControlName=\"Description\"></ckeditor>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"MaxStudents\">MaxStudents:</label>\n        <input type=\"number\" formControlName=\"MaxStudents\" placeholder=\"MaxStudents\"\n               name=\"MaxStudents\" class=\"form-control\" id=\"MaxStudents\">\n        <div *ngIf=\"submitted && fe.MaxStudents.errors\" class=\"error response\">\n          <div *ngIf=\"fe.MaxStudents.errors.max\">The maximum number of students allowed is 100</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Enabled\">Enabled:</label>\n        <select formControlName=\"Enabled\" placeholder=\"Enabled\" name=\"Enabled\" class=\"form-control\" id=\"Enabled\">\n          <option [value]=\"1\" selected>Yes</option>\n          <option [value]=\"0\">No</option>\n        </select>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"KeyAccess\">KeyAccess:</label>\n        <input type=\"text\" formControlName=\"KeyAccess\" placeholder=\"KeyAccess\"\n               name=\"KeyAccess\" class=\"form-control\" id=\"KeyAccess\">\n        <div *ngIf=\"submitted && fe.KeyAccess.errors\" class=\"error response\">\n          <div *ngIf=\"fe.KeyAccess.errors.maxlength\">The key must be up to 60 characters long</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">{{fe.Id.value ? \"Update\":\"Insert\"}}</button>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <h6 class=\"card-header\">\n    <div style=\"float: left\">\n      <span>{{fe.Id.value ? \"Edit\":\"Add\"}} Classroom</span>\n    </div>\n    <div style=\"float: right\">\n      <button class=\"btn-sm btn-success\" (click)=\"setRoute('view-classroom-manager')\" style=\"margin-left: 20px;\">Classroom</button>\n    </div>\n  </h6>\n\n  <div class=\"col-md-6 user-container\">\n    <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"form-group\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Name\">Name:</label>\n        <input type=\"text\" formControlName=\"Name\" placeholder=\"Name\" name=\"Name\" class=\"form-control\" id=\"Name\">\n        <div *ngIf=\"submitted && fe.Name.errors\" class=\"error response\">\n          <div *ngIf=\"fe.Name.errors.required\">Field Name is required</div>\n          <div *ngIf=\"fe.Name.errors.minlength\">Name field must have a minimum of 5 characters</div>\n          <div *ngIf=\"fe.Name.errors.maxlength\">Name must be a maximum of 50 characters</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"IdUser\">Owner:</label>\n        <select formControlName=\"IdUser\" placeholder=\"Owner\" name=\"IdUser\" class=\"form-control\" id=\"IdUser\">\n          <option *ngFor=\"let u of users\" [value]=\"u.Id\">{{u.Name}}</option>\n        </select>\n        <div *ngIf=\"submitted && fe.IdUser.errors\" class=\"error response\">\n          <div *ngIf=\"fe.IdUser.errors.required\">Field Owner is required</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Description\">Description:</label>\n        <ckeditor [editor]=\"Editor\" [config]=\"config\" formControlName=\"Description\"></ckeditor>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"MaxStudents\">MaxStudents:</label>\n        <input type=\"number\" formControlName=\"MaxStudents\" placeholder=\"MaxStudents\"\n               name=\"MaxStudents\" class=\"form-control\" id=\"MaxStudents\">\n        <div *ngIf=\"submitted && fe.MaxStudents.errors\" class=\"error response\">\n          <div *ngIf=\"fe.MaxStudents.errors.max\">The maximum number of students allowed is 100</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"Enabled\">Enabled:</label>\n        <select formControlName=\"Enabled\" placeholder=\"Enabled\" name=\"Enabled\" class=\"form-control\" id=\"Enabled\">\n          <option [value]=\"1\" selected>Yes</option>\n          <option [value]=\"0\">No</option>\n        </select>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"KeyAccess\">KeyAccess:</label>\n        <input type=\"text\" formControlName=\"KeyAccess\" placeholder=\"KeyAccess\"\n               name=\"KeyAccess\" class=\"form-control\" id=\"KeyAccess\">\n        <div *ngIf=\"submitted && fe.KeyAccess.errors\" class=\"error response\">\n          <div *ngIf=\"fe.KeyAccess.errors.maxlength\">The key must be up to 60 characters long</div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <button class=\"btn-sm btn-success\">{{fe.Id.value ? \"Update\":\"Insert\"}}</button>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>Classrooms</span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addClassroom()\">Add</button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(classroom?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n    </div>\n\n    <div class=\"mat-elevation-z8 \">\n\n        <mat-table [dataSource]=\"dataSource\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n            </ng-container>\n\n            <!-- Name Column -->\n            <ng-container matColumnDef=\"Name\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n            </ng-container>\n\n            <!-- IdUser Column -->\n            <ng-container matColumnDef=\"Owner\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Owner </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Owner}} </mat-cell>\n            </ng-container>\n\n            <!-- MaxStudents Column -->\n            <ng-container matColumnDef=\"MaxStudents\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> MaxStudents </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.MaxStudents}} </mat-cell>\n            </ng-container>\n\n            <!-- Enabled Column -->\n=            <ng-container matColumnDef=\"Enabled\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Enabled </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Enabled ? 'Yes' : 'No'}} </mat-cell>\n            </ng-container>\n\n            <!-- KeyAccess Column -->\n            <ng-container matColumnDef=\"KeyAccess\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> KeyAccess </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.KeyAccess}} </mat-cell>\n            </ng-container>\n\n            <!-- Action Column -->\n            <ng-container matColumnDef=\"Action\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button mat-icon-button (click)=\"deleteClassroom(element)\">\n                        <mat-icon>delete</mat-icon>\n                    </button>\n                    <button mat-icon-button (click)=\"editClassroom(element)\" style=\"margin-left: 20px;\">\n                        <mat-icon>edit</mat-icon>\n                    </button>\n                </mat-cell>\n            </ng-container>\n\n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n            </mat-row>\n        </mat-table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>Classrooms</span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addClassroom()\">Add</button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(classroom?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($any($event.target).value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n    </div>\n\n    <div class=\"mat-elevation-z8 \">\n\n        <mat-table [dataSource]=\"dataSource\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n            </ng-container>\n\n            <!-- Name Column -->\n            <ng-container matColumnDef=\"Name\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n            </ng-container>\n\n            <!-- IdUser Column -->\n            <ng-container matColumnDef=\"Owner\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Owner </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Owner}} </mat-cell>\n            </ng-container>\n\n            <!-- MaxStudents Column -->\n            <ng-container matColumnDef=\"MaxStudents\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> MaxStudents </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.MaxStudents}} </mat-cell>\n            </ng-container>\n\n            <!-- Enabled Column -->\n=            <ng-container matColumnDef=\"Enabled\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Enabled </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Enabled ? 'Yes' : 'No'}} </mat-cell>\n            </ng-container>\n\n            <!-- KeyAccess Column -->\n            <ng-container matColumnDef=\"KeyAccess\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> KeyAccess </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.KeyAccess}} </mat-cell>\n            </ng-container>\n\n            <!-- Action Column -->\n            <ng-container matColumnDef=\"Action\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button mat-icon-button (click)=\"deleteClassroom(element)\">\n                        <mat-icon>delete</mat-icon>\n                    </button>\n                    <button mat-icon-button (click)=\"editClassroom(element)\" style=\"margin-left: 20px;\">\n                        <mat-icon>edit</mat-icon>\n                    </button>\n                </mat-cell>\n            </ng-container>\n\n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n            </mat-row>\n        </mat-table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <span>Cluster on Network</span>\n        <br/>\n        <span class=\"help\">In this section, the nodes detected on the local computer network are displayed.\n          If this host is a node, you can connect to a host configured as a master on the network.</span>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n\n        <div class=\"form-group\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header\" style=\"min-height: 141px;\">\n                            <app-mat-progress-bar *ngIf=\"!hostInfo.IP\"></app-mat-progress-bar>\n\n                            <div *ngIf=\"response.Name\" class=\"{{response.Name}} response text-center\">\n                                {{response.Status}}\n                                <app-mat-progress-bar *ngIf=\"response.Name==='info'\"></app-mat-progress-bar>\n                            </div>\n                            <table class=\"table table-striped\">\n                                <tr *ngFor=\"let c of clusters\">\n                                    <td>\n                                        <ul>\n                                            <li [className]=\"c.Name==='master' ? 'master':''\">\n                                                {{c.Name}} - {{c.MasterIP}}\n                                                <p>\n                                                    <span class=\"connected\">Last Check: {{c.LastActivity | slice:0:16}}</span>\n                                                    <span *ngIf=\"hostInfo.Cluster.Id===c.Id\" class=\"connected\"> | (connected)</span>\n                                                    <img *ngIf=\"c.Password\" class=\"key\" src=\"../../assets/key.png\"/>\n\n                                                    <a *ngIf=\"hostInfo.Cluster.Id!==c.Id && hostInfo['IsMaster']\"\n                                                       href=\"#\" (click)=\"connectToCluster(c);false;\" class=\"connected\">-\n                                                        Connect Now</a>\n                                                </p>\n                                            </li>\n                                        </ul>\n                                    </td>\n                                </tr>\n                            </table>\n                            <div *ngIf=\"!(clusters)?.length\"><span\n                                    class=\"connected\">*No master detected on the network</span></div>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header text-center\">\n                            Change the host's operating mode:\n\n                            <div class=\"card-body op-mode\">\n                                <mat-button-toggle-group #group=\"matButtonToggleGroup\" [value]=\"hostInfo.OpMode\"\n                                                         (click)=\"setOpMode(group.value)\">\n                                    <mat-button-toggle value=\"MASTER\">\n                                        MASTER\n                                    </mat-button-toggle>\n                                    <mat-button-toggle value=\"NODE\">NODE\n                                    </mat-button-toggle>\n                                    <mat-button-toggle value=\"LOCAL\">LOCAL\n                                    </mat-button-toggle>\n                                </mat-button-toggle-group>\n                            </div>\n\n                            <div class=\"response text-center\" *ngIf=\"response.Name\">\n                                <div *ngIf=\"response.Name==='ok' || response.Name==='info'\" class=\"{{response.Name}}\">\n                                    {{response.Status}}\n                                    <app-mat-progress-bar></app-mat-progress-bar>\n                                </div>\n                                <div *ngIf=\"response.Name==='error'\" class=\"{{response.Name}}\">{{response.Status}}</div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <span>Cluster on Network</span>\n        <br/>\n        <span class=\"help\">In this section, the nodes detected on the local computer network are displayed.\n          If this host is a node, you can connect to a host configured as a master on the network.</span>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n\n        <div class=\"form-group\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header\" style=\"min-height: 141px;\">\n                            <app-mat-progress-bar *ngIf=\"!hostInfo.OpMode\"></app-mat-progress-bar>\n\n                            <div *ngIf=\"response.Name\" class=\"{{response.Name}} response text-center\">\n                                {{response.Status}}\n                                <app-mat-progress-bar *ngIf=\"response.Name==='info'\"></app-mat-progress-bar>\n                            </div>\n                            <table class=\"table table-striped\">\n                                <tr *ngFor=\"let c of clusters\">\n                                    <td>\n                                        <ul>\n                                            <li [className]=\"c.Name==='master' ? 'master':''\">\n                                                {{c.Name}} - {{c.MasterIP}}\n                                                <p>\n                                                    <span class=\"connected\">Last Check: {{c.LastActivity | slice:0:16}}</span>\n                                                    <span *ngIf=\"hostInfo.Cluster.Id===c.Id\" class=\"connected\"> | (connected)</span>\n                                                    <img *ngIf=\"c.Password\" class=\"key\" src=\"../../assets/key.png\"/>\n\n                                                    <a *ngIf=\"hostInfo.Cluster.Id!==c.Id && hostInfo['IsMaster']\"\n                                                       href=\"#\" (click)=\"connectToCluster(c);false;\" class=\"connected\">-\n                                                        Connect Now</a>\n                                                </p>\n                                            </li>\n                                        </ul>\n                                    </td>\n                                </tr>\n                            </table>\n                            <div *ngIf=\"!(clusters)?.length\"><span\n                                    class=\"connected\">*No master detected on the network</span></div>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header text-center\">\n                            Change the host's operating mode:\n\n                            <div class=\"card-body op-mode\">\n                                <mat-button-toggle-group #group=\"matButtonToggleGroup\" [value]=\"hostInfo.OpMode\"\n                                                         (click)=\"setOpMode(group.value)\">\n                                    <mat-button-toggle value=\"MASTER\">\n                                        MASTER\n                                    </mat-button-toggle>\n                                    <mat-button-toggle value=\"NODE\">NODE\n                                    </mat-button-toggle>\n                                    <mat-button-toggle value=\"LOCAL\">LOCAL\n                                    </mat-button-toggle>\n                                </mat-button-toggle-group>\n                            </div>\n\n                            <div class=\"response text-center\" *ngIf=\"response.Name\">\n                                <div *ngIf=\"response.Name==='ok' || response.Name==='info'\" class=\"{{response.Name}}\">\n                                    {{response.Status}}\n                                    <app-mat-progress-bar></app-mat-progress-bar>\n                                </div>\n                                <div *ngIf=\"response.Name==='error'\" class=\"{{response.Name}}\">{{response.Status}}</div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -370,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <span>Current Virtual Nodes in the Cluster</span>\n        <br/>\n        <span class=\"help\">Here the hosts and their respective nodes are listed.\n          You can add or remove nodes in the host/cluster.</span>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n\n        <div class=\"form-group\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header nodesSelection\">\n                            Increase or decrease the virtual nodes number\n                            <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\" class=\"justify-content-center\">\n                                <div class=\"form-row\">\n                                    <div class=\"form-group col-md-6\">\n                                        <input type=\"number\" formControlName=\"srvNumber\"\n                                               onkeydown=\"return false\"\n                                               onclick=\"return false\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && f.srvNumber.errors }\"\n                                        />\n                                    </div>\n                                    <div class=\"form-group col-md-1\">\n                                        <button class=\"btn btn-primary mr-1\"\n                                                [disabled]=\"!f.srvNumber.errors && response.Name==='info'\">OK\n                                        </button>\n                                    </div>\n                                </div>\n                                <div class=\"form-row\">\n                                    <div *ngIf=\"submitted && f.srvNumber.errors\" class=\"invalid-feedback\">\n                                        <div *ngIf=\"f.srvNumber.errors.required\">Number of nodes is required</div>\n                                        <div *ngIf=\"f.srvNumber.errors.min\">Nodes must be at least 0 number or more\n                                        </div>\n                                        <div *ngIf=\"f.srvNumber.errors.generic\">{{f.srvNumber.errors.generic}}</div>\n                                    </div>\n                                    <div *ngIf=\"response.Name\" class=\"{{response.Name}} response\">\n                                        {{response.Status}}\n                                        <app-mat-progress-bar *ngIf=\"response.Name==='info'\"></app-mat-progress-bar>\n                                    </div>\n                                </div>\n                            </form>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <mat-list>\n                            <mat-list-item *ngFor=\"let n of nodes\">\n                                <mat-icon mat-list-icon>computer</mat-icon>\n                                <div mat-line><b>Host: {{n.Hostname}}</b>\n                                    <i class=\"nodes\">(vCPU: {{n.NumberOfCPUs}} | Mem: {{n.Memory}}MB)</i>\n                                </div>\n                                <mat-list class=\"listNodes\">\n                                    <div *ngFor=\"let c of n.Container\">\n                                        <mat-list-item mat-line class=\"nodes\">---</mat-list-item>\n                                        <mat-list-item mat-line class=\"nodes\"><b>Virtual Node: {{c.Name}}</b></mat-list-item>\n                                        <mat-list-item mat-line class=\"nodes\">vCPU: {{c.Name==='master'?\n                                            'Available':'1'}} (<span [className]=\"c.State==='running' ? 'ok':'error'\">{{c.State}}</span>)\n                                        </mat-list-item>\n                                    </div>\n                                </mat-list>\n                                <mat-divider></mat-divider>\n                            </mat-list-item>\n                        </mat-list>\n\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <span>Current Virtual Nodes in the Cluster</span>\n        <br/>\n        <span class=\"help\">Here the hosts and their respective nodes are listed.\n          You can add or remove nodes in the host/cluster.</span>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n\n        <div class=\"form-group\" style=\"margin-top: 15px;\">\n\n            <div class=\"form-row\">\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <div class=\"card-header nodesSelection\">\n                            Increase or decrease the virtual nodes number\n                            <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\" class=\"justify-content-center\">\n                                <div class=\"form-row\">\n                                    <div class=\"form-group col-md-6\">\n                                        <input type=\"number\" formControlName=\"srvNumber\"\n                                               onkeydown=\"return false\"\n                                               onclick=\"return false\"\n                                               class=\"form-control\"\n                                               [ngClass]=\"{ 'is-invalid': submitted && f.srvNumber.errors }\"\n                                        />\n                                    </div>\n                                    <div class=\"form-group col-md-1\">\n                                        <button class=\"btn btn-primary mr-1\"\n                                                [disabled]=\"!f.srvNumber.errors && response.Name==='info'\">OK\n                                        </button>\n                                    </div>\n                                </div>\n                                <div class=\"form-row\">\n                                    <div *ngIf=\"submitted && f.srvNumber.errors\" class=\"invalid-feedback\">\n                                        <div *ngIf=\"f.srvNumber.errors.required\">Number of nodes is required</div>\n                                        <div *ngIf=\"f.srvNumber.errors.min\">Nodes must be at least 0 number or more\n                                        </div>\n                                        <div *ngIf=\"f.srvNumber.errors.generic\">{{f.srvNumber.errors.generic}}</div>\n                                    </div>\n                                    <div *ngIf=\"response.Name\" class=\"{{response.Name}} response\">\n                                        {{response.Status}}\n                                        <app-mat-progress-bar *ngIf=\"response.Name==='info'\"></app-mat-progress-bar>\n                                    </div>\n                                </div>\n                            </form>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"col-md-6 user-container\">\n                    <div class=\"card m-12\">\n                        <mat-list>\n                            <mat-list-item *ngFor=\"let n of nodes\">\n                                <mat-icon mat-list-icon>computer</mat-icon>\n                                <div mat-line><b>Host: {{n.Hostname}}</b>\n                                    <i class=\"nodes\">(Mem: {{n.Memory}}MB | vCPU: {{n.NumberOfCPUs}})</i>\n                                </div>\n                                <mat-list class=\"listNodes\">\n                                    <div *ngFor=\"let c of n.Container\">\n                                        <mat-list-item mat-line class=\"nodes\">---</mat-list-item>\n                                        <mat-list-item mat-line class=\"nodes\"><b>{{c.Name==='master'? 'Physical\n                                            Node':'Virtual Node'}}: {{c.Name}}</b></mat-list-item>\n                                        <mat-list-item mat-line class=\"nodes\">vCPU: {{c.Name==='master'?\n                                            'Available':'1'}} (<span [className]=\"c.State==='running' ? 'ok':'error'\">{{c.State}}</span>)\n                                        </mat-list-item>\n                                    </div>\n                                </mat-list>\n                                <mat-divider></mat-divider>\n                            </mat-list-item>\n                        </mat-list>\n\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -409,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <span>Settings</span>\n        <br/>\n        <span class=\"help\">If the field is left empty, the system will attempt to automatically detect the settings.</span>\n    </h6>\n    <br />\n    <div class=\"col-md-12 user-container\">\n\n        <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n\n            <ul ngbNav #nav=\"ngbNav\" class=\"nav-tabs\" [destroyOnHide]=\"false\">\n                <li [ngbNavItem]=\"1\">\n                    <a ngbNavLink>Network</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"PublicInterface\">Public Host Interface:</label>\n                            <span class=\"description\" for=\"PublicInterface\">Defines which network interface backend\n          and frontend will use to listen to network services.</span>\n                            <input type=\"text\" formControlName=\"PublicInterface\"\n                                   placeholder=\"Default: empty | Example: eth0\"\n                                   name=\"PublicInterface\" class=\"form-control\" id=\"PublicInterface\">\n                            <div *ngIf=\"submitted && fe.PublicInterface.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.PublicInterface.errors.minlength\">Public Interface field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.PublicInterface.errors.maxlength\">Public Interface must be a maximum of 15 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"BackendPort\">Backend Service Port:</label>\n                            <span class=\"description\">Sets the port value to list the services between the backends in the network.</span>\n                            <input type=\"number\" formControlName=\"BackendPort\" placeholder=\"Default: 10001\"\n                                   name=\"BackendPort\" class=\"form-control\" id=\"BackendPort\">\n                            <div *ngIf=\"submitted && fe.BackendPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.BackendPort.errors.min\">Backend Port field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.BackendPort.errors.max\">Backend Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"FrontendPort\">Frontend Service Port:</label>\n                            <span class=\"description\">Sets the port value to list the services for the frontends.</span>\n                            <input type=\"number\" formControlName=\"FrontendPort\" placeholder=\"Default: 8000\"\n                                   name=\"FrontendPort\" class=\"form-control\" id=\"FrontendPort\">\n                            <div *ngIf=\"submitted && fe.FrontendPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.FrontendPort.errors.min\">Frontend Port field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.FrontendPort.errors.max\">Frontend Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"WebSocketPort\">WebSocket Service Port:</label>\n                            <span class=\"description\">Sets the port to provide access to websocket (chat and code pair).</span>\n                            <input type=\"number\" formControlName=\"WebSocketPort\" placeholder=\"Default: 8001\"\n                                   name=\"WebSocketPort\" class=\"form-control\" id=\"WebSocketPort\">\n                            <div *ngIf=\"submitted && fe.WebSocketPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.WebSocketPort.errors.min\">WebSocket Port field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.WebSocketPort.errors.max\">WebSocket Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"2\">\n                    <a ngbNavLink>Cluster</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"ClusterName\">Cluster:</label>\n                            <span class=\"description\">The default cluster name.</span>\n                            <input type=\"text\" formControlName=\"ClusterName\" placeholder=\"Default: CLUSTER01\"\n                                   name=\"ClusterName\" class=\"form-control\" id=\"ClusterName\">\n                            <div *ngIf=\"submitted && fe.ClusterName.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.ClusterName.errors.minlength\">Cluster Name field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.ClusterName.errors.maxlength\">Cluster Name must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"ClusterPassword\">Cluster Password:</label>\n                            <span class=\"description\">Defines the cluster password for connection between nodes.\n          If the password is left empty, the nodes will connect automatically if their\n          operating modes are set to NODE.</span>\n                            <input type=\"text\" formControlName=\"ClusterPassword\" placeholder=\"Default: empty\"\n                                   name=\"ClusterPassword\" class=\"form-control\" id=\"ClusterPassword\">\n                            <div *ngIf=\"submitted && fe.ClusterPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.ClusterPassword.errors.minlength\">Cluster Password field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.ClusterPassword.errors.maxlength\">Cluster Password must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"NodeMode\">Node Mode:</label>\n                            <span class=\"description\">\n                                SINGLE: creates a node for each vCPU present on the host, simulating a cluster. <br />\n\t\t\t\t\t\t\t\tMULTI.: allocates all vCPUs to Master virtual node. <br />\n\t\t                        SHARED: makes all vCPUs available to nodes, regardless of quantity.\n                            </span>\n                            <select formControlName=\"NodeMode\" name=\"NodeMode\" class=\"form-control\"\n                                    id=\"NodeMode\">\n                                <option value=\"\">Default: SHARED</option>\n                                <option value=\"SINGLE\">SINGLE</option>\n                                <option value=\"MULTI\">MULTI</option>\n                                <option value=\"SHARED\">SHARED</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.NodeMode.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.NodeMode.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"OperationMode\">Operation Mode:</label>\n                            <span class=\"description\">\n                                \t\tLOCAL: prepares the system to work on one host or virtual machine. <br />\n\t\t                                MASTER: defines the host or virtual machine as the master node of the cluster, listing the service available to other hosts on the network. <br />\n\t\t                                NODE: sets the host or virtual machine as node mode, enabling the search for a master host to connect.\n                            </span>\n                            <select formControlName=\"OperationMode\" name=\"OperationMode\" class=\"form-control\"\n                                    id=\"OperationMode\">\n                                <option value=\"\">Default: LOCAL</option>\n                                <option value=\"LOCAL\">LOCAL</option>\n                                <option value=\"CLUSTER\">NODE</option>\n                                <option value=\"MASTER\">MASTER</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.OperationMode.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.OperationMode.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"StartContainers\">Number of Nodes:</label>\n                            <span class=\"description\">The number of containers (virtual nodes) to be started on backend init.</span>\n                            <input type=\"number\" formControlName=\"StartContainers\" placeholder=\"Default: 0\"\n                                   name=\"StartContainers\" class=\"form-control\" id=\"StartContainers\">\n                            <div *ngIf=\"submitted && fe.StartContainers.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.StartContainers.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"MaxContainers\">Maximum Number of Nodes:</label>\n                            <span class=\"description\">The maximum number of containers running as nodes.</span>\n                            <input type=\"number\" formControlName=\"MaxContainers\" placeholder=\"Default: 30\"\n                                   name=\"MaxContainers\" class=\"form-control\" id=\"MaxContainers\">\n                            <div *ngIf=\"submitted && fe.MaxContainers.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.MaxContainers.errors.min\">Max Containers field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.MaxContainers.errors.max\">Max Containers must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"3\">\n                    <a ngbNavLink>Admin</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"HostUser\">Host User:</label>\n                            <span class=\"description\">Sets the default user for the host and for accessing\n          the frontend Administrator roles.</span>\n                            <input type=\"text\" formControlName=\"HostUser\" placeholder=\"Default: user@user\"\n                                   name=\"HostUser\" class=\"form-control\" id=\"HostUser\">\n                            <div *ngIf=\"submitted && fe.HostUser.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.HostUser.errors.minlength\">Host User field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.HostUser.errors.maxlength\">Host User must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"HostPassword\">Host Password:</label>\n                            <span class=\"description\">Sets the default user password.</span>\n                            <input type=\"text\" formControlName=\"HostPassword\" placeholder=\"Default: user\"\n                                   name=\"HostPassword\" class=\"form-control\" id=\"HostPassword\">\n                            <div *ngIf=\"submitted && fe.HostPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.HostPassword.errors.minlength\">Host Password field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.HostPassword.errors.maxlength\">Host Password must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SelfRegistration\">Self Registration:</label>\n                            <span class=\"description\">Allows users to create their own logins on the server.</span>\n                            <select formControlName=\"SelfRegistration\" placeholder=\"Default: On\"\n                                    name=\"SelfRegistration\" class=\"form-control\" id=\"SelfRegistration\">\n                                <option value=\"\">Default: On</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.SelfRegistration.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SelfRegistration.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"4\">\n                    <a ngbNavLink>Coding</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"CodeExecTimeout\">Code Execution Timeout:</label>\n                            <span class=\"description\">Defines a timeout to code execution (in seconds).</span>\n                            <input type=\"number\" formControlName=\"CodeExecTimeout\" placeholder=\"Default: 20\"\n                                   name=\"CodeExecTimeout\" class=\"form-control\" id=\"CodeExecTimeout\">\n                            <div *ngIf=\"submitted && fe.CodeExecTimeout.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.CodeExecTimeout.errors.min\">Code Execution Timeout field must have a minimum value of 10</div>\n                                <div *ngIf=\"fe.CodeExecTimeout.errors.max\">Code Execution Timeout must be a maximum of value 1000</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"CodeMaxFileSize\">File Size Upload:</label>\n                            <span class=\"description\">Sets the maximum file size to upload (in bytes).</span>\n                            <input type=\"number\" formControlName=\"CodeMaxFileSize\" placeholder=\"Default: 5242880\"\n                                   name=\"CodeMaxFileSize\" class=\"form-control\" id=\"CodeMaxFileSize\"\n                                   (click)=\"getInputMaxFileSize($event)\"\n                                   (keyup)=\"getInputMaxFileSize($event)\">{{CodeMaxFileSize}}\n                            <div *ngIf=\"submitted && fe.CodeMaxFileSize.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.CodeMaxFileSize.errors.min\">File Size Upload field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.CodeMaxFileSize.errors.max\">File Size Upload must be a maximum of value 10000000000</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"Queue\">Queuing System:</label>\n                            <span class=\"description\">If enabled, a queue system will prevent two codes from running at the same time.\n          If disabled, it will become optional for each run.</span>\n                            <select formControlName=\"Queue\" placeholder=\"Default: Off\" name=\"Queue\" class=\"form-control\"\n                                    id=\"Queue\">\n                                <option value=\"\">Default: Off</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.Queue.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.Queue.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"MaxConcurrency\">Maximum Queue Concurrency:</label>\n                            <span class=\"description\">Defines the maximum number of users in the queue, competing for resources.</span>\n                            <input type=\"number\" formControlName=\"MaxConcurrency\" placeholder=\"Default: 30\"\n                                   name=\"MaxConcurrency\" class=\"form-control\" id=\"MaxConcurrency\">\n                            <div *ngIf=\"submitted && fe.MaxConcurrency.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.MaxConcurrency.errors.min\">Max Concurrency field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.MaxConcurrency.errors.max\">Max Concurrency must be a maximum of value 10000000000</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"5\">\n                    <a ngbNavLink>Debug</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"Debug\">Debug:</label>\n                            <span class=\"description\">Shows debug messages on the backend.</span>\n                            <select formControlName=\"Debug\" placeholder=\"Default: Off\" name=\"Debug\" class=\"form-control\"\n                                    id=\"Debug\">\n                                <option value=\"\">Default: Off</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.Debug.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.Debug.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"Error\">Error:</label>\n                            <span class=\"description\">Shows error messages on the backend.</span>\n                            <select formControlName=\"Error\" placeholder=\"Default: Off\" name=\"Error\" class=\"form-control\"\n                                    id=\"Error\">\n                                <option value=\"\">Default: Off</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.Error.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.Error.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"6\">\n                    <a ngbNavLink>SMTP Account</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpServer\">Smtp Server:</label>\n                            <span class=\"description\">Server address responsible for sending the account\n          registration and password recovery emails.</span>\n                            <input type=\"text\" formControlName=\"SmtpServer\" placeholder=\"Default: empty\"\n                                   name=\"SmtpServer\" class=\"form-control\" id=\"SmtpServer\">\n                            <div *ngIf=\"submitted && fe.SmtpServer.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpServer.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpPort\">Smtp Port:</label>\n                            <span class=\"description\">Mail server port.</span>\n                            <input type=\"number\" formControlName=\"SmtpPort\" placeholder=\"Default: empty\"\n                                   name=\"SmtpPort\" class=\"form-control\" id=\"SmtpPort\">\n                            <div *ngIf=\"submitted && fe.SmtpPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpPort.errors.min\">Smtp Port field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.SmtpPort.errors.max\">Smtp Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpUser\">Smtp User:</label>\n                            <span class=\"description\">Registered user for sending emails.</span>\n                            <input type=\"text\" formControlName=\"SmtpUser\" placeholder=\"Default: empty\"\n                                   name=\"SmtpUser\" class=\"form-control\" id=\"SmtpUser\">\n                            <div *ngIf=\"submitted && fe.SmtpUser.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpUser.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpPassword\">Smtp User Password:</label>\n                            <span class=\"description\">User Password registered for sending e-mails.</span>\n                            <input type=\"text\" formControlName=\"SmtpPassword\" placeholder=\"Default: empty\"\n                                   name=\"SmtpPassword\" class=\"form-control\" id=\"SmtpPassword\">\n                            <div *ngIf=\"submitted && fe.SmtpPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpPassword.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"\">\n                    <a ngbNavLink>Database Account</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbHost\">DB Server:</label>\n                            <span class=\"description\">DB Server address.</span>\n                            <input type=\"text\" formControlName=\"DbHost\" placeholder=\"Default: localhost\"\n                                   name=\"DbHost\" class=\"form-control\" id=\"DbHost\">\n                            <div *ngIf=\"submitted && fe.DbHost.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbHost.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbPort\">DB Port:</label>\n                            <span class=\"description\">DB server port.</span>\n                            <input type=\"number\" formControlName=\"DbPort\" placeholder=\"Default: 3306\"\n                                   name=\"SmtpPort\" class=\"form-control\" id=\"DbPort\">\n                            <div *ngIf=\"submitted && fe.DbPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbPort.errors.min\">DB Port field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.DbPort.errors.max\">DB Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbUser\">DB User:</label>\n                            <span class=\"description\">DB user to connection.</span>\n                            <input type=\"text\" formControlName=\"DbUser\" placeholder=\"Default: root\"\n                                   name=\"DbUser\" class=\"form-control\" id=\"DbUser\">\n                            <div *ngIf=\"submitted && fe.DbUser.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbUser.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbPassword\">DB Password:</label>\n                            <span class=\"description\">DB password to connection.</span>\n                            <input type=\"text\" formControlName=\"DbPassword\" placeholder=\"Default: 1gu@nACS\"\n                                   name=\"DbPassword\" class=\"form-control\" id=\"DbPassword\">\n                            <div *ngIf=\"submitted && fe.DbPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbPassword.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n            </ul>\n            <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n            <div class=\"form-group\">\n                <button class=\"btn-sm btn-success\">Update</button>\n            </div>\n        </form>\n\n        <div class=\"response text-center\" *ngIf=\"response.Name\">\n            <div *ngIf=\"response.Name==='ok' || response.Name==='info'\" class=\"{{response.Name}}\">\n                {{response.Status}}\n                <app-mat-progress-bar></app-mat-progress-bar>\n            </div>\n            <div *ngIf=\"response.Name==='error'\" class=\"{{response.Name}}\">{{response.Status}}</div>\n        </div>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <span>Settings</span>\n        <br/>\n        <span class=\"help\">If the field is left empty, the system will attempt to automatically detect the settings.</span>\n    </h6>\n    <div class=\"col-md-12 user-container\">\n\n        <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\n\n            <ul ngbNav #nav=\"ngbNav\" class=\"nav-tabs\" [destroyOnHide]=\"false\">\n                <li [ngbNavItem]=\"1\">\n                    <a ngbNavLink>Network</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"PublicInterface\">Public Host Interface:</label>\n                            <span class=\"description\" for=\"PublicInterface\">Defines which network interface backend\n          and frontend will use to listen to network services.</span>\n                            <input type=\"text\" formControlName=\"PublicInterface\"\n                                   placeholder=\"Default: empty | Example: eth0\"\n                                   name=\"PublicInterface\" class=\"form-control\" id=\"PublicInterface\">\n                            <div *ngIf=\"submitted && fe.PublicInterface.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.PublicInterface.errors.minlength\">Public Interface field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.PublicInterface.errors.maxlength\">Public Interface must be a maximum of 15 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"BackendPort\">Backend Service Port:</label>\n                            <span class=\"description\">Sets the port value to list the services between the backends in the network.</span>\n                            <input type=\"number\" formControlName=\"BackendPort\" placeholder=\"Default: 10001\"\n                                   name=\"BackendPort\" class=\"form-control\" id=\"BackendPort\">\n                            <div *ngIf=\"submitted && fe.BackendPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.BackendPort.errors.min\">Backend Port field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.BackendPort.errors.max\">Backend Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"FrontendPort\">Frontend Service Port:</label>\n                            <span class=\"description\">Sets the port value to list the services for the frontends.</span>\n                            <input type=\"number\" formControlName=\"FrontendPort\" placeholder=\"Default: 8000\"\n                                   name=\"FrontendPort\" class=\"form-control\" id=\"FrontendPort\">\n                            <div *ngIf=\"submitted && fe.FrontendPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.FrontendPort.errors.min\">Frontend Port field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.FrontendPort.errors.max\">Frontend Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"WebSocketPort\">Websocket Service Port:</label>\n                            <span class=\"description\">Sets the frontend websocket communication port.</span>\n                            <input type=\"number\" formControlName=\"WebSocketPort\" placeholder=\"Default: 8001\"\n                                   name=\"WebSocketPort\" class=\"form-control\" id=\"WebSocketPort\">\n                            <div *ngIf=\"submitted && fe.WebSocketPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.WebSocketPort.errors.min\">WebSocket Port field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.WebSocketPort.errors.max\">WebSocket Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"2\">\n                    <a ngbNavLink>Cluster</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"ClusterName\">Cluster:</label>\n                            <span class=\"description\">The default cluster name.</span>\n                            <input type=\"text\" formControlName=\"ClusterName\" placeholder=\"Default: CLUSTER01\"\n                                   name=\"ClusterName\" class=\"form-control\" id=\"ClusterName\">\n                            <div *ngIf=\"submitted && fe.ClusterName.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.ClusterName.errors.minlength\">Cluster Name field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.ClusterName.errors.maxlength\">Cluster Name must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"ClusterPassword\">Cluster Password:</label>\n                            <span class=\"description\">Defines the cluster password for connection between nodes.\n          If the password is left empty, the nodes will connect automatically if their\n          operating modes are set to NODE.</span>\n                            <input type=\"text\" formControlName=\"ClusterPassword\" placeholder=\"Default: empty\"\n                                   name=\"ClusterPassword\" class=\"form-control\" id=\"ClusterPassword\">\n                            <div *ngIf=\"submitted && fe.ClusterPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.ClusterPassword.errors.minlength\">Cluster Password field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.ClusterPassword.errors.maxlength\">Cluster Password must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"NodeMode\">Node Mode:</label>\n                            <span class=\"description\">\n                                SINGLE: creates a node for each vCPU present on the host, simulating a cluster.\n                                <br />MULTI.: allocates all vCPUs to Master virtual node.\n                                <br />SHARED: makes all vCPUs available to nodes, regardless of quantity.\n                            </span>\n                            <select formControlName=\"NodeMode\" name=\"NodeMode\" class=\"form-control\"\n                                    id=\"NodeMode\">\n                                <option value=\"\">Default: SHARED</option>\n                                <option value=\"SINGLE\">SINGLE</option>\n                                <option value=\"MULTI\">MULTI</option>\n                                <option value=\"SHARED\">SHARED</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.NodeMode.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.NodeMode.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"OperationMode\">Operation Mode:</label>\n                            <span class=\"description\">\n                                LOCAL: prepares the system to work on one host or virtual machine.\n                                <br />MASTER: defines the host or virtual machine as the master node of the cluster, listing the service available to other hosts on the network.\n                                <br />NODE: sets the host or virtual machine as node mode, enabling the search for a master host to connect.\n                            </span>\n                            <select formControlName=\"OperationMode\" name=\"OperationMode\" class=\"form-control\"\n                                    id=\"OperationMode\">\n                                <option value=\"\">Default: LOCAL</option>\n                                <option value=\"LOCAL\">LOCAL</option>\n                                <option value=\"NODE\">NODE</option>\n                                <option value=\"MASTER\">MASTER</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.OperationMode.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.OperationMode.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"StartContainers\">Number of Nodes:</label>\n                            <span class=\"description\">The number of containers (virtual nodes) to be started on backend init.</span>\n                            <input type=\"number\" formControlName=\"StartContainers\" placeholder=\"Default: 0\"\n                                   name=\"StartContainers\" class=\"form-control\" id=\"StartContainers\">\n                            <div *ngIf=\"submitted && fe.StartContainers.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.StartContainers.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"MaxContainers\">Maximum Number of Nodes:</label>\n                            <span class=\"description\">The maximum number of containers running as nodes.</span>\n                            <input type=\"number\" formControlName=\"MaxContainers\" placeholder=\"Default: 30\"\n                                   name=\"MaxContainers\" class=\"form-control\" id=\"MaxContainers\">\n                            <div *ngIf=\"submitted && fe.MaxContainers.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.MaxContainers.errors.min\">Max Containers field must have a minimum value of 1500</div>\n                                <div *ngIf=\"fe.MaxContainers.errors.max\">Max Containers must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"3\">\n                    <a ngbNavLink>Admin</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"HostUser\">Host User:</label>\n                            <span class=\"description\">Sets the default user for the host and for accessing\n          the frontend Administrator roles.</span>\n                            <input type=\"text\" formControlName=\"HostUser\" placeholder=\"Default: user@user\"\n                                   name=\"HostUser\" class=\"form-control\" id=\"HostUser\">\n                            <div *ngIf=\"submitted && fe.HostUser.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.HostUser.errors.minlength\">Host User field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.HostUser.errors.maxlength\">Host User must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"HostPassword\">Host Password:</label>\n                            <span class=\"description\">Sets the default user password.</span>\n                            <input type=\"text\" formControlName=\"HostPassword\" placeholder=\"Default: user\"\n                                   name=\"HostPassword\" class=\"form-control\" id=\"HostPassword\">\n                            <div *ngIf=\"submitted && fe.HostPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.HostPassword.errors.minlength\">Host Password field must have a minimum of 4 characters</div>\n                                <div *ngIf=\"fe.HostPassword.errors.maxlength\">Host Password must be a maximum of 20 characters</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SelfRegistration\">Self Registration:</label>\n                            <span class=\"description\">Allows users to create their own logins on the server.</span>\n                            <select formControlName=\"SelfRegistration\" placeholder=\"Default: On\"\n                                    name=\"SelfRegistration\" class=\"form-control\" id=\"SelfRegistration\">\n                                <option value=\"\">Default: On</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.SelfRegistration.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SelfRegistration.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"4\">\n                    <a ngbNavLink>Coding</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"CodeExecTimeout\">Code Execution Timeout:</label>\n                            <span class=\"description\">Defines a timeout to code execution (in seconds).</span>\n                            <input type=\"number\" formControlName=\"CodeExecTimeout\" placeholder=\"Default: 20\"\n                                   name=\"CodeExecTimeout\" class=\"form-control\" id=\"CodeExecTimeout\">\n                            <div *ngIf=\"submitted && fe.CodeExecTimeout.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.CodeExecTimeout.errors.min\">Code Execution Timeout field must have a minimum value of 10</div>\n                                <div *ngIf=\"fe.CodeExecTimeout.errors.max\">Code Execution Timeout must be a maximum of value 1000</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"CodeMaxFileSize\">File Size Upload:</label>\n                            <span class=\"description\">Sets the maximum file size to upload (in bytes).</span>\n                            <input type=\"number\" formControlName=\"CodeMaxFileSize\" placeholder=\"Default: 5242880\"\n                                   name=\"CodeMaxFileSize\" class=\"form-control\" id=\"CodeMaxFileSize\"\n                                   (click)=\"getInputMaxFileSize($event)\"\n                                   (keyup)=\"getInputMaxFileSize($event)\">{{CodeMaxFileSize}}\n                            <div *ngIf=\"submitted && fe.CodeMaxFileSize.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.CodeMaxFileSize.errors.min\">File Size Upload field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.CodeMaxFileSize.errors.max\">File Size Upload must be a maximum of value 10000000000</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"Queue\">Queuing System:</label>\n                            <span class=\"description\">If enabled, a queue system will prevent two codes from running at the same time.\n          If disabled, it will become optional for each run.</span>\n                            <select formControlName=\"Queue\" placeholder=\"Default: Off\" name=\"Queue\" class=\"form-control\"\n                                    id=\"Queue\">\n                                <option value=\"\">Default: Off</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.Queue.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.Queue.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"MaxConcurrency\">Maximum Queue Concurrency:</label>\n                            <span class=\"description\">Defines the maximum number of users in the queue, competing for resources.</span>\n                            <input type=\"number\" formControlName=\"MaxConcurrency\" placeholder=\"Default: 30\"\n                                   name=\"MaxConcurrency\" class=\"form-control\" id=\"MaxConcurrency\">\n                            <div *ngIf=\"submitted && fe.MaxConcurrency.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.MaxConcurrency.errors.min\">Max Concurrency field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.MaxConcurrency.errors.max\">Max Concurrency must be a maximum of value 10000000000</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"5\">\n                    <a ngbNavLink>Debug</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"Debug\">Debug:</label>\n                            <span class=\"description\">Shows debug messages on the backend.</span>\n                            <select formControlName=\"Debug\" placeholder=\"Default: Off\" name=\"Debug\" class=\"form-control\"\n                                    id=\"Debug\">\n                                <option value=\"\">Default: Off</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.Debug.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.Debug.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"Error\">Error:</label>\n                            <span class=\"description\">Shows error messages on the backend.</span>\n                            <select formControlName=\"Error\" placeholder=\"Default: Off\" name=\"Error\" class=\"form-control\"\n                                    id=\"Error\">\n                                <option value=\"\">Default: Off</option>\n                                <option value=\"On\">On</option>\n                                <option value=\"Off\">Off</option>\n                            </select>\n                            <div *ngIf=\"submitted && fe.Error.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.Error.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"6\">\n                    <a ngbNavLink>SMTP Account</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpServer\">Smtp Server:</label>\n                            <span class=\"description\">Server address responsible for sending the account\n          registration and password recovery emails.</span>\n                            <input type=\"text\" formControlName=\"SmtpServer\" placeholder=\"Default: empty\"\n                                   name=\"SmtpServer\" class=\"form-control\" id=\"SmtpServer\">\n                            <div *ngIf=\"submitted && fe.SmtpServer.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpServer.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpPort\">Smtp Port:</label>\n                            <span class=\"description\">Mail server port.</span>\n                            <input type=\"number\" formControlName=\"SmtpPort\" placeholder=\"Default: empty\"\n                                   name=\"SmtpPort\" class=\"form-control\" id=\"SmtpPort\">\n                            <div *ngIf=\"submitted && fe.SmtpPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpPort.errors.min\">Smtp Port field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.SmtpPort.errors.max\">Smtp Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpUser\">Smtp User:</label>\n                            <span class=\"description\">Registered user for sending emails.</span>\n                            <input type=\"text\" formControlName=\"SmtpUser\" placeholder=\"Default: empty\"\n                                   name=\"SmtpUser\" class=\"form-control\" id=\"SmtpUser\">\n                            <div *ngIf=\"submitted && fe.SmtpUser.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpUser.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"SmtpPassword\">Smtp User Password:</label>\n                            <span class=\"description\">User Password registered for sending e-mails.</span>\n                            <input type=\"text\" formControlName=\"SmtpPassword\" placeholder=\"Default: empty\"\n                                   name=\"SmtpPassword\" class=\"form-control\" id=\"SmtpPassword\">\n                            <div *ngIf=\"submitted && fe.SmtpPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.SmtpPassword.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n                <li [ngbNavItem]=\"\">\n                    <a ngbNavLink>Database Account</a>\n                    <ng-template ngbNavContent>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbHost\">DB Server:</label>\n                            <span class=\"description\">DB Server address.</span>\n                            <input type=\"text\" formControlName=\"DbHost\" placeholder=\"Default: localhost\"\n                                   name=\"DbHost\" class=\"form-control\" id=\"DbHost\">\n                            <div *ngIf=\"submitted && fe.DbHost.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbHost.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbPort\">DB Port:</label>\n                            <span class=\"description\">DB server port.</span>\n                            <input type=\"number\" formControlName=\"DbPort\" placeholder=\"Default: 3306\"\n                                   name=\"SmtpPort\" class=\"form-control\" id=\"DbPort\">\n                            <div *ngIf=\"submitted && fe.DbPort.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbPort.errors.min\">DB Port field must have a minimum value of 1</div>\n                                <div *ngIf=\"fe.DbPort.errors.max\">DB Port must be a maximum of value 65534</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbUser\">DB User:</label>\n                            <span class=\"description\">DB user to connection.</span>\n                            <input type=\"text\" formControlName=\"DbUser\" placeholder=\"Default: root\"\n                                   name=\"DbUser\" class=\"form-control\" id=\"DbUser\">\n                            <div *ngIf=\"submitted && fe.DbUser.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbUser.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <label for=\"DbPassword\">DB Password:</label>\n                            <span class=\"description\">DB password to connection.</span>\n                            <input type=\"text\" formControlName=\"DbPassword\" placeholder=\"Default: 1gu@nACS\"\n                                   name=\"DbPassword\" class=\"form-control\" id=\"DbPassword\">\n                            <div *ngIf=\"submitted && fe.DbPassword.errors\" class=\"error response\">\n                                <div *ngIf=\"fe.DbPassword.errors.required\">Field is required</div>\n                            </div>\n                        </div>\n\n                    </ng-template>\n                </li>\n\n            </ul>\n            <div [ngbNavOutlet]=\"nav\" class=\"mt-2\"></div>\n\n            <div class=\"form-group\">\n                <button class=\"btn-sm btn-success\">Update</button>\n            </div>\n        </form>\n\n        <div class=\"response text-center\" *ngIf=\"response.Name\">\n            <div *ngIf=\"response.Name==='ok' || response.Name==='info'\" class=\"{{response.Name}}\">\n                {{response.Status}}\n                <app-mat-progress-bar></app-mat-progress-bar>\n            </div>\n            <div *ngIf=\"response.Name==='error'\" class=\"{{response.Name}}\">{{response.Status}}</div>\n        </div>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -448,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>System Users</span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addUser()\">Add</button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(users?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n    </div>\n\n    <div class=\"mat-elevation-z8 \">\n\n        <mat-table [dataSource]=\"dataSource\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n            </ng-container>\n\n            <!-- Name Column -->\n            <ng-container matColumnDef=\"Name\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n            </ng-container>\n\n            <!-- Email Column -->\n            <ng-container matColumnDef=\"Email\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Email}} </mat-cell>\n            </ng-container>\n\n            <!-- Module Column -->\n            <ng-container matColumnDef=\"Module\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Module </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Module}} </mat-cell>\n            </ng-container>\n\n            <!-- Action Column -->\n            <ng-container matColumnDef=\"Action\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button mat-icon-button (click)=\"deleteUser(element)\">\n                        <mat-icon>delete</mat-icon>\n                    </button>\n                    <button mat-icon-button (click)=\"editUser(element)\" style=\"margin-left: 20px;\">\n                        <mat-icon>edit</mat-icon>\n                    </button>\n                </mat-cell>\n            </ng-container>\n\n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n            </mat-row>\n        </mat-table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n    <h6 class=\"card-header\">\n        <div style=\"float: left\">\n            <span>System Users</span>\n        </div>\n        <div style=\"float: right\">\n            <button class=\"btn-sm btn-primary\" style=\"width:100px\" (click)=\"addUser()\">Add</button>\n        </div>\n    </h6>\n\n    <div *ngIf=\"load===0\">\n        <app-mat-progress-bar></app-mat-progress-bar>\n    </div>\n\n    <div *ngIf=\"(users?.length <= 0 && load===1)\">\n        No records found.\n    </div>\n\n    <div class=\"filter\">\n        <mat-form-field>\n            <input matInput (keyup)=\"applyFilter($any($event.target).value)\" placeholder=\"Filter: \">\n        </mat-form-field>\n    </div>\n\n    <div class=\"mat-elevation-z8 \">\n\n        <mat-table [dataSource]=\"dataSource\" matSort>\n\n            <!-- ID Column -->\n            <ng-container matColumnDef=\"Id\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Id}} </mat-cell>\n            </ng-container>\n\n            <!-- Name Column -->\n            <ng-container matColumnDef=\"Name\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Name}} </mat-cell>\n            </ng-container>\n\n            <!-- Email Column -->\n            <ng-container matColumnDef=\"Email\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Email}} </mat-cell>\n            </ng-container>\n\n            <!-- Module Column -->\n            <ng-container matColumnDef=\"Module\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Module </mat-header-cell>\n                <mat-cell *matCellDef=\"let row\"> {{row.Module}} </mat-cell>\n            </ng-container>\n\n            <!-- Action Column -->\n            <ng-container matColumnDef=\"Action\">\n                <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>\n                <mat-cell *matCellDef=\"let element\" class=\"action-link\">\n                    <button mat-icon-button (click)=\"deleteUser(element)\">\n                        <mat-icon>delete</mat-icon>\n                    </button>\n                    <button mat-icon-button (click)=\"editUser(element)\" style=\"margin-left: 20px;\">\n                        <mat-icon>edit</mat-icon>\n                    </button>\n                </mat-cell>\n            </ng-container>\n\n            <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n            <mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n            </mat-row>\n        </mat-table>\n\n        <mat-paginator [pageSizeOptions]=\"[25, 50, 100]\"></mat-paginator>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -461,7 +461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <div class=\"welcome\">\n\n    <div class=\"form-row\">\n      <div class=\"form-group col\">\n        <span>\n          Hello!\n          <br />\n          The Iguana Cluster System allows the execution of parallelized codes in OpenMP, MPI, and CUDA.\n          <br />\n          <br />\n          <a href=\"#\" (click)=\"setRoute(); false;\">Register a user</a> and execute your codes in parallel.\n          <br />\n          <br />\n          Simple, quick, and easy.\n          <hr />\n          Author: Naylor Garcia Bachiega\n          <br />\n          Developed for doctoral work at the University of São Paulo - ICMC/USP\n          <br /><br />\n          Advisor: Paulo Sérgio Lopes de Souza\n        </span>\n      </div>\n      <div *ngIf=\"!userSession.Owner\" class=\"flex-column\">\n\n        <div class=\"card-body\">\n          <app-host-login></app-host-login>\n        </div>\n\n      </div>\n\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card m-3\">\n  <div class=\"welcome\">\n\n    <div class=\"form-row\">\n      <div class=\"form-group col\">\n        <span>\n          Hello!\n          <br />\n          The Iguana Cluster System allows the execution of parallelized codes in OpenMP, MPI, and CUDA.\n          <br />\n          <br />\n          <span *ngIf=\"hostInfo.SelfRegistration==='On'\">\n            <a href=\"#\" (click)=\"setRoute(); false;\">Register a user</a> and execute your codes in parallel.\n          </span>\n          <br />\n          <br />\n          Simple, quick, and easy.\n          <hr />\n          Author: Naylor Garcia Bachiega\n          <br />\n          Developed for doctoral work at the University of São Paulo - ICMC/USP\n          <br /><br />\n          Advisor: Paulo Sérgio Lopes de Souza\n        </span>\n      </div>\n      <div *ngIf=\"!userSession.Owner\" class=\"flex-column\">\n\n        <div class=\"card-body\">\n          <app-host-login></app-host-login>\n        </div>\n\n      </div>\n\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -826,14 +826,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/dialog.es5.js");
 /* harmony import */ var _services_dialog_dialog_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/dialog/dialog.component */ "./src/app/_services/dialog/dialog.component.ts");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
 
 
 
 
 var UtilControl = /** @class */ (function () {
-    function UtilControl(dialog) {
+    function UtilControl(dialog, _snackBar, router) {
         this.dialog = dialog;
+        this._snackBar = _snackBar;
+        this.router = router;
     }
+    UtilControl.prototype.setResponse = function (text, action, panel, route) {
+        var _this = this;
+        if (!panel)
+            panel = action;
+        var snackBarRef = this._snackBar.open(text, action, {
+            duration: 5000, panelClass: [panel]
+        });
+        if (route) {
+            snackBarRef.onAction().subscribe(function () {
+                return _this.router.navigate([route]);
+            });
+        }
+        return snackBarRef;
+    };
     UtilControl.prototype.openModal = function (title, text, yes, no, input) {
         var dialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
         dialogConfig.disableClose = true;
@@ -882,13 +902,17 @@ var UtilControl = /** @class */ (function () {
         return number;
     };
     UtilControl.ctorParameters = function () { return [
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] },
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
     ]; };
     UtilControl = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: "root"
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"],
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], UtilControl);
     return UtilControl;
 }());
@@ -1242,7 +1266,7 @@ var HostService = /** @class */ (function () {
         auth.Password = localStorage.getItem('PASS');
         auth.Name = localStorage.getItem('NAME');
         auth.Module = localStorage.getItem('MODULE');
-        auth.Id = localStorage.getItem('ID');
+        auth.Id = Number(localStorage.getItem('ID'));
         auth.Token = localStorage.getItem('TOKEN');
         if ((auth.Owner == "" || auth.Owner == "undefined" || auth.Owner == null)
             && auth.Module != "SelfRegistration")
@@ -1256,6 +1280,8 @@ var HostService = /** @class */ (function () {
             'CurrentNodesComponent',
             'ClassroomManagerComponent',
         ];
+        if (this.getSessionID().Module == 'SelfRegistration')
+            return;
         if (this.getSessionID().Id == null || !this.getSessionID()) {
             this.router.navigate(['welcome']);
         }
@@ -1390,11 +1416,10 @@ var SocketService = /** @class */ (function () {
     function SocketService() {
         var _this = this;
         this.listener = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        var webSocketPort = window.localStorage.getItem("WebSocketPort");
         var url = new URL('/ws/', window.location.href);
         url.protocol = url.protocol.replace('http', 'ws');
-        var ws = localStorage.getItem('WebSocketPort');
-        this.socket = new WebSocket("ws://" + url.hostname + ":" + ws + "/ws");
-        //console.log("ws://"+url.hostname+":"+ws+"/ws");
+        this.socket = new WebSocket("ws://" + url.hostname + ":" + webSocketPort + "/ws");
         this.socket.onopen = function (event) {
             _this.listener.emit({ type: "open", data: event });
         };
@@ -1408,8 +1433,10 @@ var SocketService = /** @class */ (function () {
     SocketService.prototype.isOpen = function () { return this.socket.readyState === this.socket.OPEN; };
     SocketService.prototype.send = function (data) {
         try {
-            if (!this.isOpen())
+            if (!this.isOpen()) {
+                console.log("Socket is not open");
                 return;
+            }
             this.socket.send(JSON.stringify(data));
         }
         catch (e) {
@@ -1679,7 +1706,8 @@ var AppComponent = /** @class */ (function () {
             .subscribe(function (data) {
             //console.log('App Root | hostInfo, this.newOpMode: ', data, this.newOpMode);
             _this.hostInfo = data;
-            window.localStorage.setItem("WebSocketPort", _this.hostInfo.WebSocketPort);
+            if (_this.hostInfo.WebSocketPort)
+                window.localStorage.setItem('WebSocketPort', _this.hostInfo.WebSocketPort);
             if (data == '-' ||
                 data['OpMode'] == '' ||
                 (_this.newOpMode && _this.hostInfo.OpMode != _this.newOpMode)) {
@@ -1728,16 +1756,16 @@ var AppComponent = /** @class */ (function () {
                     case 1:
                         if (false) {}
                         this.getHostInfo();
+                        if (this.hostConnection["Name"] == "info" && n == 2) {
+                            this.conn = this._util.openModal('Connection Failed', 'There is no connection with the server!', 'Close', '', '');
+                        }
+                        if (this.conn && this.hostConnection["Name"] == "ok" && n > 0) {
+                            this.conn.close();
+                            n = 0;
+                        }
                         return [4 /*yield*/, this._util.delay(10000)];
                     case 2:
                         _a.sent();
-                        if (this.hostConnection["Name"] == "info" && n == 10) {
-                            this._util.openModal('Connection Failed', 'There is no connection with the server!', 'Close', '', '');
-                        }
-                        if (this.hostConnection["Name"] == "ok" && n > 0) {
-                            this._util.dialog.closeAll();
-                            n = 0;
-                        }
                         if (this.hostConnection["Name"] == "info")
                             n++;
                         return [3 /*break*/, 1];
@@ -1829,33 +1857,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
 /* harmony import */ var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/material/autocomplete */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/autocomplete.es5.js");
 /* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @angular/material/chips */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/chips.es5.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/divider.es5.js");
-/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! @angular/material/button-toggle */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/button-toggle.es5.js");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/input.es5.js");
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
-/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/progress-bar.es5.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/tabs.es5.js");
-/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
-/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/select.es5.js");
-/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/list.es5.js");
-/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sidenav.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/__ivy_ngcc__/esm5/flex-layout.es5.js");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/toolbar.es5.js");
-/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/expansion.es5.js");
-/* harmony import */ var ngx_monaco_editor__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ngx-monaco-editor */ "./node_modules/ngx-monaco-editor/__ivy_ngcc__/fesm5/ngx-monaco-editor.js");
-/* harmony import */ var _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! @ng-idle/keepalive */ "./node_modules/@ng-idle/keepalive/__ivy_ngcc__/fesm5/ng-idle-keepalive.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
-/* harmony import */ var _helpers_HttpErrorInterceptor__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./_helpers/HttpErrorInterceptor */ "./src/app/_helpers/HttpErrorInterceptor.ts");
-/* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/grid-list.es5.js");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/card.es5.js");
-/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/menu.es5.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/icon.es5.js");
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/__ivy_ngcc__/esm5/layout.es5.js");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/button.es5.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/dialog.es5.js");
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/divider.es5.js");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! @angular/material/button-toggle */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/button-toggle.es5.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/input.es5.js");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/progress-bar.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/tabs.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/select.es5.js");
+/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/list.es5.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sidenav.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/__ivy_ngcc__/esm5/flex-layout.es5.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/toolbar.es5.js");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/expansion.es5.js");
+/* harmony import */ var ngx_monaco_editor__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ngx-monaco-editor */ "./node_modules/ngx-monaco-editor/__ivy_ngcc__/fesm5/ngx-monaco-editor.js");
+/* harmony import */ var _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! @ng-idle/keepalive */ "./node_modules/@ng-idle/keepalive/__ivy_ngcc__/fesm5/ng-idle-keepalive.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
+/* harmony import */ var _helpers_HttpErrorInterceptor__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./_helpers/HttpErrorInterceptor */ "./src/app/_helpers/HttpErrorInterceptor.ts");
+/* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/grid-list.es5.js");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/card.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/menu.es5.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/icon.es5.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/__ivy_ngcc__/esm5/layout.es5.js");
 
 
 //DECLARATIONS
@@ -1895,6 +1924,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //IMPORTS
+
 
 
 
@@ -1980,46 +2010,46 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_37__["AppRoutingModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_38__["BrowserAnimationsModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_39__["BrowserModule"],
-                _angular_common__WEBPACK_IMPORTED_MODULE_66__["CommonModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_67__["CommonModule"],
                 _ckeditor_ckeditor5_angular__WEBPACK_IMPORTED_MODULE_40__["CKEditorModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_41__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_42__["HttpClientModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_42__["HttpClientJsonpModule"],
-                ngx_monaco_editor__WEBPACK_IMPORTED_MODULE_61__["MonacoEditorModule"].forRoot(),
+                ngx_monaco_editor__WEBPACK_IMPORTED_MODULE_62__["MonacoEditorModule"].forRoot(),
                 _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_43__["MatAutocompleteModule"],
                 _angular_material_chips__WEBPACK_IMPORTED_MODULE_44__["MatChipsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_45__["MatDialogModule"],
-                _angular_material_divider__WEBPACK_IMPORTED_MODULE_46__["MatDividerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_45__["MatButtonModule"],
-                _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_47__["MatButtonToggleModule"],
-                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_60__["MatExpansionModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_48__["MatInputModule"],
-                _angular_material_paginator__WEBPACK_IMPORTED_MODULE_49__["MatPaginatorModule"],
-                _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_50__["MatProgressBarModule"],
-                _angular_material_sort__WEBPACK_IMPORTED_MODULE_53__["MatSortModule"],
-                _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_57__["MatSnackBarModule"],
-                _angular_material_table__WEBPACK_IMPORTED_MODULE_51__["MatTableModule"],
-                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_52__["MatTabsModule"],
-                _angular_material_select__WEBPACK_IMPORTED_MODULE_54__["MatSelectModule"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_59__["MatToolbarModule"],
-                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_56__["MatSidenavModule"],
-                _angular_material_list__WEBPACK_IMPORTED_MODULE_55__["MatListModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_58__["FlexLayoutModule"],
-                _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_62__["NgIdleKeepaliveModule"].forRoot(),
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_63__["NgbModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_46__["MatDialogModule"],
+                _angular_material_divider__WEBPACK_IMPORTED_MODULE_47__["MatDividerModule"],
+                _angular_material_button__WEBPACK_IMPORTED_MODULE_45__["MatButtonModule"],
+                _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_48__["MatButtonToggleModule"],
+                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_61__["MatExpansionModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_49__["MatInputModule"],
+                _angular_material_paginator__WEBPACK_IMPORTED_MODULE_50__["MatPaginatorModule"],
+                _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_51__["MatProgressBarModule"],
+                _angular_material_sort__WEBPACK_IMPORTED_MODULE_54__["MatSortModule"],
+                _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_58__["MatSnackBarModule"],
+                _angular_material_table__WEBPACK_IMPORTED_MODULE_52__["MatTableModule"],
+                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_53__["MatTabsModule"],
+                _angular_material_select__WEBPACK_IMPORTED_MODULE_55__["MatSelectModule"],
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_60__["MatToolbarModule"],
+                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_57__["MatSidenavModule"],
+                _angular_material_list__WEBPACK_IMPORTED_MODULE_56__["MatListModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_59__["FlexLayoutModule"],
+                _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_63__["NgIdleKeepaliveModule"].forRoot(),
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_64__["NgbModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_41__["ReactiveFormsModule"],
-                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_67__["MatGridListModule"],
-                _angular_material_card__WEBPACK_IMPORTED_MODULE_68__["MatCardModule"],
-                _angular_material_menu__WEBPACK_IMPORTED_MODULE_69__["MatMenuModule"],
-                _angular_material_icon__WEBPACK_IMPORTED_MODULE_70__["MatIconModule"],
-                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_71__["LayoutModule"],
+                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_68__["MatGridListModule"],
+                _angular_material_card__WEBPACK_IMPORTED_MODULE_69__["MatCardModule"],
+                _angular_material_menu__WEBPACK_IMPORTED_MODULE_70__["MatMenuModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_71__["MatIconModule"],
+                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_72__["LayoutModule"],
             ],
             providers: [
                 {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_42__["HTTP_INTERCEPTORS"],
-                    useClass: _helpers_HttpErrorInterceptor__WEBPACK_IMPORTED_MODULE_64__["HttpErrorInterceptor"],
+                    useClass: _helpers_HttpErrorInterceptor__WEBPACK_IMPORTED_MODULE_65__["HttpErrorInterceptor"],
                     multi: true,
-                }, _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_65__["EventEmitterService"],
+                }, _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_66__["EventEmitterService"],
                 _services_file_service__WEBPACK_IMPORTED_MODULE_15__["ExcelService"],
             ],
             bootstrap: [
@@ -2030,7 +2060,7 @@ var AppModule = /** @class */ (function () {
                 _services_dialog_dialog_component__WEBPACK_IMPORTED_MODULE_8__["DialogComponent"],
             ],
             exports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_66__["CommonModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_67__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_41__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_41__["ReactiveFormsModule"],
             ]
@@ -2164,7 +2194,7 @@ var ClusterInfoComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".files {\n  padding-left: 10px;\n}\n\n.codeButtons {\n  padding-bottom: 10px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.form-control {\n  max-width: 500px;\n}\n\n.text {\n  min-width: 500px !important;\n  display: block;\n}\n\n.editor {\n  height: 90vh !important;\n  width: 100%;\n}\n\n.editorResult {\n  height: 200px !important;\n  width: 100%;\n}\n\n.card {\n  white-space: pre-line !important;\n}\n\n.codeRun {\n  font-size: 14px !important;\n  padding: .75rem 1.25rem;\n\n}\n\n.serviceOk {\n  font-size: 14px;\n  color: #0b51c5;\n  display: block;\n  white-space: pre-line;\n}\n\n.runTimeout {\n  padding: .75rem 1.25rem;\n  font-size: 12px;\n  color: #9d1e15;\n  display: block;\n  white-space: pre-line;\n}\n\n.queuePosition {\n  padding: .75rem 1.25rem;\n  font-size: 12px;\n  color: #28a745;\n  display: block;\n  white-space: pre-line;\n}\n\n.selection {\n  color: #0a0a0a;\n  font-size: 14px;\n}\n\n.md-fab-bottom-right{\n  position: fixed !important;\n  right: 100px; /* Add this and change value to set the margin you want */\n  bottom: 10px;\n  z-index: 9999;\n}\n\n.btn-primary {\n  color: #000;\n  background-color: #fff !important;\n  border-color: #007bff;\n}\n\n.btn-primary.focus, .btn-primary:focus {\n  color: #000 !important;\n}\n\n.nav-tabs {\n  width: 80%;\n}\n\n.chat {\n  border: 2px solid #dedede;\n  background-color: #f1f1f1;\n  border-radius: 5px;\n  margin: 10px 0;\n  width: 95%;\n}\n\n.darker {\n  border-color: #ccc;\n  background-color: #ddd;\n}\n\n.user {\n  border-color: rgba(131, 129, 129, 0.3);\n  background-color: rgba(19, 19, 19, 0.3);\n}\n\n.chat::after {\n  content: \"\";\n  clear: both;\n  display: table;\n}\n\n.chatIcon {\n  float: left;\n  max-width: 10px;\n  width: 100%;\n  margin-right: 20px;\n  border-radius: 50%;\n}\n\n.chatIcon-right {\n  float: right;\n  margin-right: 10px;\n}\n\n.time-right {\n  float: right;\n  color: #aaa;\n  margin-right: 10px;\n}\n\n.time-left {\n  float: left;\n  color: #999;\n  margin-right: 10px;\n}\n\n.time-user {\n  float: left;\n  color: rgba(19, 19, 19, 0.3);\n  margin-left: 10px;\n}\n\n.typing {\n  font-size: 12px;\n  color: #9d1e15;\n}\n\n.online {\n  font-size: 12px;\n  color: #28a745;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29kZS9jb2RlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLDhCQUE4QjtBQUNoQzs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLDJCQUEyQjtFQUMzQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsdUJBQXVCO0VBQ3ZCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLHdCQUF3QjtFQUN4QixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSwwQkFBMEI7RUFDMUIsdUJBQXVCOztBQUV6Qjs7QUFFQTtFQUNFLGVBQWU7RUFDZixjQUFjO0VBQ2QsY0FBYztFQUNkLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixlQUFlO0VBQ2YsY0FBYztFQUNkLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsZUFBZTtFQUNmLGNBQWM7RUFDZCxjQUFjO0VBQ2QscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGVBQWU7QUFDakI7O0FBRUE7RUFDRSwwQkFBMEI7RUFDMUIsWUFBWSxFQUFFLHlEQUF5RDtFQUN2RSxZQUFZO0VBQ1osYUFBYTtBQUNmOztBQUVBO0VBQ0UsV0FBVztFQUNYLGlDQUFpQztFQUNqQyxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxVQUFVO0FBQ1o7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIseUJBQXlCO0VBQ3pCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsVUFBVTtBQUNaOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLHNDQUFzQztFQUN0Qyx1Q0FBdUM7QUFDekM7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsV0FBVztFQUNYLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsZUFBZTtFQUNmLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFdBQVc7RUFDWCxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsNEJBQTRCO0VBQzVCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGNBQWM7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb2RlL2NvZGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5maWxlcyB7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbn1cblxuLmNvZGVCdXR0b25zIHtcbiAgcGFkZGluZy1ib3R0b206IDEwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cblxuLmZvcm0tY29udHJvbCB7XG4gIG1heC13aWR0aDogNTAwcHg7XG59XG5cbi50ZXh0IHtcbiAgbWluLXdpZHRoOiA1MDBweCAhaW1wb3J0YW50O1xuICBkaXNwbGF5OiBibG9jaztcbn1cblxuLmVkaXRvciB7XG4gIGhlaWdodDogOTB2aCAhaW1wb3J0YW50O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmVkaXRvclJlc3VsdCB7XG4gIGhlaWdodDogMjAwcHggIWltcG9ydGFudDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5jYXJkIHtcbiAgd2hpdGUtc3BhY2U6IHByZS1saW5lICFpbXBvcnRhbnQ7XG59XG5cbi5jb2RlUnVuIHtcbiAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7XG4gIHBhZGRpbmc6IC43NXJlbSAxLjI1cmVtO1xuXG59XG5cbi5zZXJ2aWNlT2sge1xuICBmb250LXNpemU6IDE0cHg7XG4gIGNvbG9yOiAjMGI1MWM1O1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2hpdGUtc3BhY2U6IHByZS1saW5lO1xufVxuXG4ucnVuVGltZW91dCB7XG4gIHBhZGRpbmc6IC43NXJlbSAxLjI1cmVtO1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiAjOWQxZTE1O1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2hpdGUtc3BhY2U6IHByZS1saW5lO1xufVxuXG4ucXVldWVQb3NpdGlvbiB7XG4gIHBhZGRpbmc6IC43NXJlbSAxLjI1cmVtO1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiAjMjhhNzQ1O1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2hpdGUtc3BhY2U6IHByZS1saW5lO1xufVxuXG4uc2VsZWN0aW9uIHtcbiAgY29sb3I6ICMwYTBhMGE7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cblxuLm1kLWZhYi1ib3R0b20tcmlnaHR7XG4gIHBvc2l0aW9uOiBmaXhlZCAhaW1wb3J0YW50O1xuICByaWdodDogMTAwcHg7IC8qIEFkZCB0aGlzIGFuZCBjaGFuZ2UgdmFsdWUgdG8gc2V0IHRoZSBtYXJnaW4geW91IHdhbnQgKi9cbiAgYm90dG9tOiAxMHB4O1xuICB6LWluZGV4OiA5OTk5O1xufVxuXG4uYnRuLXByaW1hcnkge1xuICBjb2xvcjogIzAwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICBib3JkZXItY29sb3I6ICMwMDdiZmY7XG59XG5cbi5idG4tcHJpbWFyeS5mb2N1cywgLmJ0bi1wcmltYXJ5OmZvY3VzIHtcbiAgY29sb3I6ICMwMDAgIWltcG9ydGFudDtcbn1cblxuLm5hdi10YWJzIHtcbiAgd2lkdGg6IDgwJTtcbn1cblxuLmNoYXQge1xuICBib3JkZXI6IDJweCBzb2xpZCAjZGVkZWRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjFmMWYxO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG1hcmdpbjogMTBweCAwO1xuICB3aWR0aDogOTUlO1xufVxuXG4uZGFya2VyIHtcbiAgYm9yZGVyLWNvbG9yOiAjY2NjO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xufVxuXG4udXNlciB7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgxMzEsIDEyOSwgMTI5LCAwLjMpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDE5LCAxOSwgMTksIDAuMyk7XG59XG5cbi5jaGF0OjphZnRlciB7XG4gIGNvbnRlbnQ6IFwiXCI7XG4gIGNsZWFyOiBib3RoO1xuICBkaXNwbGF5OiB0YWJsZTtcbn1cblxuLmNoYXRJY29uIHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1heC13aWR0aDogMTBweDtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xufVxuXG4uY2hhdEljb24tcmlnaHQge1xuICBmbG9hdDogcmlnaHQ7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cblxuLnRpbWUtcmlnaHQge1xuICBmbG9hdDogcmlnaHQ7XG4gIGNvbG9yOiAjYWFhO1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG5cbi50aW1lLWxlZnQge1xuICBmbG9hdDogbGVmdDtcbiAgY29sb3I6ICM5OTk7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cblxuLnRpbWUtdXNlciB7XG4gIGZsb2F0OiBsZWZ0O1xuICBjb2xvcjogcmdiYSgxOSwgMTksIDE5LCAwLjMpO1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn1cblxuLnR5cGluZyB7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgY29sb3I6ICM5ZDFlMTU7XG59XG5cbi5vbmxpbmUge1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiAjMjhhNzQ1O1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".files {\n  padding-left: 10px;\n}\n\n.codeButtons {\n  padding-bottom: 10px;\n  display: flex;\n  justify-content: space-between;\n}\n\n.form-control {\n  max-width: 500px;\n}\n\n.text {\n  min-width: 500px !important;\n  display: block;\n}\n\n.editor {\n  height: 90vh !important;\n  width: 100%;\n}\n\n.editorResult {\n  height: 200px !important;\n  width: 100%;\n}\n\n.card {\n  white-space: pre-line !important;\n}\n\n.codeRun {\n  font-size: 14px !important;\n  padding: .75rem 1.25rem;\n\n}\n\n.serviceOk {\n  font-size: 14px;\n  color: #0b51c5;\n  display: block;\n  white-space: pre-line;\n}\n\n.runTimeout {\n  padding: .75rem 1.25rem;\n  font-size: 12px;\n  color: #9d1e15;\n  display: block;\n  white-space: pre-line;\n}\n\n.queuePosition {\n  padding: .75rem 1.25rem;\n  font-size: 12px;\n  color: #28a745;\n  display: block;\n  white-space: pre-line;\n}\n\n.selection {\n  color: #0a0a0a;\n  font-size: 14px;\n}\n\n.md-fab-bottom-right{\n  position: fixed !important;\n  right: 100px; /* Add this and change value to set the margin you want */\n  bottom: 10px;\n  z-index: 9999;\n}\n\n.btn-primary {\n  color: #000;\n  background-color: #fff !important;\n  border-color: #007bff;\n}\n\n.btn-primary.focus, .btn-primary:focus {\n  color: #000 !important;\n}\n\n.nav-tabs {\n  width: 80%;\n}\n\n.chat {\n  border: 2px solid #dedede;\n  background-color: #f1f1f1;\n  border-radius: 5px;\n  margin: 10px 0;\n  width: 95%;\n}\n\n.darker {\n  border-color: #ccc;\n  background-color: #ddd;\n}\n\n.user {\n  border-color: rgba(131, 129, 129, 0.3);\n  background-color: rgba(19, 19, 19, 0.3);\n}\n\n.chat::after {\n  content: \"\";\n  clear: both;\n  display: table;\n}\n\n.chatIcon {\n  float: left;\n  max-width: 10px;\n  width: 100%;\n  margin-right: 20px;\n  border-radius: 50%;\n}\n\n.chatIcon-right {\n  float: right;\n  margin-right: 10px;\n}\n\n.time-right {\n  float: right;\n  color: #aaa;\n  margin-left: 10px;\n}\n\n.time-left {\n  float: left;\n  color: #999;\n  margin-right: 10px;\n}\n\n.time-user {\n  float: left;\n  color: rgba(19, 19, 19, 0.3);\n  margin-right: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29kZS9jb2RlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLDhCQUE4QjtBQUNoQzs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLDJCQUEyQjtFQUMzQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsdUJBQXVCO0VBQ3ZCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLHdCQUF3QjtFQUN4QixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSwwQkFBMEI7RUFDMUIsdUJBQXVCOztBQUV6Qjs7QUFFQTtFQUNFLGVBQWU7RUFDZixjQUFjO0VBQ2QsY0FBYztFQUNkLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixlQUFlO0VBQ2YsY0FBYztFQUNkLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsZUFBZTtFQUNmLGNBQWM7RUFDZCxjQUFjO0VBQ2QscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGVBQWU7QUFDakI7O0FBRUE7RUFDRSwwQkFBMEI7RUFDMUIsWUFBWSxFQUFFLHlEQUF5RDtFQUN2RSxZQUFZO0VBQ1osYUFBYTtBQUNmOztBQUVBO0VBQ0UsV0FBVztFQUNYLGlDQUFpQztFQUNqQyxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxVQUFVO0FBQ1o7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIseUJBQXlCO0VBQ3pCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsVUFBVTtBQUNaOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLHNDQUFzQztFQUN0Qyx1Q0FBdUM7QUFDekM7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsV0FBVztFQUNYLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsZUFBZTtFQUNmLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsV0FBVztFQUNYLFdBQVc7RUFDWCxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsNEJBQTRCO0VBQzVCLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2NvZGUvY29kZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZpbGVzIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xufVxuXG4uY29kZUJ1dHRvbnMge1xuICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4uZm9ybS1jb250cm9sIHtcbiAgbWF4LXdpZHRoOiA1MDBweDtcbn1cblxuLnRleHQge1xuICBtaW4td2lkdGg6IDUwMHB4ICFpbXBvcnRhbnQ7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuXG4uZWRpdG9yIHtcbiAgaGVpZ2h0OiA5MHZoICFpbXBvcnRhbnQ7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uZWRpdG9yUmVzdWx0IHtcbiAgaGVpZ2h0OiAyMDBweCAhaW1wb3J0YW50O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNhcmQge1xuICB3aGl0ZS1zcGFjZTogcHJlLWxpbmUgIWltcG9ydGFudDtcbn1cblxuLmNvZGVSdW4ge1xuICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcbiAgcGFkZGluZzogLjc1cmVtIDEuMjVyZW07XG5cbn1cblxuLnNlcnZpY2VPayB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgY29sb3I6ICMwYjUxYzU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aGl0ZS1zcGFjZTogcHJlLWxpbmU7XG59XG5cbi5ydW5UaW1lb3V0IHtcbiAgcGFkZGluZzogLjc1cmVtIDEuMjVyZW07XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgY29sb3I6ICM5ZDFlMTU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aGl0ZS1zcGFjZTogcHJlLWxpbmU7XG59XG5cbi5xdWV1ZVBvc2l0aW9uIHtcbiAgcGFkZGluZzogLjc1cmVtIDEuMjVyZW07XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgY29sb3I6ICMyOGE3NDU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aGl0ZS1zcGFjZTogcHJlLWxpbmU7XG59XG5cbi5zZWxlY3Rpb24ge1xuICBjb2xvcjogIzBhMGEwYTtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4ubWQtZmFiLWJvdHRvbS1yaWdodHtcbiAgcG9zaXRpb246IGZpeGVkICFpbXBvcnRhbnQ7XG4gIHJpZ2h0OiAxMDBweDsgLyogQWRkIHRoaXMgYW5kIGNoYW5nZSB2YWx1ZSB0byBzZXQgdGhlIG1hcmdpbiB5b3Ugd2FudCAqL1xuICBib3R0b206IDEwcHg7XG4gIHotaW5kZXg6IDk5OTk7XG59XG5cbi5idG4tcHJpbWFyeSB7XG4gIGNvbG9yOiAjMDAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gIGJvcmRlci1jb2xvcjogIzAwN2JmZjtcbn1cblxuLmJ0bi1wcmltYXJ5LmZvY3VzLCAuYnRuLXByaW1hcnk6Zm9jdXMge1xuICBjb2xvcjogIzAwMCAhaW1wb3J0YW50O1xufVxuXG4ubmF2LXRhYnMge1xuICB3aWR0aDogODAlO1xufVxuXG4uY2hhdCB7XG4gIGJvcmRlcjogMnB4IHNvbGlkICNkZWRlZGU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmMWYxZjE7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgbWFyZ2luOiAxMHB4IDA7XG4gIHdpZHRoOiA5NSU7XG59XG5cbi5kYXJrZXIge1xuICBib3JkZXItY29sb3I6ICNjY2M7XG4gIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG59XG5cbi51c2VyIHtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDEzMSwgMTI5LCAxMjksIDAuMyk7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTksIDE5LCAxOSwgMC4zKTtcbn1cblxuLmNoYXQ6OmFmdGVyIHtcbiAgY29udGVudDogXCJcIjtcbiAgY2xlYXI6IGJvdGg7XG4gIGRpc3BsYXk6IHRhYmxlO1xufVxuXG4uY2hhdEljb24ge1xuICBmbG9hdDogbGVmdDtcbiAgbWF4LXdpZHRoOiAxMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG5cbi5jaGF0SWNvbi1yaWdodCB7XG4gIGZsb2F0OiByaWdodDtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufVxuXG4udGltZS1yaWdodCB7XG4gIGZsb2F0OiByaWdodDtcbiAgY29sb3I6ICNhYWE7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuXG4udGltZS1sZWZ0IHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIGNvbG9yOiAjOTk5O1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG5cbi50aW1lLXVzZXIge1xuICBmbG9hdDogbGVmdDtcbiAgY29sb3I6IHJnYmEoMTksIDE5LCAxOSwgMC4zKTtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -2184,17 +2214,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _services_socket_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_services/socket.service */ "./src/app/_services/socket.service.ts");
-/* harmony import */ var _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @convergencelabs/monaco-collab-ext */ "./node_modules/@convergencelabs/monaco-collab-ext/lib/index.js");
-/* harmony import */ var _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ts-md5/dist/md5 */ "./node_modules/ts-md5/dist/md5.js");
-/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _control_code_control__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../_control/code.control */ "./src/app/_control/code.control.ts");
-/* harmony import */ var _control_node_control__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../_control/node.control */ "./src/app/_control/node.control.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _services_socket_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../_services/socket.service */ "./src/app/_services/socket.service.ts");
+/* harmony import */ var _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @convergencelabs/monaco-collab-ext */ "./node_modules/@convergencelabs/monaco-collab-ext/lib/index.js");
+/* harmony import */ var _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ts-md5/dist/md5 */ "./node_modules/ts-md5/dist/md5.js");
+/* harmony import */ var ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _control_code_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../_control/code.control */ "./src/app/_control/code.control.ts");
+/* harmony import */ var _control_node_control__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../_control/node.control */ "./src/app/_control/node.control.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -2209,12 +2237,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CodeComponent = /** @class */ (function () {
-    function CodeComponent(host, formBuilder, router, _eventEmitter, _snackBar, socket, _code, _node, _util, _document) {
+    function CodeComponent(host, formBuilder, router, _eventEmitter, socket, _code, _node, _util, _document) {
         this.host = host;
         this.formBuilder = formBuilder;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
         this.socket = socket;
         this._code = _code;
         this._node = _node;
@@ -2243,19 +2270,14 @@ var CodeComponent = /** @class */ (function () {
             readOnly: true,
         };
         this.load = 0;
-        this.userKeyPress = 0;
+        this.codePairUsers = {};
+        this.hideMsgUpdateCode = 0;
         this.receivedMsg = 0;
-        this.hideMsgSync = 0;
-        this.cursorPosition = {};
-        this.lastLock = Math.floor(Date.now() / 1000) + 10;
+        this.countLines = 0;
         this.firstUpdate = 1;
         this.chatList = [];
         this.groupHistory = { ESelection: 0, EInsert: 0, EDelete: 0, EReplace: 0 };
-        this.codePairActives = {};
-        this.tmpCodePairActives = {};
-        this.showUsers = 0;
-        this.lastShowUsers = Math.floor(Date.now() / 1000);
-        this.msgSocketFailed = 0;
+        this.codeInGroup = -1;
         this.response = {};
         this.responseTemp = {};
         this.responseQueue = {};
@@ -2263,7 +2285,6 @@ var CodeComponent = /** @class */ (function () {
         this.code = {};
         this.codeTemp = {};
         this.hostInfo = {};
-        this.loadSysInfo = 0;
         this.containers = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
         this.exercise = {};
         this.files = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
@@ -2304,7 +2325,6 @@ var CodeComponent = /** @class */ (function () {
         this.btnCompile = "Compile and Run";
         this.userId = Number(this.host.getSessionID().Id);
         this.exercise.Id = parseInt(window.localStorage.getItem("ExerciseId"));
-        this.exercise['gId'] = parseInt(window.localStorage.getItem("ExerciseGId"));
         //Getting value from child CodeComponent
         this.subCode = this._eventEmitter.code.subscribe(function (data) {
             _this.code = data;
@@ -2326,6 +2346,8 @@ var CodeComponent = /** @class */ (function () {
             }
         });
         this.tryACode = window.localStorage.getItem("TryACode");
+        if (this.tryACode)
+            this.codeInGroup = 0;
         if (this.exercise.Id)
             this.getFiles();
         //Getting value from child CodeComponent
@@ -2335,24 +2357,39 @@ var CodeComponent = /** @class */ (function () {
                 window.localStorage.setItem("ExerciseId", _this.exercise.Id.toString());
                 _this.getFiles();
             }
+            if (_this.exercise['gId']) {
+                _this.getHistoryGroup();
+                if (_this.exercise['gId'] > 0 && !_this.subSocket) {
+                    _this.codeInGroup = 1;
+                    _this.openSocket(_this.exercise.Code);
+                    var c = {};
+                    c.IdGroup = _this.exercise['gId'];
+                    c.IdUser = _this.userId;
+                    c.UserName = _this.host.getSessionID().Name;
+                    c.Option = "getCode";
+                    _this.socketSend(c);
+                }
+            }
+            else {
+                _this.codeInGroup = 0;
+            }
         });
         this.getActiveNodes();
         this.getHostInfo();
         this.getFilesCodeExecution();
+        //this.codeForm.disable();
     };
     CodeComponent.prototype.onInit = function (editor) {
+        var _this = this;
         this.editor = editor;
         this.load = 1;
-        if (this.exercise['gId']) {
-            this.getHistoryGroup();
-            this.showMsgCodeShare();
-            if (this.exercise['gId'] > 0 && !this.subSocket) {
-                this.openSocket(this.exercise.Code);
-                this.getLastCode();
+        var existCondition = setInterval(function () {
+            if (_this.exercise) {
+                _this.codePair();
+                _this.getUsersCoding();
+                clearInterval(existCondition);
             }
-            this.codePair();
-            this.getUsersCoding();
-        }
+        }, 1000);
         this.codeTempMode = "auto";
         this.cleanDecorations = false;
     };
@@ -2365,19 +2402,81 @@ var CodeComponent = /** @class */ (function () {
     CodeComponent.prototype.onQueue = function () {
         this.queue = !this.queue;
     };
-    CodeComponent.prototype.getSysInfo = function () {
-        var _this = this;
-        var params = [];
-        var request = {
-            Request: "sysInfo",
-            Param: params,
-        };
-        this.host.request(request, 'simpleRequest')
-            .subscribe(function (data) {
-            if (data['Request'] == "ok")
-                _this.sysInfo = data.Param;
-            _this.loadSysInfo = 1;
+    CodeComponent.prototype.onChange = function (editor) {
+        //Save in temp code
+        if (!this.exercise['gId'])
+            this.codeTemp.IdUser = this.userId;
+        if (this.exercise['gId'])
+            this.codeTemp.IdGroup = Number(this.exercise['gId']);
+        this.codeTemp.Code = this.code.Code;
+        this.codeTemp.Command = this.code.Command;
+    };
+    CodeComponent.prototype.setTheme = function (val) {
+        this.editor.setTheme(val);
+    };
+    CodeComponent.prototype.onKeydownEvent = function (editor) {
+        //To autodetect de compiler language
+        this.setAutoParameters(this.code.Code);
+        if (this.cleanDecorations == true) {
+            this.editor.getModel().setValue(this.code.Code);
+            this.cleanDecorations = false;
+        }
+        if (!this.lastUpdate)
+            this.lastUpdate = Math.floor(Date.now() / 1000);
+        if ((Math.floor(Date.now() / 1000) - this.lastUpdate) > 5) {
+            this.lastUpdate = Math.floor(Date.now() / 1000);
+            if (this.codeTempMode == "auto")
+                this.updateCodeTemp();
+            this.getUsersCoding();
+        }
+        if ((Math.floor(Date.now() / 1000) - this.otherUserTyping) < 5) {
+            this._util.setResponse(this.nameUserTyping + ' is typing... ' +
+                'Please, wait 3 sec and try again!', 'error', null, null);
+            var c = {};
+            c.IdGroup = this.exercise['gId'];
+            c.IdUser = this.userId;
+            c.UserName = this.host.getSessionID().Name;
+            c.Option = "sendCode";
+            c.Hash = "";
+            this.socketSend(c);
+            this.receivedMsg = 1;
+            this.hideMsgUpdateCode = 1;
+        }
+    };
+    CodeComponent.prototype.setErrorCode = function (error) {
+        var sl = 0;
+        var sc = 0;
+        var ed = this.editor;
+        error.split('\n').forEach(function (line) {
+            var regexp = line.match('(main.c):([0-9]+):([0-9]+)');
+            if (error && Array.isArray(regexp) &&
+                regexp.length >= 3 && regexp[1] == "main.c") {
+                if (Number(regexp[2]) > 0)
+                    sl = regexp[2];
+                if (Number(regexp[3]) > 0)
+                    sc = regexp[3];
+                ed.deltaDecorations([], [
+                    {
+                        range: new monaco.Range(sl, sc, sl, sc),
+                        options: {
+                            isWholeLine: true,
+                            className: 'myContentClass',
+                            glyphMarginClassName: 'myGlyphMarginClass',
+                            glyphMarginHoverMessage: { value: line },
+                        }
+                    }
+                ]);
+            }
         });
+        this.editor = ed;
+        this.cleanDecorations = true;
+    };
+    CodeComponent.prototype.setFont = function (val) {
+        var font = { "fontSize": val };
+        this.editor.updateOptions(font);
+    };
+    CodeComponent.prototype.setMiniMap = function (val) {
+        this.editor.updateOptions({ minimap: { enabled: val } });
     };
     CodeComponent.prototype.getHostInfo = function () {
         var _this = this;
@@ -2391,6 +2490,34 @@ var CodeComponent = /** @class */ (function () {
             _this.hostInfo = data;
         });
     };
+    CodeComponent.prototype.getSysInfo = function () {
+        var _this = this;
+        var params = [];
+        var request = {
+            Request: "sysInfo",
+            Param: params,
+        };
+        this.host.request(request, 'simpleRequest')
+            .subscribe(function (data) {
+            _this.sysInfo = data['Param'];
+            if (data['Request'] != 'ok')
+                _this._util.setResponse('There was a problem executing the request.', 'info', null, null);
+            else
+                _this._util.setResponse('Data found.', 'ok', null, null);
+        });
+    };
+    CodeComponent.prototype.getFilesCodeExecution = function () {
+        var _this = this;
+        var params = [];
+        var request = {
+            Request: "filesCodeExecution",
+            Param: params,
+        };
+        this.host.request(request, 'simpleRequest')
+            .subscribe(function (data) {
+            _this.fileCodeExecution = data;
+        });
+    };
     Object.defineProperty(CodeComponent.prototype, "fc", {
         // convenience getter for easy access to form fields
         get: function () {
@@ -2402,11 +2529,13 @@ var CodeComponent = /** @class */ (function () {
     CodeComponent.prototype.getCodeExample = function (example) {
         var _this = this;
         this.hasChoiceCompile = 1;
-        var range = new monaco.Range(0, 0, 0, 0);
         this.host.CodeExample(example)
             .then(function (result) {
-            //this.code.Code = result;
-            _this.editor.executeEdits('', [{ range: range, text: result }]);
+            _this.receivedMsg = 0;
+            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
+                editor: _this.editor,
+            });
+            contentManager.replace(0, result.length + 1, result);
         })
             .catch(function (error) {
             console.log('Error Getting Data: ', error);
@@ -2415,13 +2544,16 @@ var CodeComponent = /** @class */ (function () {
         this.codeExample = example;
         this.setParameters(this.codeExample);
     };
-    CodeComponent.prototype.setFileUploaded = function (f) {
+    CodeComponent.prototype.setFileCodeExecution = function (file) {
         var ExtraArgs = this.fc['ExtraArgs'].value.toString();
         var ExtraArgsTemp = ExtraArgs.split(" ");
-        if (ExtraArgsTemp.indexOf(f) === -1) {
-            if (ExtraArgsTemp.indexOf("<") === -1)
-                ExtraArgs += " < ";
-            ExtraArgs += f;
+        if (ExtraArgsTemp.indexOf(file) > -1) {
+            return;
+        }
+        else {
+            if (ExtraArgsTemp.indexOf("<") == -1)
+                ExtraArgs += "<";
+            ExtraArgs += " " + file;
         }
         this.fc['ExtraArgs'].setValue(ExtraArgs);
     };
@@ -2431,23 +2563,13 @@ var CodeComponent = /** @class */ (function () {
         var ExtraArgsTemp = ExtraArgs.split(" ");
         //check if all files in the selected box are in the input ExtraArgs
         if (this.files.value) {
-            var upFile = 0;
-            if (this.loadedFiles.length > 0)
-                for (var j = 0; j < this.loadedFiles.length; j++)
-                    if (ExtraArgsTemp.indexOf(this.loadedFiles[j]) > -1)
-                        upFile = 1;
-            if (this.files.value.length == 0
-                && ExtraArgsTemp.indexOf(this.fileName) === -1
-                && upFile == 0
-                && ExtraArgsTemp.indexOf("<") > -1)
-                ExtraArgs = ExtraArgs.replace('<', '');
             for (var i = 0; i < this.files.value.length; i++) {
                 if (ExtraArgsTemp.indexOf(this.files.value[i]) > -1) {
                     continue;
                 }
                 else {
-                    if (i == 0 && ExtraArgsTemp.indexOf("<") === -1)
-                        ExtraArgs += " <";
+                    if (i == 0 && ExtraArgsTemp.indexOf("<") == -1)
+                        ExtraArgs += "<";
                     ExtraArgs += " " + this.files.value[i];
                 }
             }
@@ -2462,7 +2584,7 @@ var CodeComponent = /** @class */ (function () {
             ExtraArgsTemp = ExtraArgs.split(" ");
             ExtraArgs = "";
             for (var i = 0; i < ExtraArgsTemp.length; i++) {
-                if (this.files.value && exerciseFilesTemp.indexOf(ExtraArgsTemp[i]) > -1) {
+                if (exerciseFilesTemp.indexOf(ExtraArgsTemp[i]) > -1) {
                     if (this.files.value.indexOf(ExtraArgsTemp[i]) > -1) {
                         ExtraArgs += " " + ExtraArgsTemp[i];
                     }
@@ -2476,8 +2598,8 @@ var CodeComponent = /** @class */ (function () {
         ExtraArgsTemp = ExtraArgs.split(" ");
         if (this.fileName != null) {
             if (ExtraArgsTemp.indexOf(this.fileName) === -1) {
-                if (ExtraArgsTemp.indexOf("<") === -1)
-                    ExtraArgs += " <";
+                if (ExtraArgsTemp.indexOf("<") == -1)
+                    ExtraArgs += "<";
                 ExtraArgs += " " + this.fileName;
             }
         }
@@ -2566,13 +2688,13 @@ var CodeComponent = /** @class */ (function () {
         }
         if (this.loadParameters == "OpenMP_MPI") {
             CompCmd = "mpic++";
-            CompArgs = "-lm -fopenmp main.c -o main";
+            CompArgs = "-fopenmp main.c -o main";
             ExecCmd = "mpiexec";
             ExecArgs = "-n " + nProcess + " " + hosts + " main";
         }
         if (this.loadParameters == "OpenMP") {
             CompCmd = "g++";
-            CompArgs = "-lm -fopenmp main.c -o main";
+            CompArgs = "-fopenmp main.c -o main";
             ExecCmd = "main";
             this.fc['ExecArgs'].setValidators([,]);
             this.fc['ExecArgs'].updateValueAndValidity();
@@ -2630,7 +2752,7 @@ var CodeComponent = /** @class */ (function () {
                 _this.setFileParameters('');
                 _this.responseFile.Name = "ok";
                 _this.responseFile.Status = "File uploaded successfully. " +
-                    "You can call the file by name directly in your code or by extra arguments: " + filedata.name;
+                    "You can call the file directly in your code by the name: " + filedata.name;
                 _this.getFilesCodeExecution();
             }
             if (data.loaded == data.total) {
@@ -2642,18 +2764,6 @@ var CodeComponent = /** @class */ (function () {
                 }
             }
         }, function (error) { return console.log(error); });
-    };
-    CodeComponent.prototype.getFilesCodeExecution = function () {
-        var _this = this;
-        var params = [];
-        var request = {
-            Request: "filesCodeExecution",
-            Param: params,
-        };
-        this.host.request(request, 'simpleRequest')
-            .subscribe(function (data) {
-            _this.loadedFiles = data;
-        });
     };
     CodeComponent.prototype.download = function (file) {
         //console.log(file);
@@ -2675,10 +2785,8 @@ var CodeComponent = /** @class */ (function () {
         //Check if user include fopen in his code but forget of input the file
         if (this.code.Code && this.code.Code.indexOf('fopen') !== -1 &&
             (!this.fileName && !this.files.value)) {
-            this._snackBar.open("Attention, you are called a file in your code. " +
-                "Go to the Files tab and send or select the correct file.", '', {
-                duration: 10000, panelClass: ['info']
-            });
+            this._util.setResponse("Attention, you are called a file in your code. " +
+                "Go to the Files tab and send or select the correct file.", 'info', null, null);
             return false;
         }
         if (this.exerciseFiles) {
@@ -2845,7 +2953,7 @@ var CodeComponent = /** @class */ (function () {
                         this.responseQueue = {};
                         _a.label = 1;
                     case 1:
-                        if (!wait) return [3 /*break*/, 4];
+                        if (!wait) return [3 /*break*/, 3];
                         //Let's refresh the Session Timeout
                         this._eventEmitter.setLoginChange({ Name: "RefreshSession", Status: "" });
                         if (timeout == true) {
@@ -2854,15 +2962,8 @@ var CodeComponent = /** @class */ (function () {
                             else
                                 this.programTimeout--;
                         }
-                        return [4 /*yield*/, this._util.delay(1000)];
-                    case 2:
-                        _a.sent();
                         if (wait_queue && this.responseQueue.Position > 1)
                             this.queueStatus = "getting position...";
-                        return [4 /*yield*/, this._util.delay(1000)];
-                    case 3:
-                        _a.sent();
-                        //console.log(sequence, this.responseTemp);
                         if (sequence == "queue") {
                             if (!wait_queue) {
                                 this.responseTemp = {};
@@ -2881,6 +2982,9 @@ var CodeComponent = /** @class */ (function () {
                                 }
                             }
                         }
+                        return [4 /*yield*/, this._util.delay(1000)];
+                    case 2:
+                        _a.sent();
                         if (sequence == "compile") {
                             if (!wait_compile) {
                                 this.responseTemp = {};
@@ -2950,19 +3054,13 @@ var CodeComponent = /** @class */ (function () {
                                 }
                             }
                         }
-                        if (this.programTimeout < -5) {
-                            wait = false;
-                            this.programTimeout = 0;
-                            this.responseTemp['Name'] = 'error';
-                            this.responseTemp['Status'] = 'There was an error or connection problem, please try again!';
-                        }
                         if (this.responseTemp['Name'] == 'error' || this.responseTemp['Name'] == 'info') {
                             wait = false;
                             this.programTimeout = 0;
                             this.setErrorCode(this.responseTemp['Status']);
                         }
                         return [3 /*break*/, 1];
-                    case 4:
+                    case 3:
                         this.queueStatus = "done!";
                         this.codeForm.enable();
                         this.disabled = false;
@@ -2971,10 +3069,11 @@ var CodeComponent = /** @class */ (function () {
                         this.programStatus = "output";
                         this.programTimeout = 0;
                         if (!this.exercise.Id) {
-                            this._snackBar.open("Execution finished.", '', {
-                                duration: 5000, panelClass: ['ok']
-                            });
+                            this._util.setResponse("Execution finished.", '', 'ok', null);
                         }
+                        return [4 /*yield*/, this._util.delay(1000)];
+                    case 4:
+                        _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -2982,14 +3081,14 @@ var CodeComponent = /** @class */ (function () {
     };
     CodeComponent.prototype.codeTempCall = function (option) {
         if (option == "load") {
-            this.getCodeTemp();
+            this.getCodeTemp("replace");
         }
         if (option == "none")
             this.codeTempMode = "none";
         if (option == "auto")
             this.codeTempMode = "auto";
     };
-    CodeComponent.prototype.getCodeTemp = function () {
+    CodeComponent.prototype.getCodeTemp = function (option) {
         var _this = this;
         var filter = [];
         var table = 'code-temp-user';
@@ -2998,7 +3097,7 @@ var CodeComponent = /** @class */ (function () {
             table = 'code-temp-group';
         }
         else {
-            filter.push({ Name: "UserId", Value: this.host.getSessionID().Id });
+            filter.push({ Name: "UserId", Value: String(this.host.getSessionID().Id) });
         }
         var requestDB = {
             Operation: "view",
@@ -3009,11 +3108,15 @@ var CodeComponent = /** @class */ (function () {
         this.host.request(requestDB, 'FDBRequest')
             .subscribe(function (data) {
             if (data[0]) {
-                var range = new monaco.Range(0, 0, 0, 0);
-                _this.editor.executeEdits('', [{ range: range, text: data[0].Code }]);
-                _this.code.Command = data[0].Command;
-                if (_this.hasChoiceCompile == 0)
-                    _this.setAutoParameters(_this.code.Code);
+                if (option == "replace") {
+                    var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
+                        editor: _this.editor,
+                    });
+                    contentManager.replace(0, data[0].Code.length + 1, data[0].Code);
+                    _this.code.Command = data[0].Command;
+                    if (_this.hasChoiceCompile == 0)
+                        _this.setAutoParameters(_this.code.Code);
+                }
                 _this.codeTemp.Id = data[0].Id;
             }
         });
@@ -3021,6 +3124,7 @@ var CodeComponent = /** @class */ (function () {
     CodeComponent.prototype.updateCodeTemp = function () {
         var _this = this;
         var filter = [];
+        filter.push({ Name: "Id", Value: String(this.codeTemp.Id) });
         var requestDB = {
             Operation: "update",
             TableData: this.codeTemp,
@@ -3033,98 +3137,25 @@ var CodeComponent = /** @class */ (function () {
                 _this.codeTemp.Id = data['Status'];
         });
     };
-    /////// MONACO EDITOR IMPLEMENTATION //////////
-    CodeComponent.prototype.setFont = function (val) {
-        var font = { "fontSize": val };
-        this.editor.updateOptions(font);
-    };
-    CodeComponent.prototype.setMiniMap = function (val) {
-        this.editor.updateOptions({ minimap: { enabled: val } });
-    };
-    CodeComponent.prototype.onChange = function (editor) {
-        //Save in temp code
-        if (!this.exercise['gId'])
-            this.codeTemp.IdUser = this.userId;
-        if (this.exercise['gId'])
-            this.codeTemp.IdGroup = Number(this.exercise['gId']);
-        this.codeTemp.Code = this.code.Code;
-        this.codeTemp.Command = this.code.Command;
-    };
-    CodeComponent.prototype.setTheme = function (val) {
-        monaco.editor.setTheme(val);
-    };
-    CodeComponent.prototype.setErrorCode = function (error) {
-        var sl = 0;
-        var sc = 0;
-        var ed = this.editor;
-        error.split('\n').forEach(function (line) {
-            var regexp = line.match('(main.c):([0-9]+):([0-9]+)');
-            if (error && Array.isArray(regexp) &&
-                regexp.length >= 3 && regexp[1] == "main.c") {
-                if (Number(regexp[2]) > 0)
-                    sl = regexp[2];
-                if (Number(regexp[3]) > 0)
-                    sc = regexp[3];
-                ed.deltaDecorations([], [
-                    {
-                        range: new monaco.Range(sl, sc, sl, sc),
-                        options: {
-                            isWholeLine: true,
-                            className: 'myContentClass',
-                            glyphMarginClassName: 'myGlyphMarginClass',
-                            glyphMarginHoverMessage: { value: line },
-                        }
-                    }
-                ]);
-            }
-        });
-        this.editor = ed;
-        this.cleanDecorations = true;
-    };
-    CodeComponent.prototype.onKeydownEvent = function (editor) {
-        this.userKeyPress = 1;
-        this.setAutoParameters(this.code.Code);
-        this.receivedMsg = 0;
-        if (this.cleanDecorations == true) {
-            this.editor.getModel().setValue(this.code.Code);
-            this.cleanDecorations = false;
-        }
-        if (!this.lastUpdate)
-            this.lastUpdate = Math.floor(Date.now() / 1000);
-        if (this.codeTempMode == "auto" &&
-            (Math.floor(Date.now() / 1000) - this.lastUpdate) > 3) {
-            this.lastUpdate = Math.floor(Date.now() / 1000);
-            this.updateCodeTemp();
-        }
-    };
     /////// CODE PAIR IMPLEMENTATION //////////
     CodeComponent.prototype.socketSend = function (c) {
         var _this = this;
         if (!this.exercise['gId'])
             return;
-        if (!this.socket.isOpen() && this.msgSocketFailed == 0) {
+        if (!this.socket.isOpen()) {
             var ret = this._util.openModal('Connection failed', 'You are not connected to the group. ' +
                 'Press F5 to reload the page.', 'F5', 'Cancel', '');
             ret.afterClosed().subscribe(function (data) {
                 if (data && data['button'] == 'YES')
                     _this._document.defaultView.location.reload();
             });
-            this.msgSocketFailed = 1;
         }
         this.socket.send(c);
-    };
-    CodeComponent.prototype.getLastCode = function () {
-        var c = {};
-        c.IdGroup = this.exercise['gId'];
-        c.IdUser = this.userId;
-        c.UserName = this.host.getSessionID().Name;
-        c.Option = "sendCode";
-        this.socketSend(c);
     };
     CodeComponent.prototype.getHistoryGroup = function () {
         var _this = this;
         var filter = [];
-        filter.push({ Name: "UserId", Value: this.host.getSessionID().Id });
+        filter.push({ Name: "UserId", Value: String(this.host.getSessionID().Id) });
         filter.push({ Name: "GroupId", Value: String(this.exercise['gId']) });
         var requestDB = {
             Operation: "view",
@@ -3189,33 +3220,23 @@ var CodeComponent = /** @class */ (function () {
         //console.log("CurrentNodes | request: ", request);
         this.host.request(request, 'simpleRequest')
             .subscribe(function (data) {
-            if (data[0]) {
-                _this.codePairActives = data[0];
-                var cp = Object.keys(_this.codePairActives.Users);
-                var cpt = Object.keys(_this.tmpCodePairActives);
-                if (cp.length != cpt.length)
-                    _this.showUsers = 1;
-                setTimeout(function () {
-                    this.showUsers = 0;
-                }.bind(_this), 6000);
-                _this.tmpCodePairActives = _this.codePairActives.Users;
+            if (data) {
+                _this.codePairUsers = data[0].Users;
             }
+            //console.log(data);
         });
-    };
-    CodeComponent.prototype.showMsgCodeShare = function () {
-        this._util.openModal('Screen sharing', 'You are playing in a group exercise. ' +
-            'The code screen is shared among all online group users.' +
-            '\n\nRules: \n' +
-            '#1. One user can edit the code at a time. \n' +
-            '#2. After a user finishes editing, the system ' +
-            'automatically releases it to the other users in the group. \n' +
-            '#3. The first one to start editing wins the turn. \n' +
-            '#4. The user name tag is set in the editor when some character is typed.', 'Close', '', '');
     };
     CodeComponent.prototype.codePair = function () {
         var _this = this;
         if (!this.exercise['gId'])
             return;
+        this._util.openModal('Screen sharing', 'You are playing in a group exercise. ' +
+            'The code screen is shared among all online group users.' +
+            '\n\nRules: \n' +
+            '#1. One user can edit the code at a time. \n' +
+            '#2. After a user finishes editing, the system automatically releases it to the other users in the group. \n' +
+            '#3. The first one to start editing wins the turn. \n' +
+            '#4. The user name tag is set in the editor when some character is typed.\n', 'Close', '', '');
         var c = {};
         c.IdGroup = this.exercise['gId'];
         c.IdUser = this.userId;
@@ -3230,11 +3251,9 @@ var CodeComponent = /** @class */ (function () {
         this.editor.onDidChangeCursorPosition(function (e) {
             c.Option = "position";
             c.Offset = _this.editor.getModel().getOffsetAt(e.position);
-            _this.cursorPosition['l'] = e.position.lineNumber;
-            _this.cursorPosition['c'] = e.position.column;
-            if (_this.userKeyPress == 1)
-                _this.socketSend(c);
-            //console.log(e.position);
+            _this.offsetLine = e.position['lineNumber'];
+            _this.offsetCol = e.position['column'];
+            _this.socketSend(c);
         });
         this.editor.onDidChangeCursorSelection(function (e) {
             c.Option = "selection";
@@ -3248,25 +3267,14 @@ var CodeComponent = /** @class */ (function () {
         this.editor.onDidChangeModelContent(function (e) {
             e.changes.forEach(function (change) {
                 if (_this.receivedMsg == 0) {
-                    _this.hideMsgSync = 0;
-                    if (_this.userTyping && (Math.floor(Date.now() / 1000) - _this.lastLock) < 5) {
-                        _this._snackBar.open('Please wait for user ' + _this.userTyping +
-                            ' to finish changing the code.', _this.userTyping + ' is typing...', {
-                            duration: 6000, panelClass: ['error']
-                        });
-                        _this.hideMsgSync = 1;
-                        _this.getLastCode();
-                        return;
-                    }
-                    _this.userTyping = "";
                     var rangeOffset = change.rangeOffset, rangeLength = change.rangeLength, text = change.text;
                     if (text.length > 0 && rangeLength === 0) {
                         c.Option = "insert";
                         c.Index = rangeOffset;
                         c.Text = text;
-                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9__["Md5"]();
+                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8__["Md5"]();
                         c.Hash = String(md5.appendStr(_this.editor.getModel().getValue()).end());
-                        //console.log(c);
+                        //console.log(this.editor.getModel().getValue(), c);
                         _this.groupHistory.EInsert++;
                         _this.setHistoryGroup();
                         _this.socketSend(c);
@@ -3276,7 +3284,7 @@ var CodeComponent = /** @class */ (function () {
                         c.Index = rangeOffset;
                         c.Text = text;
                         c.Length = rangeLength;
-                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9__["Md5"]();
+                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8__["Md5"]();
                         c.Hash = String(md5.appendStr(_this.editor.getModel().getValue()).end());
                         //console.log(c);
                         _this.groupHistory.EReplace++;
@@ -3287,7 +3295,7 @@ var CodeComponent = /** @class */ (function () {
                         c.Option = "delete";
                         c.Index = rangeOffset;
                         c.Length = rangeLength;
-                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9__["Md5"]();
+                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8__["Md5"]();
                         c.Hash = String(md5.appendStr(_this.editor.getModel().getValue()).end());
                         //console.log(c);
                         _this.groupHistory.EDelete++;
@@ -3299,7 +3307,6 @@ var CodeComponent = /** @class */ (function () {
                     }
                 }
                 _this.receivedMsg = 0;
-                _this.setAutoParameters(_this.code.Code);
             });
         });
     };
@@ -3307,9 +3314,11 @@ var CodeComponent = /** @class */ (function () {
         var _this = this;
         if (!this.exercise['gId'])
             return;
-        if (this.editor) {
-            var range = new monaco.Range(0, 0, 0, 0);
-            this.editor.executeEdits('', [{ range: range, text: code }]);
+        if (this.editor && code) {
+            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
+                editor: this.editor,
+            });
+            contentManager.replace(0, code.length + 1, code);
         }
         this.cursorEditors = new Map([]);
         this.selectionEditors = new Map([]);
@@ -3318,6 +3327,7 @@ var CodeComponent = /** @class */ (function () {
                 if (event['data']) {
                     var codePair = {};
                     codePair = event['data'];
+                    //console.log(codePair);
                     if (!_this.editor || !codePair.IdGroup)
                         return;
                     if (!codePair.IdUser || !_this.host.getSessionID().Id)
@@ -3335,17 +3345,7 @@ var CodeComponent = /** @class */ (function () {
                     c.IdGroup = _this.exercise['gId'];
                     c.IdUser = _this.userId;
                     c.UserName = _this.host.getSessionID().Name;
-                    if ((Math.floor(Date.now() / 1000) - _this.lastShowUsers) > 5) {
-                        _this.lastShowUsers = Math.floor(Date.now() / 1000);
-                        _this.getUsersCoding();
-                    }
                     if (codePair.IdUser != _this.userId) {
-                        if (codePair.Option == "insert" || codePair.Option == "replace" ||
-                            codePair.Option == "delete") {
-                            _this.lastLock = Math.floor(Date.now() / 1000);
-                            _this.userTyping = codePair.UserName;
-                            _this.tmpCodePairActives = {};
-                        }
                         var remoteCursorManager = void 0;
                         var remoteSelectionManager = void 0;
                         var cursor = void 0;
@@ -3358,14 +3358,14 @@ var CodeComponent = /** @class */ (function () {
                                 color: color
                             };
                             if (_this.editor) {
-                                remoteCursorManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__["RemoteCursorManager"]({
+                                remoteCursorManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["RemoteCursorManager"]({
                                     editor: _this.editor,
                                     tooltips: true,
                                     tooltipDuration: 2
                                 });
                                 cursor = remoteCursorManager.addCursor(sourceUser.id, sourceUser.color, sourceUser.label);
                                 _this.cursorEditors.set(String(codePair.IdUser), cursor);
-                                remoteSelectionManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__["RemoteSelectionManager"]({ editor: _this.editor });
+                                remoteSelectionManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["RemoteSelectionManager"]({ editor: _this.editor });
                                 selection = remoteSelectionManager.addSelection(String(codePair.IdUser), color);
                                 _this.selectionEditors.set(String(codePair.IdUser), selection);
                             }
@@ -3378,21 +3378,21 @@ var CodeComponent = /** @class */ (function () {
                         }
                         if (codePair.Option == "insert") {
                             _this.receivedMsg = 1;
-                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__["EditorContentManager"]({
+                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
                                 editor: _this.editor,
                             });
                             contentManager.insert(codePair.Offset, codePair.Text);
                         }
                         if (codePair.Option == "replace") {
                             _this.receivedMsg = 1;
-                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__["EditorContentManager"]({
+                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
                                 editor: _this.editor,
                             });
                             contentManager.replace(codePair.Index, codePair.Length, codePair.Text);
                         }
                         if (codePair.Option == "delete") {
                             _this.receivedMsg = 1;
-                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_8__["EditorContentManager"]({
+                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
                                 editor: _this.editor,
                             });
                             contentManager.delete(codePair.Index, codePair.Length);
@@ -3400,46 +3400,56 @@ var CodeComponent = /** @class */ (function () {
                         if (codePair.Option == "sendCode") {
                             c.Option = "codeUpdated";
                             codePair.Hash = "";
-                            c.StartOffset = _this.cursorPosition['l'];
-                            c.EndOffset = _this.cursorPosition['c'];
+                            c.StartOffset = _this.offsetLine;
+                            c.EndOffset = _this.offsetCol;
                             c.Text = _this.editor.getModel().getValue();
                             _this.socketSend(c);
-                            //console.log("sendCode", c.Text);
+                            //console.log("sendCode", c.Hash);
                         }
                         if (codePair.Option == "codeUpdated") {
                             _this.receivedMsg = 1;
-                            _this.editor.getModel().setValue(codePair.Text);
-                            if (_this.hideMsgSync == 0) {
-                                _this._snackBar.open('The system is synchronizing with group coders.', 'Rsync', {
-                                    duration: 3000, panelClass: ['info']
-                                });
+                            if (!_this.hideMsgUpdateCode) {
+                                _this._util.setResponse('The system is waiting for synchronization with your group.', 'Rsync', 'info', null);
                             }
-                            _this.editor.setPosition({ lineNumber: codePair.StartOffset, column: codePair.EndOffset });
-                            _this.editor.focus();
+                            //this.editor.getModel().setValue(codePair.Text);
+                            var contentManager = new _convergencelabs_monaco_collab_ext__WEBPACK_IMPORTED_MODULE_7__["EditorContentManager"]({
+                                editor: _this.editor,
+                            });
+                            contentManager.replace(0, codePair.Text.length + 1, codePair.Text);
+                            //this.editor.setPosition({
+                            //    lineNumber: codePair.StartOffset,
+                            //    column: codePair.EndOffset
+                            //});
+                            //this.editor.focus();
+                            _this.hideMsgUpdateCode = 0;
                             codePair.Hash = "";
                         }
                         if (codePair.Option == "result") {
                             var res = "not equal";
                             if (codePair.Text == "ok")
                                 res = "equal";
-                            _this._snackBar.open(c.UserName + " just ran a code. Result: " + res, '', {
-                                duration: 5000, panelClass: [codePair.Text]
-                            });
+                            _this._util.setResponse(c.UserName + " just ran a code. Result: " + res, '', codePair.Text, null);
                         }
                         if (codePair.Option == "submit") {
-                            _this._snackBar.open(c.UserName + " Test submit a code right now. " +
-                                "In a few moments, we will show the result.", '', {
-                                duration: 5000, panelClass: ['info']
-                            });
+                            _this._util.setResponse(c.UserName + " Test submit a code right now. " +
+                                "In a few moments, we will show the result.", '', 'info', null);
                         }
-                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_9__["Md5"]();
+                        if (codePair.Option == "insert"
+                            || codePair.Option == "replace"
+                            || codePair.Option == "delete") {
+                            _this.otherUserTyping = Math.floor(Date.now() / 1000);
+                            _this.receivedMsg = 1;
+                            _this.nameUserTyping = codePair.UserName;
+                        }
+                        var md5 = new ts_md5_dist_md5__WEBPACK_IMPORTED_MODULE_8__["Md5"]();
                         var s1 = String(md5.appendStr(_this.editor.getModel().getValue()).end());
                         if (codePair.Hash && codePair.Hash != s1
                             && (codePair.Option == "insert" || codePair.Option == "replace" ||
                                 codePair.Option == "delete")) {
-                            c.Option = "sendCode";
+                            c.Option = "codeUpdated";
+                            c.Text = _this.editor.getModel().getValue();
                             _this.socketSend(c);
-                            console.log("getCodeUpdated Request", c);
+                            //console.log("getCodeUpdated Request");
                             return;
                         }
                     }
@@ -3452,12 +3462,11 @@ var CodeComponent = /** @class */ (function () {
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] },
-        { type: _services_socket_service__WEBPACK_IMPORTED_MODULE_7__["SocketService"] },
-        { type: _control_code_control__WEBPACK_IMPORTED_MODULE_10__["CodeControl"] },
-        { type: _control_node_control__WEBPACK_IMPORTED_MODULE_11__["NodeControl"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_13__["UtilControl"] },
-        { type: Document, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_12__["DOCUMENT"],] }] }
+        { type: _services_socket_service__WEBPACK_IMPORTED_MODULE_6__["SocketService"] },
+        { type: _control_code_control__WEBPACK_IMPORTED_MODULE_9__["CodeControl"] },
+        { type: _control_node_control__WEBPACK_IMPORTED_MODULE_10__["NodeControl"] },
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_12__["UtilControl"] },
+        { type: Document, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["DOCUMENT"],] }] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("ResultsTab", { static: false }),
@@ -3473,16 +3482,15 @@ var CodeComponent = /** @class */ (function () {
             template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./code.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/code/code.component.html")).default,
             styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./code.component.css */ "./src/app/code/code.component.css")).default]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](9, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_12__["DOCUMENT"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](8, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_11__["DOCUMENT"])),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"],
-            _services_socket_service__WEBPACK_IMPORTED_MODULE_7__["SocketService"],
-            _control_code_control__WEBPACK_IMPORTED_MODULE_10__["CodeControl"],
-            _control_node_control__WEBPACK_IMPORTED_MODULE_11__["NodeControl"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_13__["UtilControl"],
+            _services_socket_service__WEBPACK_IMPORTED_MODULE_6__["SocketService"],
+            _control_code_control__WEBPACK_IMPORTED_MODULE_9__["CodeControl"],
+            _control_node_control__WEBPACK_IMPORTED_MODULE_10__["NodeControl"],
+            _control_util_control__WEBPACK_IMPORTED_MODULE_12__["UtilControl"],
             Document])
     ], CodeComponent);
     return CodeComponent;
@@ -3522,9 +3530,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _ng_idle_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-idle/core */ "./node_modules/@ng-idle/core/__ivy_ngcc__/fesm5/ng-idle-core.js");
 /* harmony import */ var _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ng-idle/keepalive */ "./node_modules/@ng-idle/keepalive/__ivy_ngcc__/fesm5/ng-idle-keepalive.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -3534,7 +3540,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HostCredentialsComponent = /** @class */ (function () {
-    function HostCredentialsComponent(host, _eventEmitter, router, idle, keepalive, _util, _snackBar) {
+    function HostCredentialsComponent(host, _eventEmitter, router, idle, keepalive, _util) {
         var _this = this;
         this.host = host;
         this._eventEmitter = _eventEmitter;
@@ -3542,7 +3548,6 @@ var HostCredentialsComponent = /** @class */ (function () {
         this.idle = idle;
         this.keepalive = keepalive;
         this._util = _util;
-        this._snackBar = _snackBar;
         this.idleState = '30 m';
         this.lastPing = null;
         this.submitted = false;
@@ -3609,11 +3614,6 @@ var HostCredentialsComponent = /** @class */ (function () {
     HostCredentialsComponent.prototype.setRoute = function (val) {
         this.router.navigate([val]);
     };
-    HostCredentialsComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     HostCredentialsComponent.prototype.addUser = function () {
         window.localStorage.removeItem("editUserId");
         this.host.setSessionID('', 'SelfRegistration', '||NPZ8fvABP5pKSwU3');
@@ -3631,7 +3631,7 @@ var HostCredentialsComponent = /** @class */ (function () {
         this.host.request(request, 'simpleRequest')
             .subscribe(function (data) {
             _this.response = data;
-            _this.setResponse(_this.response['Status'], _this.response['Name']);
+            _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
             if (_this.response['Name'] == "ok") {
                 _this.host.killSessionID();
                 _this.userSession = {};
@@ -3668,8 +3668,7 @@ var HostCredentialsComponent = /** @class */ (function () {
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
         { type: _ng_idle_core__WEBPACK_IMPORTED_MODULE_5__["Idle"] },
         { type: _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_6__["Keepalive"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('hostInfo'),
@@ -3686,8 +3685,7 @@ var HostCredentialsComponent = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _ng_idle_core__WEBPACK_IMPORTED_MODULE_5__["Idle"],
             _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_6__["Keepalive"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"]])
     ], HostCredentialsComponent);
     return HostCredentialsComponent;
 }());
@@ -3725,9 +3723,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -3736,13 +3732,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HostLoginComponent = /** @class */ (function () {
-    function HostLoginComponent(formBuilder, host, _eventEmitter, router, _util, _snackBar) {
+    function HostLoginComponent(formBuilder, host, _eventEmitter, router, _util) {
         this.formBuilder = formBuilder;
         this.host = host;
         this._eventEmitter = _eventEmitter;
         this.router = router;
         this._util = _util;
-        this._snackBar = _snackBar;
         this.submitted = false;
         this.userSession = {};
         this.hostInfo = {};
@@ -3797,11 +3792,6 @@ var HostLoginComponent = /** @class */ (function () {
         });
     };
     ;
-    HostLoginComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     HostLoginComponent.prototype.onSubmit = function () {
         var _this = this;
         this.submitted = true;
@@ -3809,7 +3799,7 @@ var HostLoginComponent = /** @class */ (function () {
         if (this.registerForm.invalid) {
             return;
         }
-        this.setResponse(this.response['Status'], this.response['Name']);
+        this._util.setResponse(this.response['Status'], this.response['Name'], null, null);
         var hostInfoTemp = this.hostInfo;
         hostInfoTemp['Owner'] = this.registerForm.get('owner').value;
         hostInfoTemp['Password'] = this.registerForm.get('password').value;
@@ -3820,14 +3810,14 @@ var HostLoginComponent = /** @class */ (function () {
                 _this.host.setSessionID(hostInfoTemp['Owner'], _this.response['Name'], _this.response['Status']);
                 _this.userSession = _this.host.getSessionID();
                 //console.log("App Host-Credential | userSession: ", data);
-                _this.setResponse("Login successfully!", "ok");
+                _this._util.setResponse("Login successfully!", "ok", null, null);
                 // We will notify the root app about new login
                 _this._eventEmitter.setLoginChange({ Name: "startSession", Status: "" });
                 _this.checkChangePass();
                 _this.router.navigate(['welcome']);
             }
             else {
-                _this.setResponse(_this.response['Status'], _this.response['Name']);
+                _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                 //this.registerForm.reset();
                 //this.f['owner'].clearValidators();
                 //this.f['owner'].setErrors({ 'generic': this.response['Status'] });
@@ -3859,12 +3849,12 @@ var HostLoginComponent = /** @class */ (function () {
                     Request: "recoverPassword",
                     Param: params,
                 };
-                _this.setResponse("Sending request for password recovery...", "info");
+                _this._util.setResponse("Sending request for password recovery...", "info", null, null);
                 _this.host.request(request, 'simpleRequest')
                     .subscribe(function (data) {
                     _this.response = data;
                     //console.log('Host-Credentials: data ', data);
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                 });
             }
         });
@@ -3874,8 +3864,7 @@ var HostLoginComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"] }
     ]; };
     HostLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -3887,8 +3876,7 @@ var HostLoginComponent = /** @class */ (function () {
             _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"]])
     ], HostLoginComponent);
     return HostLoginComponent;
 }());
@@ -3982,9 +3970,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/dialog.es5.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @haifahrul/ckeditor5-build-rich */ "./node_modules/@haifahrul/ckeditor5-build-rich/build/ckeditor.js");
+/* harmony import */ var _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -3995,14 +3983,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ClassroomEditComponent = /** @class */ (function () {
-    function ClassroomEditComponent(host, dialog, formBuilder, router, _eventEmitter, _snackBar) {
+    function ClassroomEditComponent(host, dialog, formBuilder, router, _eventEmitter, _util) {
         this.host = host;
         this.dialog = dialog;
         this.formBuilder = formBuilder;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
-        this.Editor = _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7__;
+        this._util = _util;
+        this.Editor = _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7___default.a;
+        this.config = {
+            toolbar: {
+                items: [
+                    'heading', '|',
+                    'alignment', '|',
+                    'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                    'link', '|',
+                    'bulletedList', 'numberedList', 'todoList',
+                    '-',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+                    'code', 'codeBlock', '|',
+                    'Smiley', 'insertTable', '|',
+                    'outdent', 'indent', '|',
+                    'uploadImage', 'blockQuote', '|',
+                    'undo', 'redo'
+                ],
+                shouldNotGroupWhenFull: true,
+            },
+            language: 'id',
+            image: {
+                toolbar: [
+                    'imageTextAlternative',
+                    'imageStyle:full',
+                    'imageStyle:side'
+                ]
+            },
+        };
         this.submitted = false;
         this.responseEdit = {};
         this.classroom = {};
@@ -4031,7 +4046,7 @@ var ClassroomEditComponent = /** @class */ (function () {
                 ]
             ],
         });
-        this.classroomId = window.localStorage.getItem("ClassroomId");
+        this.classroomId = Number(window.localStorage.getItem("ClassroomId"));
         window.localStorage.setItem('waitLoadComponent', 'N');
         if (this.classroomId)
             this.getClassroom();
@@ -4039,7 +4054,7 @@ var ClassroomEditComponent = /** @class */ (function () {
     ClassroomEditComponent.prototype.getClassroom = function () {
         var _this = this;
         var filter = [];
-        filter.push({ Name: "Id", Value: this.classroomId });
+        filter.push({ Name: "Id", Value: String(this.classroomId) });
         var requestDB = {
             Operation: "view",
             TableData: null,
@@ -4062,10 +4077,6 @@ var ClassroomEditComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    ClassroomEditComponent.prototype.setRoute = function () {
-        this.router.navigate(['view-classroom']);
-        this.waitLoadComponent();
-    };
     ClassroomEditComponent.prototype.waitLoadComponent = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             var waitLoad, loop;
@@ -4119,18 +4130,16 @@ var ClassroomEditComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.responseEdit = data;
             if (!_this.classroomId && _this.responseEdit.Name == "ok" && parseInt(_this.responseEdit.Status) > 0) {
-                _this.classroomId = _this.responseEdit.Status;
-                window.localStorage.setItem("ExerciseId", _this.classroomId);
+                _this.classroomId = Number(_this.responseEdit.Status);
+                window.localStorage.setItem("ExerciseId", String(_this.classroomId));
                 _this.responseEdit.Status = "Record inserted successfully.";
             }
             else if (_this.classroomId && _this.responseEdit.Name == "ok") {
                 _this.responseEdit.Status = "Record updated successfully.";
             }
             _this.getClassroom();
-            var snackBarRef = _this._snackBar.open(_this.responseEdit.Status, 'Go to Classroom', {
-                duration: 3000, panelClass: [_this.responseEdit.Name]
-            });
-            snackBarRef.onAction().subscribe(function () { return _this.setRoute(); });
+            _this.waitLoadComponent();
+            _this._util.setResponse(_this.responseEdit.Status, 'Go to Classroom', _this.responseEdit.Name, 'view-classroom');
         });
     };
     ClassroomEditComponent.ctorParameters = function () { return [
@@ -4139,7 +4148,7 @@ var ClassroomEditComponent = /** @class */ (function () {
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
     ]; };
     ClassroomEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -4152,7 +4161,7 @@ var ClassroomEditComponent = /** @class */ (function () {
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
     ], ClassroomEditComponent);
     return ClassroomEditComponent;
 }());
@@ -4170,7 +4179,7 @@ var ClassroomEditComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".user-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.table td, .table th {\n    padding: initial !important;\n}\n\nbutton {\n    margin-left: 5px;\n}\n\n.mat-progress-bar{\n    height: 20px;\n}\n\n::ng-deep .mat-progress-bar-buffer {\n    background: #E4E8EB;\n}\n\n#checkBar {\n    border-radius: 2px;\n    width: 100px !important;\n}\n\n.icon {\n    width: 20px;\n    height: 20px;\n}\n\n.description {\n    font-size: 12px;\n}\n\n.Enabled {\n    color: #1231da;\n}\n\n.Disabled {\n    color: #9d1e15;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS1jbGFzc3Jvb20vY2xhc3Nyb29tL2NsYXNzcm9vbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLDJCQUEyQjtBQUMvQjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFDQTtJQUNJLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9tZW51LWNsYXNzcm9vbS9jbGFzc3Jvb20vY2xhc3Nyb29tLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudXNlci1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLnRhYmxlIHRkLCAudGFibGUgdGgge1xuICAgIHBhZGRpbmc6IGluaXRpYWwgIWltcG9ydGFudDtcbn1cblxuYnV0dG9uIHtcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xufVxuXG4ubWF0LXByb2dyZXNzLWJhcntcbiAgICBoZWlnaHQ6IDIwcHg7XG59XG5cbjo6bmctZGVlcCAubWF0LXByb2dyZXNzLWJhci1idWZmZXIge1xuICAgIGJhY2tncm91bmQ6ICNFNEU4RUI7XG59XG5cbiNjaGVja0JhciB7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIHdpZHRoOiAxMDBweCAhaW1wb3J0YW50O1xufVxuXG4uaWNvbiB7XG4gICAgd2lkdGg6IDIwcHg7XG4gICAgaGVpZ2h0OiAyMHB4O1xufVxuXG4uZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbn1cblxuLkVuYWJsZWQge1xuICAgIGNvbG9yOiAjMTIzMWRhO1xufVxuLkRpc2FibGVkIHtcbiAgICBjb2xvcjogIzlkMWUxNTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".user-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.table td, .table th {\n    padding: initial !important;\n}\n\nbutton {\n    margin-left: 5px;\n}\n\n.mat-progress-bar{\n    height: 20px;\n}\n\n::ng-deep .mat-progress-bar-buffer {\n    background: #E4E8EB;\n}\n\n#checkBar {\n    border-radius: 2px;\n    width: 100px !important;\n}\n\n.icon {\n    width: 20px;\n    height: 20px;\n}\n\n.description {\n    font-size: 12px;\n}\n\n.Enabled {\n    color: #1231da;\n}\n\n.Disabled {\n    color: #9d1e15;\n}\n\n::ng-deep h1 {\n    font-size: 1.5rem !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS1jbGFzc3Jvb20vY2xhc3Nyb29tL2NsYXNzcm9vbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLDJCQUEyQjtBQUMvQjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFDQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSw0QkFBNEI7QUFDaEMiLCJmaWxlIjoic3JjL2FwcC9tZW51LWNsYXNzcm9vbS9jbGFzc3Jvb20vY2xhc3Nyb29tLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudXNlci1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLnRhYmxlIHRkLCAudGFibGUgdGgge1xuICAgIHBhZGRpbmc6IGluaXRpYWwgIWltcG9ydGFudDtcbn1cblxuYnV0dG9uIHtcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xufVxuXG4ubWF0LXByb2dyZXNzLWJhcntcbiAgICBoZWlnaHQ6IDIwcHg7XG59XG5cbjo6bmctZGVlcCAubWF0LXByb2dyZXNzLWJhci1idWZmZXIge1xuICAgIGJhY2tncm91bmQ6ICNFNEU4RUI7XG59XG5cbiNjaGVja0JhciB7XG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xuICAgIHdpZHRoOiAxMDBweCAhaW1wb3J0YW50O1xufVxuXG4uaWNvbiB7XG4gICAgd2lkdGg6IDIwcHg7XG4gICAgaGVpZ2h0OiAyMHB4O1xufVxuXG4uZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbn1cblxuLkVuYWJsZWQge1xuICAgIGNvbG9yOiAjMTIzMWRhO1xufVxuLkRpc2FibGVkIHtcbiAgICBjb2xvcjogIzlkMWUxNTtcbn1cblxuOjpuZy1kZWVwIGgxIHtcbiAgICBmb250LXNpemU6IDEuNXJlbSAhaW1wb3J0YW50O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -4189,10 +4198,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -4201,17 +4208,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ClassroomComponent = /** @class */ (function () {
-    function ClassroomComponent(host, router, _eventEmitter, _util, _snackBar, formBuilder) {
+    function ClassroomComponent(host, router, _eventEmitter, _util, formBuilder) {
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
         this._util = _util;
-        this._snackBar = _snackBar;
         this.formBuilder = formBuilder;
         this.response = {};
         this.classroom = {};
         this.userSession = {};
         this.users = [];
+        this.submitted = false;
         this.loadM = 0;
         this.loadC = 0;
         this.notSel = 1;
@@ -4222,7 +4229,7 @@ var ClassroomComponent = /** @class */ (function () {
         this.registerForm = this.formBuilder.group({
             KeyAccess: ['',
                 [,
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_6__["Validators"].maxLength(60),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].maxLength(60),
                 ]
             ],
         }, {});
@@ -4233,6 +4240,7 @@ var ClassroomComponent = /** @class */ (function () {
             _this.userSession = _this.host.getSessionID();
             if (data && _this.userSession.Id) {
                 _this.classroom = data;
+                _this.classroomModule = data['Module'];
                 _this.loadC = 1;
                 if (_this.classroom.IdUser == Number(_this.userSession.Id))
                     window.localStorage.setItem("ClassModule", "Lecturer");
@@ -4280,9 +4288,7 @@ var ClassroomComponent = /** @class */ (function () {
                     if (_this.classroom.Id && _this.response.Name == "ok") {
                         _this.response.Status = "Record updated successfully.";
                     }
-                    var snackBarRef = _this._snackBar.open(_this.response.Status, _this.response.Name, {
-                        duration: 3000, panelClass: [_this.response.Name]
-                    });
+                    _this._util.setResponse(_this.response.Status, _this.response.Name, null, null);
                 });
             }
         });
@@ -4300,10 +4306,9 @@ var ClassroomComponent = /** @class */ (function () {
         if (this.registerForm.invalid) {
             return;
         }
+        this.submitted = true;
         if (this.classroom.KeyAccess != this.fe['KeyAccess'].value) {
-            var snackBarRef = this._snackBar.open('Invalid Key!', 'Error', {
-                duration: 3000, panelClass: ['error']
-            });
+            this._util.setResponse('Invalid Key!', 'Error', 'error', null);
             return;
         }
         var c = { 'IdClassroom': this.classroom.Id, IdUser: this.userSession.Id, Module: 'Student' };
@@ -4319,15 +4324,11 @@ var ClassroomComponent = /** @class */ (function () {
             _this.response = data;
             if (_this.response.Name == "ok") {
                 _this.response.Status = "Record inserted successfully.";
-                _this.classroom['Module'] = "Student";
                 _this._eventEmitter.setClassroom(_this.classroom);
+                _this.classroom['Module'] = "Student";
+                _this.classroomModule = "Student";
             }
-            var snackBarRef = _this._snackBar.open(_this.response.Status, 'Welcome!', {
-                duration: 3000, panelClass: [_this.response.Name]
-            });
-            snackBarRef.onAction().subscribe(function () {
-                return _this.router.navigate(['view-classroom-manager']);
-            });
+            _this._util.setResponse(_this.response.Status, 'Welcome!', _this.response.Name, 'view-classroom-manager');
         });
     };
     ClassroomComponent.prototype.getUsers = function () {
@@ -4358,9 +4359,8 @@ var ClassroomComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormBuilder"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] }
     ]; };
     ClassroomComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -4371,9 +4371,8 @@ var ClassroomComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormBuilder"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]])
     ], ClassroomComponent);
     return ClassroomComponent;
 }());
@@ -4412,9 +4411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -4424,12 +4421,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ExercisesAnswerEditComponent = /** @class */ (function () {
-    function ExercisesAnswerEditComponent(host, formBuilder, router, _eventEmitter, _snackBar, _util) {
+    function ExercisesAnswerEditComponent(host, formBuilder, router, _eventEmitter, _util) {
         this.host = host;
         this.formBuilder = formBuilder;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
         this._util = _util;
         this.resultOptions = {
             theme: 'vs-dark',
@@ -4440,7 +4436,6 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
         };
         this.responseEdit = {};
         this.exercise = {};
-        this.answer = {};
         this.answers = {};
         this.diff = '';
         this.exerciseId = '';
@@ -4490,10 +4485,7 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
                     typeM = "error";
                 }
                 if (_this.code['DIFF']) {
-                    var snackBarRef = void 0;
-                    snackBarRef = _this._snackBar.open(message, 'Go to DIFF tab', {
-                        duration: 10000, panelClass: [typeM]
-                    });
+                    var snackBarRef = _this._util.setResponse(message, 'Go to DIFF tab', typeM, null);
                     snackBarRef.onAction().subscribe(function () {
                         return _this.navActive = 3;
                     });
@@ -4518,7 +4510,7 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
         var filter = [];
         var requestDB;
         filter.push({ Name: "Id", Value: this.exerciseId });
-        filter.push({ Name: "IdUser", Value: this.userSession.Id });
+        filter.push({ Name: "IdUser", Value: String(this.userSession.Id) });
         var table = "exercises-list-user";
         if (this.userSession.Module == "Admin" || window.localStorage.getItem("ClassModule"))
             table = "exercises-list-admin";
@@ -4533,6 +4525,7 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
             if (data[0]) {
                 _this.originalModel = { code: data[0]['Result'], language: 'text/plain' };
                 _this.exercise = data[0];
+                _this.exIsExpired = _this.exercise['ExIsExpired'];
                 _this._eventEmitter.setExercise(_this.exercise);
                 _this.managerStatus();
             }
@@ -4543,7 +4536,7 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
         var filter = [];
         var requestDB;
         filter.push({ Name: "Id", Value: this.exerciseId });
-        filter.push({ Name: "IdUser", Value: this.userSession.Id });
+        filter.push({ Name: "IdUser", Value: String(this.userSession.Id) });
         var table = "exercises-answer-user";
         if (this.userSession.Module == "Admin" || window.localStorage.getItem("ClassModule")) {
             table = "exercises-answer-admin";
@@ -4560,6 +4553,10 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
                 _this.answers = data[0];
                 _this.TotalEx = parseInt(data[0]['TotalEx']);
                 _this.Score = data[0]['Score'];
+                if (_this.answers['Name'])
+                    _this.answerName = _this.answers['Name'];
+                if (_this.answers['gName'])
+                    _this.answerName = _this.answers['gName'];
             }
             else {
                 _this.TotalEx = 0;
@@ -4662,15 +4659,10 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
                         _this.responseEdit = data;
                         if (_this.responseEdit.Name == "ok" && parseInt(_this.responseEdit.Status) > 0)
                             _this.responseEdit.Status = "Record inserted successfully.";
-                        var snackBarRef = _this._snackBar.open(_this.responseEdit.Status, 'Go to Answers', {
-                            duration: 3000, panelClass: [_this.responseEdit.Name]
-                        });
-                        snackBarRef.onAction().subscribe(function () { return _this.router.navigate(['view-answer']); });
+                        _this._util.setResponse(_this.responseEdit.Status, 'Go to Answers', _this.responseEdit.Name, 'view-answer');
                     }
                     else {
-                        var snackBarRef = _this._snackBar.open(_this.responseEdit.Status, _this.responseEdit.Name, {
-                            duration: 3000, panelClass: [_this.responseEdit.Name]
-                        });
+                        _this._util.setResponse(_this.responseEdit.Status, _this.responseEdit.Name, null, null);
                     }
                 });
             }
@@ -4740,8 +4732,7 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] }
     ]; };
     ExercisesAnswerEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -4753,8 +4744,7 @@ var ExercisesAnswerEditComponent = /** @class */ (function () {
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"]])
     ], ExercisesAnswerEditComponent);
     return ExercisesAnswerEditComponent;
 }());
@@ -4791,15 +4781,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/__ivy_ngcc__/fesm5/animations.js");
-/* harmony import */ var _services_file_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../_services/file.service */ "./src/app/_services/file.service.ts");
-/* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! jszip */ "./node_modules/jszip/dist/jszip.min.js");
-/* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! file-saver */ "./node_modules/file-saver/dist/FileSaver.min.js");
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/__ivy_ngcc__/fesm5/animations.js");
+/* harmony import */ var _services_file_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../_services/file.service */ "./src/app/_services/file.service.ts");
+/* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! jszip */ "./node_modules/jszip/dist/jszip.min.js");
+/* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! file-saver */ "./node_modules/file-saver/dist/FileSaver.min.js");
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
+
 
 
 
@@ -4813,12 +4805,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ExercisesAnswerComponent = /** @class */ (function () {
-    function ExercisesAnswerComponent(host, router, _eventEmitter, excelService, _snackBar, _util) {
+    function ExercisesAnswerComponent(host, router, _eventEmitter, excelService, _util) {
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
         this.excelService = excelService;
-        this._snackBar = _snackBar;
         this._util = _util;
         this.displayedColumns = ['Id', 'Name', 'Date', 'Status', 'Score', 'TotalEx'];
         this.displayedColumns2 = ['Index2', 'Name2', 'Date2', 'CheckCount2', 'ExecTime2', 'History2', 'Status2', 'Action2'];
@@ -4853,7 +4844,6 @@ var ExercisesAnswerComponent = /** @class */ (function () {
     };
     ExercisesAnswerComponent.prototype.addAnswer = function () {
         window.localStorage.setItem("ExerciseId", this.exerciseId);
-        window.localStorage.setItem("ExerciseGId", this.exercise['gId']);
         window.localStorage.removeItem("AnswerId");
         this.router.navigate(['add-answer']);
     };
@@ -4861,15 +4851,9 @@ var ExercisesAnswerComponent = /** @class */ (function () {
     ExercisesAnswerComponent.prototype.editAnswer = function (answer) {
         window.localStorage.setItem("AnswerId", answer.Id.toString());
         window.localStorage.setItem("ExerciseId", this.exerciseId);
-        window.localStorage.setItem("ExerciseGId", this.exercise['gId']);
         this.router.navigate(['edit-answer']);
     };
     ;
-    ExercisesAnswerComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     ExercisesAnswerComponent.prototype.deleteAnswer = function (id, name, r, i) {
         var _this = this;
         var ret = this._util.openModal('Delete Exercise of the User: ' + name, 'Confirm to delete the exercise?', 'Yes', 'No', '');
@@ -4886,7 +4870,7 @@ var ExercisesAnswerComponent = /** @class */ (function () {
                 _this.host.request(requestDB, 'FDBRequest')
                     .subscribe(function (data) {
                     _this.response = data;
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                     if (_this.response['Name'] == "ok") {
                         _this.getAnswers();
                         //console.log("Exercises-Answer | deleteAnswer: ", this.response, this.exerciseId);
@@ -4908,7 +4892,6 @@ var ExercisesAnswerComponent = /** @class */ (function () {
                 var name = answer['Name'];
                 if (answer['gId'])
                     name = answer['gName'];
-                console.log(_this.answers);
                 _this.answersXLS.push({
                     Name: name,
                     Submission_Date: answer.Date,
@@ -4923,7 +4906,7 @@ var ExercisesAnswerComponent = /** @class */ (function () {
             //console.log(this.answersXLS);
         }
         if (choice == "lastCode") {
-            var zip = new jszip__WEBPACK_IMPORTED_MODULE_8__();
+            var zip = new jszip__WEBPACK_IMPORTED_MODULE_10__();
             this.answers.forEach(function (answer) {
                 var name = answer['Name'];
                 if (answer['gId'])
@@ -4933,7 +4916,7 @@ var ExercisesAnswerComponent = /** @class */ (function () {
             var name_1 = this.exercise.Title;
             zip.generateAsync({ type: "blob" }).then(function (content) {
                 // see FileSaver.js
-                Object(file_saver__WEBPACK_IMPORTED_MODULE_9__["saveAs"])(content, name_1);
+                Object(file_saver__WEBPACK_IMPORTED_MODULE_11__["saveAs"])(content, name_1);
             });
         }
     };
@@ -4979,14 +4962,14 @@ var ExercisesAnswerComponent = /** @class */ (function () {
                                 _this.answers[index].IdScore = parseInt(data['Status']);
                             _this.answers[index].Score = score_1;
                             _this.answers[index].Feedback = feedback_1;
-                            _this.setResponse('Record changed successfully.', 'ok');
+                            _this._util.setResponse('Record changed successfully.', 'ok', null, null);
                             if (score_1)
                                 _this.score = true;
                             else
                                 _this.score = false;
                         }
                         else {
-                            _this.setResponse(data['Status'], 'error');
+                            _this._util.setResponse(data['Status'], 'error', null, null);
                         }
                     }
                 });
@@ -5075,7 +5058,7 @@ var ExercisesAnswerComponent = /** @class */ (function () {
         var filter = [];
         var requestDB;
         filter.push({ Name: "Id", Value: this.exerciseId });
-        filter.push({ Name: "IdUser", Value: this.userSession.Id });
+        filter.push({ Name: "IdUser", Value: String(this.userSession.Id) });
         var table = "exercises-list-user";
         if (this.userSession.Module == "Admin" || window.localStorage.getItem("ClassModule"))
             table = "exercises-list-admin";
@@ -5089,6 +5072,8 @@ var ExercisesAnswerComponent = /** @class */ (function () {
             .subscribe(function (data) {
             if (data[0]) {
                 _this.exercise = data[0];
+                _this.exIsExpired = _this.exercise['ExIsExpired'];
+                _this.countDown = _this._util.countdown(_this.exercise['CountDown']);
             }
         });
     };
@@ -5097,7 +5082,7 @@ var ExercisesAnswerComponent = /** @class */ (function () {
         var filter = [];
         var requestDB;
         filter.push({ Name: "Id", Value: this.exerciseId });
-        filter.push({ Name: "IdUser", Value: this.userSession.Id });
+        filter.push({ Name: "IdUser", Value: String(this.userSession.Id) });
         var table = "exercises-answer-user";
         if (this.userSession.Module == "Admin" || window.localStorage.getItem("ClassModule")) {
             table = "exercises-answer-admin";
@@ -5150,7 +5135,7 @@ var ExercisesAnswerComponent = /** @class */ (function () {
                     i_1++;
                     _this.totalAnswers++;
                 });
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.answers);
+                _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableDataSource"](_this.answers);
                 //console.log(this.answers);
                 _this.dataSource.paginator = _this.paginator;
                 _this.dataSource.sort = _this.sort;
@@ -5186,28 +5171,27 @@ var ExercisesAnswerComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _services_file_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_10__["MatSnackBar"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_11__["UtilControl"] }
+        { type: _services_file_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"] },
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_12__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
     ], ExercisesAnswerComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"])
     ], ExercisesAnswerComponent.prototype, "sort", void 0);
     ExercisesAnswerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'exercises-answer-app-answer',
             template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./exercises-answer.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/menu-classroom/classroom/exercises/exercises-answer/exercises-answer.component.html")).default,
             animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["trigger"])('detailExpand', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('collapsed, void', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({ height: '0px', minHeight: '0', display: 'none' })),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('expanded', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({ height: '*' })),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('expanded <=> collapsed', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('expanded <=> void', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["trigger"])('detailExpand', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["state"])('collapsed, void', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["style"])({ height: '0px', minHeight: '0', display: 'none' })),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["state"])('expanded', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["style"])({ height: '*' })),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["transition"])('expanded <=> collapsed', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["animate"])('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["transition"])('expanded <=> void', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["animate"])('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
                 ]),
             ],
             styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./exercises-answer.component.css */ "./src/app/menu-classroom/classroom/exercises/exercises-answer/exercises-answer.component.css")).default]
@@ -5215,9 +5199,8 @@ var ExercisesAnswerComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _services_file_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_10__["MatSnackBar"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_11__["UtilControl"]])
+            _services_file_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"],
+            _control_util_control__WEBPACK_IMPORTED_MODULE_12__["UtilControl"]])
     ], ExercisesAnswerComponent);
     return ExercisesAnswerComponent;
 }());
@@ -5255,11 +5238,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @haifahrul/ckeditor5-build-rich */ "./node_modules/@haifahrul/ckeditor5-build-rich/build/ckeditor.js");
+/* harmony import */ var _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -5269,14 +5250,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ExercisesEditComponent = /** @class */ (function () {
-    function ExercisesEditComponent(host, _util, formBuilder, router, _eventEmitter, _snackBar) {
+    function ExercisesEditComponent(host, _util, formBuilder, router, _eventEmitter) {
         this.host = host;
         this._util = _util;
         this.formBuilder = formBuilder;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
-        this.Editor = _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_6__;
+        this.Editor = _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_6___default.a;
+        this.config = {
+            toolbar: {
+                items: [
+                    'heading', '|',
+                    'alignment', '|',
+                    'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                    'link', '|',
+                    'bulletedList', 'numberedList', 'todoList',
+                    '-',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+                    'code', 'codeBlock', '|',
+                    'Smiley', 'insertTable', '|',
+                    'outdent', 'indent', '|',
+                    'uploadImage', 'blockQuote', '|',
+                    'undo', 'redo'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            language: 'id',
+            image: {
+                toolbar: [
+                    'imageTextAlternative',
+                    'imageStyle:full',
+                    'imageStyle:side'
+                ]
+            },
+        };
         this.submitted = false;
         this.responseEdit = {};
         this.exercise = {};
@@ -5310,7 +5317,8 @@ var ExercisesEditComponent = /** @class */ (function () {
             CheckCount: [''],
             CheckList: [''],
         });
-        this.exerciseId = window.localStorage.getItem("ExerciseId");
+        if (window.localStorage.getItem("ExerciseId"))
+            this.exerciseId = Number(window.localStorage.getItem("ExerciseId"));
         this.module = window.localStorage.getItem("ClassModule");
         this.userSession = this.host.getSessionID();
         this.getInit();
@@ -5335,7 +5343,7 @@ var ExercisesEditComponent = /** @class */ (function () {
     ExercisesEditComponent.prototype.getExercise = function () {
         var _this = this;
         var filter = [];
-        filter.push({ Name: "Id", Value: this.exerciseId });
+        filter.push({ Name: "Id", Value: String(this.exerciseId) });
         var requestDB = {
             Operation: "view",
             TableData: null,
@@ -5428,21 +5436,17 @@ var ExercisesEditComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.responseEdit = data;
             if (!_this.exerciseId && _this.responseEdit.Name == "ok" && parseInt(_this.responseEdit.Status) > 0) {
-                _this.exerciseId = _this.responseEdit.Status;
-                _this.exercise.Id = parseInt(_this.exerciseId);
-                window.localStorage.setItem("ExerciseId", _this.exerciseId);
+                _this.exerciseId = Number(_this.responseEdit.Status);
+                _this.exercise.Id = _this.exerciseId;
+                window.localStorage.setItem("ExerciseId", String(_this.exerciseId));
                 _this.responseEdit.Status = "Record inserted successfully.";
             }
             else if (_this.exerciseId && _this.responseEdit.Name == "ok") {
                 _this.responseEdit.Status = "Record updated successfully.";
             }
-            var snackBarRef = _this._snackBar.open(_this.responseEdit.Status, 'Go to Exercises', {
-                duration: 3000, panelClass: [_this.responseEdit.Name]
-            });
+            _this._util.setResponse(_this.responseEdit.Status, 'Go to Exercises', _this.responseEdit.Name, 'view-exercise');
             _this.getInit();
             _this._eventEmitter.setExercise(_this.exercise);
-            snackBarRef.onAction().subscribe(function () { return _this.router.navigate(['view-exercise']); });
-            //this.router.navigate(['Exercises']);
             //console.log("Exercises onSubmit | edit: ", this.editForm.value);
         });
     };
@@ -5451,11 +5455,10 @@ var ExercisesEditComponent = /** @class */ (function () {
     };
     ExercisesEditComponent.ctorParameters = function () { return [
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] },
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-        { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"] }
+        { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] }
     ]; };
     ExercisesEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -5464,11 +5467,10 @@ var ExercisesEditComponent = /** @class */ (function () {
             styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./exercises-edit.component.css */ "./src/app/menu-classroom/classroom/exercises/exercises-edit/exercises-edit.component.css")).default]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"],
+            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
-            _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"]])
+            _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"]])
     ], ExercisesEditComponent);
     return ExercisesEditComponent;
 }());
@@ -5507,9 +5509,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
 /* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../_control/util.control */ "./src/app/_control/util.control.ts");
-
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -5519,11 +5519,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ExercisesFilesComponent = /** @class */ (function () {
-    function ExercisesFilesComponent(host, router, _eventEmitter, _snackBar, _util) {
+    function ExercisesFilesComponent(host, router, _eventEmitter, _util) {
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
         this._util = _util;
         this.displayedColumns = ['Id', 'Name', 'Size', 'Action'];
         this.progress = { loaded: 0, total: 0 };
@@ -5536,12 +5535,6 @@ var ExercisesFilesComponent = /** @class */ (function () {
     ExercisesFilesComponent.prototype.ngOnInit = function () {
         if (this.exerciseId)
             this.getFiles();
-    };
-    ExercisesFilesComponent.prototype.setResponse = function (message, action) {
-        //console.log(message, action);
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
     };
     ExercisesFilesComponent.prototype.setRoute = function (val) {
         this.router.navigate([val]);
@@ -5563,7 +5556,7 @@ var ExercisesFilesComponent = /** @class */ (function () {
         this.host.request(requestDB, 'FDBRequest')
             .subscribe(function (data) {
             _this.response = data;
-            _this.setResponse(_this.response['Status'], _this.response['Name']);
+            _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
             _this.getFiles();
         });
     };
@@ -5586,7 +5579,7 @@ var ExercisesFilesComponent = /** @class */ (function () {
                 _this.response = data.body;
                 if (data['body']['Name'] == "ok")
                     _this.response['Status'] = "File inserted successfully.";
-                _this.setResponse(_this.response['Status'], data['body']['Name']);
+                _this._util.setResponse(_this.response['Status'], data['body']['Name'], null, null);
                 _this.inputFile.nativeElement.value = "";
                 _this.getFiles();
                 _this.load = 0;
@@ -5618,8 +5611,7 @@ var ExercisesFilesComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('exerciseId'),
@@ -5649,8 +5641,7 @@ var ExercisesFilesComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_7__["MatSnackBar"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"]])
     ], ExercisesFilesComponent);
     return ExercisesFilesComponent;
 }());
@@ -5691,7 +5682,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/autocomplete */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/autocomplete.es5.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -5703,13 +5694,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ExercisesGroupsComponent = /** @class */ (function () {
-    function ExercisesGroupsComponent(host, formBuilder, router, _eventEmitter, _snackBar) {
+    function ExercisesGroupsComponent(host, formBuilder, router, _eventEmitter, _util) {
         var _this = this;
         this.host = host;
         this.formBuilder = formBuilder;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
+        this._util = _util;
         this.response = {};
         this.groups = [];
         this.visible = true;
@@ -5752,15 +5743,6 @@ var ExercisesGroupsComponent = /** @class */ (function () {
             this.memberCtrl.setValue(null);
         }
     };
-    ExercisesGroupsComponent.prototype.setResponse = function (message, action) {
-        var _this = this;
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-        snackBarRef.onAction().subscribe(function () {
-            return _this.router.navigate(['view-group']);
-        });
-    };
     ExercisesGroupsComponent.prototype.remove = function (group) {
         var _this = this;
         var index = this.members.indexOf(group);
@@ -5783,7 +5765,7 @@ var ExercisesGroupsComponent = /** @class */ (function () {
             _this.response = data;
             _this.response.Name = "ok";
             _this.response.Status = "Record updated successfully.";
-            _this.setResponse(_this.response['Status'], _this.response['Name']);
+            _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, 'view-group');
         });
     };
     ExercisesGroupsComponent.prototype.selected = function (event) {
@@ -5808,7 +5790,7 @@ var ExercisesGroupsComponent = /** @class */ (function () {
                     _this.response.Status = "Record updated successfully.";
                     //console.log(res);
                 }
-                _this.setResponse(_this.response['Status'], _this.response['Name']);
+                _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                 //this.getMembers();
             }
         });
@@ -5863,7 +5845,7 @@ var ExercisesGroupsComponent = /** @class */ (function () {
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_8__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_9__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('exerciseId'),
@@ -5887,7 +5869,7 @@ var ExercisesGroupsComponent = /** @class */ (function () {
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_8__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_9__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"]])
     ], ExercisesGroupsComponent);
     return ExercisesGroupsComponent;
 }());
@@ -5924,9 +5906,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+
 
 
 
@@ -5936,12 +5920,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ExercisesComponent = /** @class */ (function () {
-    function ExercisesComponent(host, router, _eventEmitter, _util, _snackBar) {
+    function ExercisesComponent(host, router, _eventEmitter, _util) {
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
         this._util = _util;
-        this._snackBar = _snackBar;
         this.cAdmin = ['Id', 'Title', 'MaxSubmissions', 'Date', 'ExecTime', 'CheckCount', 'Answers', 'Action'];
         this.cUser = ['Id', 'Title', 'MaxSubmissions', 'Date', 'ExecTime', 'CheckCount', 'Answers'];
         this.exercises = [];
@@ -5985,11 +5968,6 @@ var ExercisesComponent = /** @class */ (function () {
         this.router.navigate(['edit-exercise']);
     };
     ;
-    ExercisesComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     ExercisesComponent.prototype.setKey = function () {
         var _this = this;
         var input = [];
@@ -6001,7 +5979,7 @@ var ExercisesComponent = /** @class */ (function () {
                 if (data['input'][0] && data['input'][0]['Model'] != "")
                     key = data['input'][0]['Model'];
                 var filter = [];
-                filter.push({ Name: 'IdUser', Value: _this.userSession.Id });
+                filter.push({ Name: 'IdUser', Value: String(_this.userSession.Id) });
                 filter.push({ Name: 'KeyAccess', Value: key });
                 filter.push({ Name: 'IdClassroom', Value: _this.IdClassroom });
                 var requestDB = {
@@ -6013,7 +5991,7 @@ var ExercisesComponent = /** @class */ (function () {
                 _this.host.request(requestDB, 'FDBRequest')
                     .subscribe(function (data) {
                     if (data) {
-                        _this.setResponse(data['Status'], data['Name']);
+                        _this._util.setResponse(data['Status'], data['Name'], null, null);
                         _this.getExercises();
                     }
                 });
@@ -6036,7 +6014,7 @@ var ExercisesComponent = /** @class */ (function () {
                 _this.host.request(requestDB, 'FDBRequest')
                     .subscribe(function (data) {
                     _this.response = data;
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                     if (_this.response['Name'] == "ok") {
                         _this.getExercises();
                     }
@@ -6050,7 +6028,7 @@ var ExercisesComponent = /** @class */ (function () {
     ExercisesComponent.prototype.getExercises = function () {
         var _this = this;
         var filter = [];
-        filter.push({ Name: "User", Value: this.userSession.Id });
+        filter.push({ Name: "User", Value: String(this.userSession.Id) });
         filter.push({ Name: 'IdClassroom', Value: this.IdClassroom });
         var requestDB;
         if (this.userSession.Module == "User") {
@@ -6074,33 +6052,33 @@ var ExercisesComponent = /** @class */ (function () {
         var gTemp = [];
         this.host.request(requestDB, 'FDBRequest')
             .subscribe(function (data) {
-            _this.exercises = data;
-            if (_this.exercises) {
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.exercises);
-                _this.dataSource.paginator = _this.paginator;
-                _this.dataSource.sort = _this.sort;
-            }
-            else {
-                delete _this.dataSource;
+            if (data) {
+                _this.exercises = data;
+                if (_this.exercises) {
+                    _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableDataSource"](_this.exercises);
+                    _this.dataSource.paginator = _this.paginator;
+                    _this.dataSource.sort = _this.sort;
+                }
+                else {
+                    delete _this.dataSource;
+                }
             }
             _this.load = 1;
-            //console.log(this.exercises);
         });
     };
     ExercisesComponent.ctorParameters = function () { return [
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
     ], ExercisesComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"])
     ], ExercisesComponent.prototype, "sort", void 0);
     ExercisesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6111,8 +6089,7 @@ var ExercisesComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
     ], ExercisesComponent);
     return ExercisesComponent;
 }());
@@ -6150,7 +6127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -6159,12 +6136,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var GroupsEditComponent = /** @class */ (function () {
-    function GroupsEditComponent(formBuilder, host, router, _eventEmitter, _snackBar) {
+    function GroupsEditComponent(formBuilder, host, router, _eventEmitter, _util) {
         this.formBuilder = formBuilder;
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
+        this._util = _util;
         this.submitted = false;
         this.response = {};
         this.host.checkSessionID(this.constructor.name);
@@ -6193,8 +6170,8 @@ var GroupsEditComponent = /** @class */ (function () {
             Id: ['', []],
             IdClassroom: ['', []],
         }, {});
-        this.groupId = window.localStorage.getItem("editGroupId");
-        this.IdClassroom = window.localStorage.getItem("ClassroomId");
+        this.groupId = Number(window.localStorage.getItem("editGroupId"));
+        this.IdClassroom = Number(window.localStorage.getItem("ClassroomId"));
         if (this.groupId)
             this.getGroups(this.groupId);
     };
@@ -6208,7 +6185,7 @@ var GroupsEditComponent = /** @class */ (function () {
     GroupsEditComponent.prototype.getGroups = function (groupId) {
         var _this = this;
         var filter = [];
-        filter.push({ Name: "Id", Value: groupId });
+        filter.push({ Name: "Id", Value: String(groupId) });
         var requestDB = {
             Operation: "view",
             TableData: null,
@@ -6224,15 +6201,6 @@ var GroupsEditComponent = /** @class */ (function () {
     };
     GroupsEditComponent.prototype.setRoute = function (val) {
         this.router.navigate([val]);
-    };
-    GroupsEditComponent.prototype.setResponse = function (message, action) {
-        var _this = this;
-        var snackBarRef = this._snackBar.open(message, 'Go to Groups', {
-            duration: 3000, panelClass: [action]
-        });
-        snackBarRef.onAction().subscribe(function () {
-            return _this.router.navigate(['view-group']);
-        });
     };
     GroupsEditComponent.prototype.onSubmit = function () {
         var _this = this;
@@ -6257,8 +6225,7 @@ var GroupsEditComponent = /** @class */ (function () {
                 _this.response.Status = "Record inserted successfully.";
             if (_this.response.Name == "ok" && _this.groupId)
                 _this.response.Status = "Record updated successfully.";
-            _this.setResponse(_this.response['Status'], _this.response['Name']);
-            //this.router.navigate(['Groups']);
+            _this._util.setResponse(_this.response['Status'], 'Go to Groups', _this.response['Name'], 'view-group');
             //console.log("Groups onSubmit | edit: ", this.editForm.value);
         });
     };
@@ -6267,7 +6234,7 @@ var GroupsEditComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"] }
     ]; };
     GroupsEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6279,7 +6246,7 @@ var GroupsEditComponent = /** @class */ (function () {
             _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"]])
     ], GroupsEditComponent);
     return GroupsEditComponent;
 }());
@@ -6319,7 +6286,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/__ivy_ngcc__/esm5/keycodes.es5.js");
 /* harmony import */ var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/autocomplete */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/autocomplete.es5.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -6330,12 +6297,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var GroupsMembersComponent = /** @class */ (function () {
-    function GroupsMembersComponent(host, formBuilder, router, _snackBar) {
+    function GroupsMembersComponent(host, formBuilder, router, _util) {
         var _this = this;
         this.host = host;
         this.formBuilder = formBuilder;
         this.router = router;
-        this._snackBar = _snackBar;
+        this._util = _util;
         this.response = {};
         this.users = [];
         this.visible = true;
@@ -6410,15 +6377,6 @@ var GroupsMembersComponent = /** @class */ (function () {
             return usersFiltered;
         }
     };
-    GroupsMembersComponent.prototype.setResponse = function (message, action) {
-        var _this = this;
-        var snackBarRef = this._snackBar.open(message, 'Go to Groups', {
-            duration: 3000, panelClass: [action]
-        });
-        snackBarRef.onAction().subscribe(function () {
-            return _this.router.navigate(['view-group']);
-        });
-    };
     GroupsMembersComponent.prototype.onSubmit = function () {
         var _this = this;
         this.deleteMembers();
@@ -6444,7 +6402,7 @@ var GroupsMembersComponent = /** @class */ (function () {
                         _this.response.Name = "ok";
                         _this.response.Status = "Record updated successfully.";
                         //console.log(res);
-                        _this.setResponse(_this.response['Status'], _this.response['Name']);
+                        _this._util.setResponse(_this.response['Status'], 'Go to Groups', _this.response['Name'], 'view-group');
                     }
                     _this.getMembers();
                 }
@@ -6472,7 +6430,7 @@ var GroupsMembersComponent = /** @class */ (function () {
                 _this.response = data;
                 _this.response.Name = "ok";
                 _this.response.Status = "Record updated successfully.";
-                _this.setResponse(_this.response['Status'], _this.response['Name']);
+                _this._util.setResponse(_this.response['Status'], 'Go to Groups', _this.response['Name'], 'view-group');
             });
             //console.log(requestDB);
         }
@@ -6514,7 +6472,7 @@ var GroupsMembersComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('memberInput', { static: false }),
@@ -6533,7 +6491,7 @@ var GroupsMembersComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
     ], GroupsMembersComponent);
     return GroupsMembersComponent;
 }());
@@ -6570,9 +6528,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+
 
 
 
@@ -6582,12 +6542,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var GroupsComponent = /** @class */ (function () {
-    function GroupsComponent(host, router, _eventEmitter, _util, _snackBar) {
+    function GroupsComponent(host, router, _eventEmitter, _util) {
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
         this._util = _util;
-        this._snackBar = _snackBar;
         this.displayedColumns = ['Id', 'Name', 'KeyAccess', 'Action'];
         this.groups = [];
         this.response = {};
@@ -6629,11 +6588,6 @@ var GroupsComponent = /** @class */ (function () {
         this.router.navigate(['edit-group']);
     };
     ;
-    GroupsComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     GroupsComponent.prototype.deleteGroup = function (group) {
         var _this = this;
         var ret = this._util.openModal('Delete Group: ' + group.Name, 'Confirm to delete the group?', 'Yes', 'No', '');
@@ -6650,7 +6604,7 @@ var GroupsComponent = /** @class */ (function () {
                 _this.host.request(requestDB, 'FDBRequest')
                     .subscribe(function (data) {
                     _this.response = data;
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                     if (_this.response['Name'] == "ok") {
                         _this.getGroups();
                     }
@@ -6674,7 +6628,7 @@ var GroupsComponent = /** @class */ (function () {
             _this.groups = data;
             if (_this.groups) {
                 //console.log("Groups | dbList: ", data);
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.groups);
+                _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableDataSource"](_this.groups);
                 _this.dataSource.paginator = _this.paginator;
                 _this.dataSource.sort = _this.sort;
             }
@@ -6688,16 +6642,15 @@ var GroupsComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
     ], GroupsComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"])
     ], GroupsComponent.prototype, "sort", void 0);
     GroupsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6708,8 +6661,7 @@ var GroupsComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
     ], GroupsComponent);
     return GroupsComponent;
 }());
@@ -6747,7 +6699,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
 
@@ -6756,12 +6708,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UsersClassroomEditComponent = /** @class */ (function () {
-    function UsersClassroomEditComponent(formBuilder, host, router, _eventEmitter, _snackBar) {
+    function UsersClassroomEditComponent(formBuilder, host, router, _eventEmitter, _util) {
         this.formBuilder = formBuilder;
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
-        this._snackBar = _snackBar;
+        this._util = _util;
         this.submitted = false;
         this.response = {};
         this.userSession = {};
@@ -6799,7 +6751,7 @@ var UsersClassroomEditComponent = /** @class */ (function () {
             ForceChangePass: ['0', []],
             Id: ['', []],
         }, { validator: this.checkPassword });
-        this.IdClassroom = window.localStorage.getItem("ClassroomId");
+        this.IdClassroom = Number(window.localStorage.getItem("ClassroomId"));
         this.module = window.localStorage.getItem("ClassModule");
         this.userSession = this.host.getSessionID();
         //Getting Credentials
@@ -6809,9 +6761,9 @@ var UsersClassroomEditComponent = /** @class */ (function () {
             this.router.navigate(['welcome']);
             return;
         }
-        this.userId = window.localStorage.getItem("editUserClassroomId");
-        if (this.userId)
-            this.getUsers(this.userId);
+        this.userId = Number(window.localStorage.getItem("editUserClassroomId"));
+        if (this.userId && this.IdClassroom)
+            this.getUsers(this.userId, this.IdClassroom);
     };
     UsersClassroomEditComponent.prototype.checkPassword = function (control) {
         if (control.get('Password').value != control.get('CPassword').value) {
@@ -6828,11 +6780,12 @@ var UsersClassroomEditComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    UsersClassroomEditComponent.prototype.getUsers = function (userId) {
+    UsersClassroomEditComponent.prototype.getUsers = function (userId, IdClassroom) {
         var _this = this;
         var filter = [];
-        if (userId) {
-            filter.push({ Name: 'Id', Value: userId });
+        if (userId && IdClassroom) {
+            filter.push({ Name: 'Id', Value: String(userId) });
+            filter.push({ Name: 'IdClassroom', Value: String(IdClassroom) });
             var requestDB = {
                 Operation: "view",
                 TableData: null,
@@ -6889,12 +6842,7 @@ var UsersClassroomEditComponent = /** @class */ (function () {
                 _this.registerForm.enable();
                 _this.disabled = true;
             }
-            var snackBarRef = _this._snackBar.open(_this.response.Status, 'Go to Users', {
-                duration: 3000, panelClass: [_this.response.Name]
-            });
-            snackBarRef.onAction().subscribe(function () {
-                return _this.router.navigate(['view-user-classroom']);
-            });
+            _this._util.setResponse(_this.response.Status, 'Go to Users', _this.response['Name'], 'view-user-classroom');
             //console.log("requestDB | this.response ", requestDB, this.response);
         });
     };
@@ -6917,17 +6865,11 @@ var UsersClassroomEditComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.response = data;
             if (_this.response.Name != "ok" && _this.response.Name != "info") {
-                var snackBarRef = _this._snackBar.open(_this.response.Status, 'Go to Users', {
-                    duration: 3000, panelClass: [_this.response.Name]
-                });
-                snackBarRef.onAction().subscribe(function () {
-                    return _this.router.navigate(['view-user-classroom']);
-                });
-                console.log("requestDB | this.response ", requestDB, _this.response);
+                _this._util.setResponse(_this.response.Status, 'Go to Users', _this.response['Name'], 'view-user-classroom');
             }
         });
         //console.log("requestDB | this.response ", requestDB, this.response);
-        this.getUsers(this.userId);
+        this.getUsers(this.userId, this.IdClassroom);
         this.registerForm.enable();
         this.disabled = false;
     };
@@ -6936,7 +6878,7 @@ var UsersClassroomEditComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"] }
     ]; };
     UsersClassroomEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -6948,7 +6890,7 @@ var UsersClassroomEditComponent = /** @class */ (function () {
             _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"]])
     ], UsersClassroomEditComponent);
     return UsersClassroomEditComponent;
 }());
@@ -6989,6 +6931,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/autocomplete */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/autocomplete.es5.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../_control/util.control */ "./src/app/_control/util.control.ts");
+
 
 
 
@@ -6999,12 +6943,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UsersClassroomJoinComponent = /** @class */ (function () {
-    function UsersClassroomJoinComponent(host, formBuilder, router, _snackBar) {
+    function UsersClassroomJoinComponent(host, formBuilder, router, _snackBar, _util) {
         var _this = this;
         this.host = host;
         this.formBuilder = formBuilder;
         this.router = router;
         this._snackBar = _snackBar;
+        this._util = _util;
         this.response = {};
         this.users = [];
         this.visible = true;
@@ -7069,15 +7014,6 @@ var UsersClassroomJoinComponent = /** @class */ (function () {
             return usersFiltered;
         }
     };
-    UsersClassroomJoinComponent.prototype.setResponse = function (message, action) {
-        var _this = this;
-        var snackBarRef = this._snackBar.open(message, 'Go to Users', {
-            duration: 3000, panelClass: [action]
-        });
-        snackBarRef.onAction().subscribe(function () {
-            return _this.router.navigate(['view-user-classroom']);
-        });
-    };
     UsersClassroomJoinComponent.prototype.onSubmit = function () {
         var _this = this;
         var temp = this.editForm;
@@ -7102,7 +7038,7 @@ var UsersClassroomJoinComponent = /** @class */ (function () {
                         _this.response.Name = "ok";
                         _this.response.Status = "Record updated successfully.";
                         //console.log(res);
-                        _this.setResponse(_this.response['Status'], _this.response['Name']);
+                        _this._util.setResponse(_this.response['Status'], 'Go to Users', _this.response['Name'], 'view-user-classroom');
                     }
                     _this.getMembers();
                 }
@@ -7149,7 +7085,8 @@ var UsersClassroomJoinComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] }
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] },
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('memberInput', { static: false }),
@@ -7168,7 +7105,8 @@ var UsersClassroomJoinComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"],
+            _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"]])
     ], UsersClassroomJoinComponent);
     return UsersClassroomJoinComponent;
 }());
@@ -7205,9 +7143,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+
+
 
 
 
@@ -7245,7 +7187,7 @@ var UsersClassroomComponent = /** @class */ (function () {
         //Credentials
         if (this.host.getSessionID().Module == "User" &&
             this.module != "Assistant" && this.module != "Lecturer") {
-            window.localStorage.setItem("editUserId", this.host.getSessionID().Id);
+            window.localStorage.setItem("editUserId", String(this.host.getSessionID().Id));
             this.router.navigate(['edit-user']);
             return;
         }
@@ -7256,11 +7198,6 @@ var UsersClassroomComponent = /** @class */ (function () {
             return;
         }
         this.userSession = this.host.getSessionID();
-    };
-    UsersClassroomComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
     };
     UsersClassroomComponent.prototype.addUser = function () {
         window.localStorage.removeItem("editUserClassroomId");
@@ -7294,7 +7231,7 @@ var UsersClassroomComponent = /** @class */ (function () {
                 _this.host.request(requestDB, 'FDBRequest')
                     .subscribe(function (data) {
                     _this.response = data;
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                     if (_this.response['Name'] == "ok") {
                         _this.getUsers();
                     }
@@ -7317,7 +7254,7 @@ var UsersClassroomComponent = /** @class */ (function () {
             _this.users = data;
             if (_this.users) {
                 // Assign the data to the data source for the table to render
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.users);
+                _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableDataSource"](_this.users);
                 _this.dataSource.paginator = _this.paginator;
                 _this.dataSource.sort = _this.sort;
             }
@@ -7332,16 +7269,16 @@ var UsersClassroomComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"] },
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
     ], UsersClassroomComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"])
     ], UsersClassroomComponent.prototype, "sort", void 0);
     UsersClassroomComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -7352,8 +7289,8 @@ var UsersClassroomComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"],
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
     ], UsersClassroomComponent);
     return UsersClassroomComponent;
 }());
@@ -7390,7 +7327,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
 
 
@@ -7433,6 +7370,7 @@ var MenuClassroomComponent = /** @class */ (function () {
                 _this.classroom = {};
                 _this.classroomList = {};
                 _this.classSelected = {};
+                _this.userModule = "";
             }
             if (_this.userSession.Id && data['Name'] == "startSession") {
                 _this.getClassroom('1');
@@ -7443,6 +7381,7 @@ var MenuClassroomComponent = /** @class */ (function () {
             if (!_this.onChangeClick) {
                 _this.getClassroom('1');
                 _this.classSelected = data;
+                _this.userModule = data['Module'];
                 //console.log("MenuClassroom-component|_eventEmitter", data);
             }
         });
@@ -7536,6 +7475,7 @@ var MenuClassroomComponent = /** @class */ (function () {
                     });
                     if (classSel_1) {
                         _this.classSelected = classSel_1;
+                        _this.userModule = classSel_1['Module'];
                         _this._eventEmitter.setClassroom(_this.classSelected);
                     }
                     _this.reload = 0;
@@ -7547,7 +7487,7 @@ var MenuClassroomComponent = /** @class */ (function () {
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
     ]; };
     MenuClassroomComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -7558,7 +7498,7 @@ var MenuClassroomComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
     ], MenuClassroomComponent);
     return MenuClassroomComponent;
 }());
@@ -7576,7 +7516,7 @@ var MenuClassroomComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21lbnUtbWFuYWdlbWVudC9jbGFzc3Jvb20tbWFuYWdlci9jbGFzc3Jvb20tbWFuYWdlci1lZGl0L2NsYXNzcm9vbS1tYW5hZ2VyLWVkaXQuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".description h1 {\n    font-size: 1.5rem !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWVudS1tYW5hZ2VtZW50L2NsYXNzcm9vbS1tYW5hZ2VyL2NsYXNzcm9vbS1tYW5hZ2VyLWVkaXQvY2xhc3Nyb29tLW1hbmFnZXItZWRpdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNEJBQTRCO0FBQ2hDIiwiZmlsZSI6InNyYy9hcHAvbWVudS1tYW5hZ2VtZW50L2NsYXNzcm9vbS1tYW5hZ2VyL2NsYXNzcm9vbS1tYW5hZ2VyLWVkaXQvY2xhc3Nyb29tLW1hbmFnZXItZWRpdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRlc2NyaXB0aW9uIGgxIHtcbiAgICBmb250LXNpemU6IDEuNXJlbSAhaW1wb3J0YW50O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -7597,8 +7537,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
-/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @haifahrul/ckeditor5-build-rich */ "./node_modules/@haifahrul/ckeditor5-build-rich/build/ckeditor.js");
+/* harmony import */ var _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../_control/util.control */ "./src/app/_control/util.control.ts");
+
 
 
 
@@ -7608,13 +7550,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ClassroomManagerEditComponent = /** @class */ (function () {
-    function ClassroomManagerEditComponent(formBuilder, host, router, _eventEmitter, _snackBar) {
+    function ClassroomManagerEditComponent(formBuilder, host, router, _eventEmitter, _snackBar, _util) {
         this.formBuilder = formBuilder;
         this.host = host;
         this.router = router;
         this._eventEmitter = _eventEmitter;
         this._snackBar = _snackBar;
-        this.Editor = _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_7__;
+        this._util = _util;
+        this.Editor = _haifahrul_ckeditor5_build_rich__WEBPACK_IMPORTED_MODULE_7___default.a;
+        this.config = {
+            toolbar: {
+                items: [
+                    'heading', '|',
+                    'alignment', '|',
+                    'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                    'link', '|',
+                    'bulletedList', 'numberedList', 'todoList',
+                    '-',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+                    'code', 'codeBlock', '|',
+                    'Smiley', 'insertTable', '|',
+                    'outdent', 'indent', '|',
+                    'uploadImage', 'blockQuote', '|',
+                    'undo', 'redo'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            language: 'id',
+            image: {
+                toolbar: [
+                    'imageTextAlternative',
+                    'imageStyle:full',
+                    'imageStyle:side'
+                ]
+            },
+        };
         this.submitted = false;
         this.response = {};
         this.users = [];
@@ -7643,7 +7613,8 @@ var ClassroomManagerEditComponent = /** @class */ (function () {
             Id: ['', []],
             IdUser: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
         }, {});
-        this.classroomId = window.localStorage.getItem("editClassroomId");
+        if (window.localStorage.getItem("editClassroomId"))
+            this.classroomId = Number(window.localStorage.getItem("editClassroomId"));
         this.getUsers();
         if (this.classroomId)
             this.getClassrooms(this.classroomId);
@@ -7659,7 +7630,7 @@ var ClassroomManagerEditComponent = /** @class */ (function () {
         var _this = this;
         var filter = [];
         if (classroomId) {
-            filter.push({ Name: 'Id', Value: classroomId });
+            filter.push({ Name: 'Id', Value: String(classroomId) });
             var requestDB = {
                 Operation: "view",
                 TableData: null,
@@ -7702,12 +7673,7 @@ var ClassroomManagerEditComponent = /** @class */ (function () {
                 var n = {};
                 _this._eventEmitter.setClassroom(n);
             }
-            var snackBarRef = _this._snackBar.open(_this.response.Status, 'Go to Classroom', {
-                duration: 3000, panelClass: [_this.response.Name]
-            });
-            snackBarRef.onAction().subscribe(function () {
-                return _this.router.navigate(['view-classroom-manager']);
-            });
+            _this._util.setResponse(_this.response.Status, 'Go to Classroom', _this.response.Name, 'view-classroom-manager');
         });
     };
     ClassroomManagerEditComponent.prototype.getUsers = function () {
@@ -7729,7 +7695,8 @@ var ClassroomManagerEditComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] },
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"] }
     ]; };
     ClassroomManagerEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -7741,7 +7708,8 @@ var ClassroomManagerEditComponent = /** @class */ (function () {
             _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EventEmitterService"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"],
+            _control_util_control__WEBPACK_IMPORTED_MODULE_8__["UtilControl"]])
     ], ClassroomManagerEditComponent);
     return ClassroomManagerEditComponent;
 }());
@@ -7778,9 +7746,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../_control/util.control */ "./src/app/_control/util.control.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../_control/util.control */ "./src/app/_control/util.control.ts");
+
+
 
 
 
@@ -7815,11 +7787,6 @@ var ClassroomManagerComponent = /** @class */ (function () {
     ClassroomManagerComponent.prototype.ngOnInit = function () {
         this.userSession = this.host.getSessionID();
     };
-    ClassroomManagerComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     ClassroomManagerComponent.prototype.addClassroom = function () {
         window.localStorage.removeItem("editClassroomId");
         this.router.navigate(['add-classroom-manager']);
@@ -7847,7 +7814,7 @@ var ClassroomManagerComponent = /** @class */ (function () {
                     .subscribe(function (data) {
                     _this.response = data;
                     //console.log("Classroom | dbList: ", this.response);
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                     if (_this.response['Name'] == "ok") {
                         _this.getClassroom();
                         var n = {};
@@ -7871,7 +7838,7 @@ var ClassroomManagerComponent = /** @class */ (function () {
             _this.classroom = data;
             if (_this.classroom) {
                 // Assign the data to the data source for the table to render
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.classroom);
+                _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableDataSource"](_this.classroom);
                 _this.dataSource.paginator = _this.paginator;
                 _this.dataSource.sort = _this.sort;
             }
@@ -7886,16 +7853,16 @@ var ClassroomManagerComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"] },
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
     ], ClassroomManagerComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"])
     ], ClassroomManagerComponent.prototype, "sort", void 0);
     ClassroomManagerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -7906,8 +7873,8 @@ var ClassroomManagerComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"],
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
     ], ClassroomManagerComponent);
     return ClassroomManagerComponent;
 }());
@@ -7958,7 +7925,7 @@ var ClusterAvailableComponent = /** @class */ (function () {
         this.router = router;
         this._eventEmitter = _eventEmitter;
         this.clusters = [];
-        this.response = [];
+        this.response = {};
         this.hostInfo = {};
         this.haveUpdate = "";
         this.host.checkSessionID(this.constructor.name);
@@ -8180,7 +8147,7 @@ var CurrentNodesComponent = /** @class */ (function () {
         this.registerForm = this.formBuilder.group({
             srvNumber: ['',
                 [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].min(1),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].min(0),
                 ]
             ],
         }, {});
@@ -8210,20 +8177,20 @@ var CurrentNodesComponent = /** @class */ (function () {
                 'Performance degradation may occur, confirm the request?', 'Yes', 'No', '');
             ret.afterClosed().subscribe(function (data) {
                 if (data && data['button'] == 'YES') {
-                    _this.setNodes(num);
+                    _this.setNodes(num - 1);
                     _this.registerForm.disable();
                 }
             });
         }
         else {
-            this.setNodes(num);
+            this.setNodes(num - 1);
             this.registerForm.disable();
         }
     };
     CurrentNodesComponent.prototype.setNodes = function (num) {
         var _this = this;
         var params = [];
-        params.push({ Name: "", Value: (num - 1).toString() });
+        params.push({ Name: "", Value: num.toString() });
         var request = {
             Request: "swarmAdd",
             Param: params,
@@ -8253,26 +8220,24 @@ var CurrentNodesComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.nodes = data;
             var n = 0;
-            var h = "";
-            var i = 0;
-            if (_this.nodes && _this.nodes.length > 0) {
+            var h = 0;
+            var host = "";
+            if (_this.nodes) {
                 _this.nodes.forEach(function (v, k) {
-                    if (i == 0) {
-                        h = v.Hostname;
-                    }
-                    if (h != v.Hostname) {
-                        n += 1;
-                    }
-                    i++;
                     if (v['NumberOfCPUs'])
                         vcpus += parseInt(v['NumberOfCPUs']);
-                    if (v.Container && v.Container.length > 0) {
+                    if (v.Hostname != host) {
+                        host = v.Hostname;
+                        h++;
+                    }
+                    if (v.Container) {
                         v.Container.forEach(function (v1, k1) {
-                            n += 1;
+                            n++;
+                            h++;
                         });
                     }
                 });
-                _this.haveUpdate = n.toString();
+                _this.haveUpdate = h.toString();
             }
             else {
                 _this.haveUpdate = "0";
@@ -8299,7 +8264,6 @@ var CurrentNodesComponent = /** @class */ (function () {
                         if (funcName != '') {
                             n = this[funcName]();
                         }
-                        //console.log(this.currentNumberOfNodes, desireRet);
                         if (this.currentNumberOfNodes == desireRet) {
                             this.response['Name'] = 'ok';
                             this.response['Status'] = 'Request completed successfully.';
@@ -8366,7 +8330,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
 /* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
 
 
@@ -8376,12 +8340,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MenuManagementComponent = /** @class */ (function () {
-    function MenuManagementComponent(router, host, _eventEmitter, _util, _snackBar) {
+    function MenuManagementComponent(router, host, _eventEmitter, _snackBar, _util) {
         this.router = router;
         this.host = host;
         this._eventEmitter = _eventEmitter;
-        this._util = _util;
         this._snackBar = _snackBar;
+        this._util = _util;
         this.userSession = {};
         this.response = {};
     }
@@ -8401,17 +8365,11 @@ var MenuManagementComponent = /** @class */ (function () {
     MenuManagementComponent.prototype.setRoute = function (val) {
         this.router.navigate([val]);
     };
-    MenuManagementComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
-    };
     MenuManagementComponent.prototype.reboot = function () {
         var _this = this;
-        var ret = this._util.openModal('Reboot', 'Confirm restart the system?', 'Yes', 'No', '');
+        var ret = this._util.openModal('Reboot Server: ', 'Confirm restart the server?', 'Yes', 'No', '');
         ret.afterClosed().subscribe(function (data) {
             if (data['button'] == 'YES') {
-                _this.setResponse("ok", "The system is restarting, please wait a few seconds!");
                 var params = [];
                 var request = {
                     Request: "reboot",
@@ -8420,7 +8378,7 @@ var MenuManagementComponent = /** @class */ (function () {
                 _this.host.request(request, 'simpleRequest')
                     .subscribe(function (data) {
                     _this.response = data;
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                 });
             }
         });
@@ -8429,8 +8387,8 @@ var MenuManagementComponent = /** @class */ (function () {
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"] },
-        { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] }
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"] }
     ]; };
     MenuManagementComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -8441,8 +8399,8 @@ var MenuManagementComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_host_service__WEBPACK_IMPORTED_MODULE_3__["HostService"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"],
+            _control_util_control__WEBPACK_IMPORTED_MODULE_6__["UtilControl"]])
     ], MenuManagementComponent);
     return MenuManagementComponent;
 }());
@@ -8478,8 +8436,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
 
 
 
@@ -8550,7 +8510,7 @@ var MonitoringComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.queues = data;
             if (_this.queues) {
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](_this.queues);
+                _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.queues);
                 _this.dataSource.sort = _this.sort;
             }
             else {
@@ -8561,12 +8521,12 @@ var MonitoringComponent = /** @class */ (function () {
     };
     MonitoringComponent.ctorParameters = function () { return [
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_3__["EventEmitterService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_4__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_4__["MatSort"])
     ], MonitoringComponent.prototype, "sort", void 0);
     MonitoringComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -8575,7 +8535,7 @@ var MonitoringComponent = /** @class */ (function () {
             styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./monitoring.component.css */ "./src/app/menu-management/monitoring/monitoring.component.css")).default]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_3__["EventEmitterService"]])
     ], MonitoringComponent);
     return MonitoringComponent;
@@ -8630,8 +8590,8 @@ var SettingsComponent = /** @class */ (function () {
         this._util = _util;
         this._eventEmitter = _eventEmitter;
         this.submitted = false;
-        this.response = {};
         this.config = {};
+        this.response = {};
         this.CodeMaxFileSize = '';
         this.host.checkSessionID(this.constructor.name);
     }
@@ -8674,6 +8634,7 @@ var SettingsComponent = /** @class */ (function () {
                 ]
             ],
             OperationMode: ['', []],
+            NodeMode: ['', []],
             ClusterName: ['',
                 [
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(4),
@@ -8686,7 +8647,6 @@ var SettingsComponent = /** @class */ (function () {
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(20),
                 ]
             ],
-            NodeMode: ['', []],
             HostUser: ['',
                 [
                     _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(4),
@@ -8756,6 +8716,7 @@ var SettingsComponent = /** @class */ (function () {
         };
         this.host.request(request, 'simpleRequest')
             .subscribe(function (data) {
+            //console.log("Settings | getConfigs: ", data);
             _this.registerForm.setValue(data);
         });
     };
@@ -8766,34 +8727,33 @@ var SettingsComponent = /** @class */ (function () {
         if (this.registerForm.invalid) {
             return;
         }
-        this.config.PublicInterface = this.fe['PublicInterface'].value;
+        this.config.PublicInterface = this.fe['PublicInterface'].value.toString();
         this.config.BackendPort = this.fe['BackendPort'].value.toString();
         this.config.FrontendPort = this.fe['FrontendPort'].value.toString();
         this.config.WebSocketPort = this.fe['WebSocketPort'].value.toString();
-        this.config.StartContainers = this.fe['StartContainers'].value.toString();
+        this.config.ClusterName = this.fe['ClusterName'].value.toString();
+        this.config.ClusterPassword = this.fe['ClusterPassword'].value.toString();
+        this.config.NodeMode = this.fe['NodeMode'].value.toString();
+        this.config.OperationMode = this.fe['OperationMode'].value.toString();
         this.config.MaxContainers = this.fe['MaxContainers'].value.toString();
-        this.config.OperationMode = this.fe['OperationMode'].value;
-        this.config.ClusterName = this.fe['ClusterName'].value;
-        this.config.ClusterPassword = this.fe['ClusterPassword'].value;
-        this.config.NodeMode = this.fe['NodeMode'].value;
-        this.config.HostUser = this.fe['HostUser'].value;
-        this.config.HostPassword = this.fe['HostPassword'].value;
-        this.config.SelfRegistration = this.fe['SelfRegistration'].value;
+        this.config.StartContainers = this.fe['StartContainers'].value.toString();
+        this.config.HostUser = this.fe['HostUser'].value.toString();
+        this.config.HostPassword = this.fe['HostPassword'].value.toString();
+        this.config.SelfRegistration = this.fe['SelfRegistration'].value.toString();
         this.config.CodeExecTimeout = this.fe['CodeExecTimeout'].value.toString();
         this.config.CodeMaxFileSize = this.fe['CodeMaxFileSize'].value.toString();
-        this.config.Queue = this.fe['Queue'].value;
+        this.config.Queue = this.fe['Queue'].value.toString();
         this.config.MaxConcurrency = this.fe['MaxConcurrency'].value.toString();
-        this.config.Debug = this.fe['Debug'].value;
-        this.config.Error = this.fe['Error'].value;
-        this.config.SmtpServer = this.fe['SmtpServer'].value;
+        this.config.Debug = this.fe['Debug'].value.toString();
+        this.config.Error = this.fe['Error'].value.toString();
+        this.config.SmtpServer = this.fe['SmtpServer'].value.toString();
+        this.config.SmtpPassword = this.fe['SmtpPassword'].value.toString();
         this.config.SmtpPort = this.fe['SmtpPort'].value.toString();
-        this.config.SmtpUser = this.fe['SmtpUser'].value;
-        this.config.SmtpPassword = this.fe['SmtpPassword'].value;
-        this.config.DbUser = this.fe['DbUser'].value;
-        this.config.DbPassword = this.fe['DbPassword'].value;
+        this.config.SmtpUser = this.fe['SmtpUser'].value.toString();
+        this.config.DbHost = this.fe['DbHost'].value.toString();
+        this.config.DbUser = this.fe['DbUser'].value.toString();
         this.config.DbPort = this.fe['DbPort'].value.toString();
-        this.config.DbHost = this.fe['DbHost'].value;
-        //console.log("Settings | getConfigs: ", this.config);
+        this.config.DbPassword = this.fe['DbPassword'].value.toString();
         this.host.request(this.config, 'setConfigs')
             .subscribe(function (data) {
             _this.response = data;
@@ -8976,7 +8936,7 @@ var UsersEditComponent = /** @class */ (function () {
         this.userSession = this.host.getSessionID();
         this.ForceChangePass = window.localStorage.getItem("ForceChangePass");
         if (this.host.getSessionID().Module == "Admin") {
-            this.userId = window.localStorage.getItem("editUserId");
+            this.userId = Number(window.localStorage.getItem("editUserId"));
             if (this.ForceChangePass == "1")
                 this.userId = this.userSession.Id;
             if (this.userId)
@@ -8984,7 +8944,7 @@ var UsersEditComponent = /** @class */ (function () {
         }
         //Credentials
         if (this.host.getSessionID().Module != "Admin" &&
-            this.userSession.Id != "") {
+            this.userSession.Id) {
             this.userId = this.userSession.Id;
             this.getUsers(this.userId);
         }
@@ -8998,9 +8958,7 @@ var UsersEditComponent = /** @class */ (function () {
         return false;
     };
     Object.defineProperty(UsersEditComponent.prototype, "fe", {
-        get: function () {
-            return this.registerForm.controls;
-        },
+        get: function () { return this.registerForm.controls; },
         enumerable: true,
         configurable: true
     });
@@ -9008,7 +8966,7 @@ var UsersEditComponent = /** @class */ (function () {
         var _this = this;
         var filter = [];
         if (userId) {
-            filter.push({ Name: 'Id', Value: userId });
+            filter.push({ Name: 'Id', Value: String(userId) });
             var requestDB = {
                 Operation: "view",
                 TableData: null,
@@ -9017,7 +8975,7 @@ var UsersEditComponent = /** @class */ (function () {
             };
             this.host.request(requestDB, 'FDBRequest')
                 .subscribe(function (data) {
-                if (data) {
+                if (data[0]) {
                     data[0]['CPassword'] = "";
                     if (_this.ForceChangePass == "1")
                         data[0]['ForceChangePass'] = 0;
@@ -9051,12 +9009,12 @@ var UsersEditComponent = /** @class */ (function () {
         this.host.request(requestDB, 'FDBRequest')
             .subscribe(function (data) {
             _this.response = data;
-            var action, route = '';
             if (_this.response.Name == "ok") {
                 if (!_this.userId)
                     _this.response.Status = "Record inserted successfully.";
                 else
                     _this.response.Status = "Record updated successfully.";
+                var action = void 0, route = '';
                 if (_this.userSession.Module == 'Admin') {
                     action = 'Go to Users';
                     route = 'view-user';
@@ -9071,15 +9029,18 @@ var UsersEditComponent = /** @class */ (function () {
                         route = 'view-user';
                     }
                 }
+                if (_this.response.Name != "ok")
+                    action = _this.response.Name;
+                _this._util.setResponse(_this.response.Status, action, _this.response.Name, route);
                 window.localStorage.setItem("ForceChangePass", "0");
                 //this.router.navigate(['Users']);
                 //console.log("Users onSubmit | edit: ", temp);
                 if (_this.ForceChangePass == "1" || _this.host.getSessionID().Module != 'Admin') {
-                    if (_this.host.getSessionID().Module == "SelfRegistration") {
-                        _this._util.openModal('New Login', 'Please login with the new credentials.', 'Close', '', '');
+                    if (_this.host.getSessionID().Module != 'SelfRegistration') {
+                        _this._util.openModal('Password changed', 'Please login with the new password.', 'Close', '', '');
                     }
                     else {
-                        _this._util.openModal('Password changed', 'Please login with the new password.', 'Close', '', '');
+                        _this._util.openModal('New User', 'Please enter your new credentials.', 'Close', '', '');
                     }
                     _this.host.killSessionID();
                     _this.userSession = {};
@@ -9087,14 +9048,9 @@ var UsersEditComponent = /** @class */ (function () {
                     _this.router.navigate(['welcome']);
                 }
             }
-            if (_this.response.Name != "ok")
-                action = _this.response.Name;
-            var snackBarRef = _this._snackBar.open(_this.response.Status, action, {
-                duration: 3000, panelClass: [_this.response.Name]
-            });
-            snackBarRef.onAction().subscribe(function () {
-                return _this.router.navigate([route]);
-            });
+            else {
+                _this._util.setResponse(_this.response.Status, _this.response.Name, null, null);
+            }
         });
     };
     UsersEditComponent.ctorParameters = function () { return [
@@ -9153,9 +9109,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_host_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_services/host.service */ "./src/app/_services/host.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/event-emitter.service */ "./src/app/_services/event-emitter.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/material.es5.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
-/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/table.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/__ivy_ngcc__/esm5/snack-bar.es5.js");
+/* harmony import */ var _control_util_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../_control/util.control */ "./src/app/_control/util.control.ts");
+
+
 
 
 
@@ -9187,7 +9147,7 @@ var UsersComponent = /** @class */ (function () {
     UsersComponent.prototype.ngOnInit = function () {
         //Credentials
         if (this.host.getSessionID().Module == "User") {
-            window.localStorage.setItem("editUserId", this.host.getSessionID().Id);
+            window.localStorage.setItem("editUserId", String(this.host.getSessionID().Id));
             this.router.navigate(['edit-user']);
             return;
         }
@@ -9195,11 +9155,6 @@ var UsersComponent = /** @class */ (function () {
             this.router.navigate(['welcome']);
             return;
         }
-    };
-    UsersComponent.prototype.setResponse = function (message, action) {
-        var snackBarRef = this._snackBar.open(message, action, {
-            duration: 3000, panelClass: [action]
-        });
     };
     UsersComponent.prototype.addUser = function () {
         window.localStorage.removeItem("editUserId");
@@ -9228,7 +9183,7 @@ var UsersComponent = /** @class */ (function () {
                     .subscribe(function (data) {
                     _this.response = data;
                     //console.log("Users | dbList: ", this.response);
-                    _this.setResponse(_this.response['Status'], _this.response['Name']);
+                    _this._util.setResponse(_this.response['Status'], _this.response['Name'], null, null);
                     if (_this.response['Name'] == "ok") {
                         _this.getUsers();
                     }
@@ -9250,7 +9205,7 @@ var UsersComponent = /** @class */ (function () {
             _this.users = data;
             if (_this.users) {
                 // Assign the data to the data source for the table to render
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"](_this.users);
+                _this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableDataSource"](_this.users);
                 _this.dataSource.paginator = _this.paginator;
                 _this.dataSource.sort = _this.sort;
             }
@@ -9265,16 +9220,16 @@ var UsersComponent = /** @class */ (function () {
         { type: _services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
         { type: _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"] },
-        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"] },
-        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"] }
+        { type: _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"] },
+        { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_5__["MatPaginator"])
     ], UsersComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_6__["MatSort"])
     ], UsersComponent.prototype, "sort", void 0);
     UsersComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -9285,8 +9240,8 @@ var UsersComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_host_service__WEBPACK_IMPORTED_MODULE_2__["HostService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _services_event_emitter_service__WEBPACK_IMPORTED_MODULE_4__["EventEmitterService"],
-            _control_util_control__WEBPACK_IMPORTED_MODULE_7__["UtilControl"],
-            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_6__["MatSnackBar"]])
+            _control_util_control__WEBPACK_IMPORTED_MODULE_9__["UtilControl"],
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_8__["MatSnackBar"]])
     ], UsersComponent);
     return UsersComponent;
 }());
@@ -9334,6 +9289,7 @@ var WelcomeComponent = /** @class */ (function () {
         this.host = host;
         this._eventEmitter = _eventEmitter;
         this.userSession = {};
+        this.hostInfo = {};
     }
     WelcomeComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -9342,9 +9298,22 @@ var WelcomeComponent = /** @class */ (function () {
         this.subLogin = this._eventEmitter.loginChange.subscribe(function (data) {
             _this.userSession = _this.host.getSessionID();
         });
+        this.getHostInfo();
     };
     WelcomeComponent.prototype.ngOnDestroy = function () {
         this.subLogin.unsubscribe();
+    };
+    WelcomeComponent.prototype.getHostInfo = function () {
+        var _this = this;
+        var params = [];
+        var request = {
+            Request: "hostInfo",
+            Param: params,
+        };
+        this.host.request(request, 'simpleRequest')
+            .subscribe(function (data) {
+            _this.hostInfo = data;
+        });
     };
     WelcomeComponent.prototype.setRoute = function () {
         this.host.setSessionID('', 'SelfRegistration', '||NPZ8fvABP5pKSwU3');
@@ -9372,6 +9341,36 @@ var WelcomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/environments/environment.ts":
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+
+var environment = {
+    production: false
+};
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
 /***/ "./src/main.ts":
 /*!*********************!*\
   !*** ./src/main.ts ***!
@@ -9382,25 +9381,20 @@ var WelcomeComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/__ivy_ngcc__/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 
 
 
 
-//if (environment.production) {
-//  enableProdMode();
-//}
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).then(function (ref) {
-    if (window['ngRef']) {
-        window['ngRef'].destroy();
-    }
-    window['ngRef'] = ref;
-}).catch(function (err) { return console.error(err); });
-//platformBrowserDynamic().bootstrapModule(AppModule)
-//    .catch(err => console.error(err));
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
+}
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
+    .catch(function (err) { return console.error(err); });
 
 
 /***/ }),
