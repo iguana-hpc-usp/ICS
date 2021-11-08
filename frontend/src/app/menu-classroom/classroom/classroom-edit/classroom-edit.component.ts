@@ -96,6 +96,12 @@ export class ClassroomEditComponent implements OnInit {
             this.getClassroom();
     }
 
+    setRoute(val) {
+        this.getClassroom();
+        this.waitLoadComponent();
+        this.router.navigate([val])
+    }
+
     getClassroom() {
         let filter: ParamStr[] = [];
         filter.push({Name: "Id", Value: String(this.classroomId)});
