@@ -84,6 +84,7 @@ func ConfigFileRead() {
 	if config.NodeMode == "" {
 		config.NodeMode = "SHARED"
 	}
+	GLOBAL_HOST.Cluster.NodeMode = config.NodeMode
 
 	if config.HostUser == "" {
 		config.HostUser = "user@user"

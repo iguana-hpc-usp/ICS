@@ -71,6 +71,11 @@
                                 </div>
                                 <div *ngIf="response.Name==='error'" class="{{response.Name}}">{{response.Status}}</div>
                             </div>
+
+                            <span class="description">
+                                Go to <a href="#" (click)="setRoute('settings'); false;">Settings</a> to change operating mode permanently.
+                            </span>
+
                         </div>
                     </div>
                 </div>

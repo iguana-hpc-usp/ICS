@@ -36,6 +36,7 @@ export class ClusterAvailableComponent implements OnInit {
     this.clusterInfo();
 
     this.hostInfo.Cluster = {} as ClusterStr;
+    this.getHostInfo();
 
     //Getting value from App Component
     this.subHostInfo = this._eventEmitter.hostInfo.subscribe(
@@ -106,6 +107,10 @@ export class ClusterAvailableComponent implements OnInit {
 
   }
 
+  setRoute(val) {
+    this.router.navigate([val])
+  }
+
   clusterInfo() {
     let params: ParamStr[] = [];
 
@@ -126,7 +131,19 @@ export class ClusterAvailableComponent implements OnInit {
       });
   }
 
+  getHostInfo() {
+    let params: ParamStr[] = [];
+    let request: RequestStr = {
+      Request: "hostInfo",
+      Param: params,
+    };
 
+    this.host.request(request, 'simpleRequest')
+        .subscribe(data => {
+          this.hostInfo = data;
+          //console.log(this.hostInfo);
+        });
+  }
 
   setOpMode(mode: string) {
 

@@ -34,3 +34,9 @@
 .op-mode {
   text-align: center;
 }
+
+.description {
+  font-size: 12px;
+  display: block;
+  white-space: pre-line;
+}

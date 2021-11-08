@@ -88,7 +88,7 @@ func FSimpleRequest(w http.ResponseWriter, r *http.Request) {
 	// SWARM ADD MORE NODES
 	if request.Request == "swarmAdd" {
 		if authorized && isMaster && len(request.Param) >= 1 {
-			numOfReplicas := request.Param[0].Value
+			numOfReplicas, _ := strconv.Atoi(request.Param[0].Value)
 			ret := SwarmServiceAdd(numOfReplicas)
 			js, err = json.Marshal(ret)
 		} else {

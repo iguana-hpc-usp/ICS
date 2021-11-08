@@ -43,6 +43,16 @@
                                         <app-mat-progress-bar *ngIf="response.Name==='info'"></app-mat-progress-bar>
                                     </div>
                                 </div>
+
+                                <span class="description">
+                                    Current node mode: {{hostInfo.Cluster.NodeMode}}
+                                    <hr />
+                                SINGLE: creates a node for each vCPU present on the host, simulating a cluster.
+                                <br />MULTI.: allocates all vCPUs to Master virtual node.
+                                <br />SHARED: makes all vCPUs available to nodes, regardless of quantity.
+                                    <hr />
+                                    Go to <a href="#" (click)="setRoute('settings'); false;">Settings</a> to change node mode.
+                            </span>
                             </form>
                         </div>
                     </div>
@@ -61,8 +71,8 @@
                                         <mat-list-item mat-line class="nodes">---</mat-list-item>
                                         <mat-list-item mat-line class="nodes"><b>{{c.Name==='master'? 'Physical
                                             Node':'Virtual Node'}}: {{c.Name}}</b></mat-list-item>
-                                        <mat-list-item mat-line class="nodes">vCPU: {{c.Name==='master'?
-                                            'Available':'1'}} (<span [className]="c.State==='running' ? 'ok':'error'">{{c.State}}</span>)
+                                        <mat-list-item mat-line class="nodes">vCPU: {{hostInfo.Cluster.NodeMode==='SHARED'?
+                                            'shared':hostInfo.Cluster.NodeMode==='MULTI'?'all':'1'}} (<span [className]="c.State==='running' ? 'ok':'error'">{{c.State}}</span>)
                                         </mat-list-item>
                                     </div>
                                 </mat-list>

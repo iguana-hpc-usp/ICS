@@ -28,7 +28,12 @@ func HostPublicAddr() {
 		GLOBAL_HOST.Cluster.IdSwarm = SwarmInit()
 
 		if GLOBAL_HOST.Cluster.IdSwarm != "" {
-			SwarmServiceAdd(config.StartContainers)
+			numOfReplicas, _ := strconv.Atoi(config.StartContainers)
+			ret := SwarmServiceAdd(numOfReplicas-1)
+			if ret.Name == "error" {
+				err := errors.New(ret.Status)
+				Log(ret.Status, err, "0")
+			}
 		}
 		Log("LocalStarIfPublicAddr | ClusterID: "+GLOBAL_HOST.Cluster.IdSwarm, nil, "")
 	}

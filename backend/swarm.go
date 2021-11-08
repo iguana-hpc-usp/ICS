@@ -314,7 +314,7 @@ func makeSpec(image string, replic int) swarm.ServiceSpec {
 	return spec
 }
 
-func SwarmServiceAdd(option string) ResponseStr {
+func SwarmServiceAdd(numOfReplicas int) ResponseStr {
 	ctx := context.Background()
 	cli, err := client.NewClientWithOpts(client.FromEnv)
 	Log("", err, "0")
@@ -322,16 +322,27 @@ func SwarmServiceAdd(option string) ResponseStr {
 	cli.NegotiateAPIVersion(ctx)
 
 	if config.NodeMode == "MULTI" {
-		return ResponseStr{"error", "The NodeMode setting has been set to MULTI. " +
-			"In this option all vCPUs were allocated to the Master Virtual Node."}
+		return ResponseStr{"error", "The node mode setting has been set to multi. " +
+			"In this option all vCPUs were allocated to the master."}
 	}
 
 	image := "containers_slave"
-	numOfReplicas, _ := strconv.Atoi(option)
 	MaxContainers, _ := strconv.Atoi(config.MaxContainers)
 
 	if numOfReplicas > MaxContainers {
 		return ResponseStr{"error", "Maximum number of nodes allowed: " + config.MaxContainers}
+	}
+
+	cpu, _ := HostResources()
+	NumberOfCPUs, _ := strconv.Atoi(cpu)
+	if numOfReplicas+1 > NumberOfCPUs && config.NodeMode == "SINGLE" {
+		return ResponseStr{"error", "Cannot create more containers in a " +
+			"single-mode as the CPU limit has been reached."}
+	}
+
+	if config.NodeMode == "MULTI" {
+		return ResponseStr{"error", "It is impossible to create more nodes because all " +
+			"CPUs are allocated to the master node in the multi-node."}
 	}
 
 	hasID := SwarmServiceList()

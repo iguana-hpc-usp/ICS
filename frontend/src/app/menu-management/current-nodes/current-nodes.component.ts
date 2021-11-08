@@ -2,12 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HostService} from "../../_services/host.service";
 import {NodeStr} from "../../_model/node";
-import {AuthStr, ParamStr, RequestStr, ResponseStr} from "../../_model/service";
+import {ParamStr, RequestStr, ResponseStr} from "../../_model/service";
 import {EventEmitterService} from "../../_services/event-emitter.service";
 import {HostInfoStr} from "../../_model/hostInfo";
 import {Subscription} from "rxjs";
 import {Router} from "@angular/router";
 import {UtilControl} from "../../_control/util.control";
+import {ClusterStr} from "../../_model/cluster";
 
 @Component({
   selector: 'app-current-nodes',
@@ -22,7 +23,6 @@ export class CurrentNodesComponent implements OnInit {
   response = {} as ResponseStr;
   currentNumberOfNodes: number;
 
-  haveUpdate: string = "";
   hostInfo = {} as HostInfoStr;
 
   subHostInfo: Subscription;
@@ -35,7 +35,7 @@ export class CurrentNodesComponent implements OnInit {
       private router: Router,
       private _eventEmitter: EventEmitterService,
       public _util: UtilControl,
-  ){
+  ) {
     this.host.checkSessionID(this.constructor.name);
   }
 
@@ -48,21 +48,8 @@ export class CurrentNodesComponent implements OnInit {
 
     this.getCurrentNodes();
 
-    //Getting value from App Component
-    this.subHostInfo = this._eventEmitter.hostInfo.subscribe(
-        data => {
-          this.hostInfo = data;
-
-          let hu = this.haveUpdate;
-          hu = this.hostInfo.Updates["activeNodes"];
-
-          if (hu != this.haveUpdate) {
-            this.getCurrentNodes();
-            //console.log('OperationMode: active-nodes: ', hu, this.haveUpdate);
-          }
-          //console.log('OperationMode: active-nodes: ', hu, this.haveUpdate);
-        },
-    );
+    this.hostInfo.Cluster = {} as ClusterStr;
+    this.getHostInfo();
 
     this.registerForm = this.formBuilder.group({
       srvNumber: ['',
@@ -75,7 +62,6 @@ export class CurrentNodesComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subHostInfo.unsubscribe();
   }
 
   // convenience getter for easy access to form fields
@@ -102,12 +88,12 @@ export class CurrentNodesComponent implements OnInit {
 
       ret.afterClosed().subscribe(data => {
         if (data && data['button'] == 'YES') {
-          this.setNodes(num-1);
+          this.setNodes(num - 1);
           this.registerForm.disable();
         }
       });
     } else {
-      this.setNodes(num-1);
+      this.setNodes(num - 1);
       this.registerForm.disable();
     }
 
@@ -125,7 +111,7 @@ export class CurrentNodesComponent implements OnInit {
     this.host.request(request, 'simpleRequest')
         .subscribe(data => {
           this.response = data;
-          //console.log("CurrentNodes | simpleRequest: ", request);
+          //console.log("CurrentNodes | simpleRequest: ", data);
 
           if (this.response['Name'] == "error") {
             this.registerForm.enable();
@@ -137,6 +123,9 @@ export class CurrentNodesComponent implements OnInit {
         });
   }
 
+  setRoute(val) {
+    this.router.navigate([val])
+  }
 
   getCurrentNodes() {
     let params: ParamStr[] = [];
@@ -157,7 +146,7 @@ export class CurrentNodesComponent implements OnInit {
           let h = 0;
           let host = "";
           if (this.nodes) {
-            this.nodes.forEach(function(v, k) {
+            this.nodes.forEach(function (v, k) {
               if (v['NumberOfCPUs'])
                 vcpus += parseInt(v['NumberOfCPUs']);
 
@@ -173,9 +162,6 @@ export class CurrentNodesComponent implements OnInit {
                 });
               }
             });
-            this.haveUpdate = h.toString();
-          } else {
-            this.haveUpdate = "0";
           }
 
           this.f['srvNumber'].setValue(n);
@@ -184,11 +170,24 @@ export class CurrentNodesComponent implements OnInit {
         });
   }
 
+  getHostInfo() {
+    let params: ParamStr[] = [];
+    let request: RequestStr = {
+      Request: "hostInfo",
+      Param: params,
+    };
+
+    this.host.request(request, 'simpleRequest')
+        .subscribe(data => {
+          this.hostInfo = data;
+          //console.log(this.hostInfo);
+        });
+  }
+
   async managerStatus(funcName: string, desireRet: number) {
     let wait_ret = true;
     let n = "";
-    while (wait_ret)
-    {
+    while (wait_ret) {
       await this._util.delay(5000);
       if (funcName != '') {
         n = this[funcName]();

@@ -55,3 +55,9 @@
     text-align: left;
     font-size: 14px;
 }
+
+.description {
+    font-size: 12px;
+    display: block;
+    white-space: pre-line;
+}
