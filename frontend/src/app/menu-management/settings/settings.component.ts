@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, ValidationErrors, Validators} from "@angular/forms";
 import {ParamStr, RequestStr, ResponseStr} from "../../_model/service";
 import {HostService} from "../../_services/host.service";
 import {EventEmitterService} from "../../_services/event-emitter.service";
@@ -34,6 +34,10 @@ export class SettingsComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    function alphaNumericValidator(control: FormControl): ValidationErrors | null {
+      return /^[a-zA-Z0-9_]*$/.test(control.value) ? null : { alphaNumeric: true };
+    }
 
     this.registerForm = this.formBuilder.group({
       PublicInterface: ['',
@@ -78,6 +82,7 @@ export class SettingsComponent implements OnInit {
         [
           Validators.minLength(4),
           Validators.maxLength(20),
+          alphaNumericValidator,
         ]
       ],
       ClusterPassword: ['',

@@ -17,7 +17,8 @@ import {UtilControl} from "../../_control/util.control";
 export class ClusterAvailableComponent implements OnInit {
 
   clusters: ClusterStr[] = [];
-  response = {} as ResponseStr;
+  responseCo = {} as ResponseStr;
+  responseOp = {} as ResponseStr;
   hostInfo = {} as HostInfoStr;
   subHostInfo: Subscription;
   haveUpdate: string = "";
@@ -76,16 +77,16 @@ export class ClusterAvailableComponent implements OnInit {
         if (val.Password &&
           (!data['input'][0]['Model'] ||
             data['input'][0]['Model'] == "")) {
-          this.response['Name'] = "error";
-          this.response['Status'] = "Please, type the cluster password...";
+          this.responseCo['Name'] = "error";
+          this.responseCo['Status'] = "Please, type the cluster password...";
           return;
         }
 
         if (val.Password)
           val.Check = data['input'][0]['Model'];
 
-        this.response['Name'] = "info";
-        this.response['Status'] = "Request sent, wait ...";
+        this.responseCo['Name'] = "info";
+        this.responseCo['Status'] = "Request sent, wait ...";
 
         let serviceOpMode: ServiceOpModeStr = {
           NewOpMode: "NODE",
@@ -95,9 +96,9 @@ export class ClusterAvailableComponent implements OnInit {
 
         this.host.request(serviceOpMode, 'setOpMode')
           .subscribe(data => {
-            this.response = data;
+            this.responseCo = data;
 
-            if (this.response['Name'] == "ok") {
+            if (this.responseCo['Name'] == "ok") {
               // Inform the App Root about new change in OpMode
               this._eventEmitter.setNewOpMode("NODE");
             }
@@ -167,8 +168,17 @@ export class ClusterAvailableComponent implements OnInit {
         if (mode == 'MASTER' &&
             (!data['input'][0]['Model'] ||
                 data['input'][0]['Model'] == "")) {
-          this.response['Name'] = "error";
-          this.response['Status'] = "Please, type a cluster name...";
+          this.responseOp['Name'] = "error";
+          this.responseOp['Status'] = "Please, type a cluster name...";
+          mode = this.hostInfo.OpMode;
+          return;
+        }
+
+        if (mode == 'MASTER' &&
+            data['input'][0]['Model'] && /[^\w]/.test(data['input'][0]['Model'])) {
+          this.responseOp['Name'] = "error";
+          this.responseOp['Status'] = "Spaces and special characters are not allowed. " +
+              "Alphanumeric characters only.";
           mode = this.hostInfo.OpMode;
           return;
         }
@@ -187,13 +197,13 @@ export class ClusterAvailableComponent implements OnInit {
           Cluster: cluster,
         };
 
-        this.response['Name'] = "info";
-        this.response['Status'] = "Request sent, wait ...";
+        this.responseOp['Name'] = "info";
+        this.responseOp['Status'] = "Request sent, wait ...";
 
         this.host.request(serviceOpMode, 'setOpMode')
             .subscribe(data => {
-              this.response = data;
-              if (this.response['Name'] == "ok") {
+              this.responseOp = data;
+              if (this.responseOp['Name'] == "ok") {
                 // Inform the App Root about new change in OpMode
                 this.host.killSessionID();
                 this._eventEmitter.setNewOpMode(mode);

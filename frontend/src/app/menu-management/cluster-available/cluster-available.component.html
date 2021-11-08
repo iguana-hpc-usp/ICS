@@ -16,9 +16,9 @@
                         <div class="card-header" style="min-height: 141px;">
                             <app-mat-progress-bar *ngIf="!hostInfo.OpMode"></app-mat-progress-bar>
 
-                            <div *ngIf="response.Name" class="{{response.Name}} response text-center">
-                                {{response.Status}}
-                                <app-mat-progress-bar *ngIf="response.Name==='info'"></app-mat-progress-bar>
+                            <div *ngIf="responseCo.Name" class="{{responseCo.Name}} response text-center">
+                                {{responseCo.Status}}
+                                <app-mat-progress-bar *ngIf="responseCo.Name==='info'"></app-mat-progress-bar>
                             </div>
                             <table class="table table-striped">
                                 <tr *ngFor="let c of clusters">
@@ -64,12 +64,12 @@
                                 </mat-button-toggle-group>
                             </div>
 
-                            <div class="response text-center" *ngIf="response.Name">
-                                <div *ngIf="response.Name==='ok' || response.Name==='info'" class="{{response.Name}}">
-                                    {{response.Status}}
+                            <div class="response text-center" *ngIf="responseOp.Name">
+                                <div *ngIf="responseOp.Name==='ok' || responseOp.Name==='info'" class="{{responseOp.Name}}">
+                                    {{responseOp.Status}}
                                     <app-mat-progress-bar></app-mat-progress-bar>
                                 </div>
-                                <div *ngIf="response.Name==='error'" class="{{response.Name}}">{{response.Status}}</div>
+                                <div *ngIf="responseOp.Name==='error'" class="{{responseOp.Name}}">{{responseOp.Status}}</div>
                             </div>
 
                             <span class="description">

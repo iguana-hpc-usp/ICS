@@ -73,6 +73,7 @@
                             <input type="text" formControlName="ClusterName" placeholder="Default: CLUSTER01"
                                    name="ClusterName" class="form-control" id="ClusterName">
                             <div *ngIf="submitted && fe.ClusterName.errors" class="error response">
+                                <div *ngIf="fe.ClusterName.errors.alphaNumeric">Spaces and special characters are not allowed. Alphanumeric characters only.</div>
                                 <div *ngIf="fe.ClusterName.errors.minlength">Cluster Name field must have a minimum of 4 characters</div>
                                 <div *ngIf="fe.ClusterName.errors.maxlength">Cluster Name must be a maximum of 20 characters</div>
                             </div>

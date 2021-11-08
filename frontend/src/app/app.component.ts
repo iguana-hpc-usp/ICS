@@ -75,8 +75,6 @@ export class AppComponent {
     this.hostConnection = this.tmp_hostConnection;
     this.clusterConnection = this.tmp_clusterConnection;
 
-    this.managerStatus();
-
     this.getVersion();
 
     //Getting value from child HostCredentials
@@ -103,6 +101,8 @@ export class AppComponent {
           this.host.killSessionID();
         },
     );
+
+    this.managerStatus();
 
   }
 

@@ -4,8 +4,8 @@ import (
 	"os"
 )
 
-var GLOBAL_VERSION_NUMBER = "3.5"
-var GLOBAL_VERSION_RELEASE = "2021-10-13" +
+var GLOBAL_VERSION_NUMBER = "3.6"
+var GLOBAL_VERSION_RELEASE = "2021-11-08" +
 	""
 
 func main() {
