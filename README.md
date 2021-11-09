@@ -10,7 +10,7 @@ apt install curl -y && curl -s https://raw.githubusercontent.com/iguana-hpc-usp/
 
 2. Download the ready-to-use virtual machine and just import it into VirtualBox.
 
-* [Iguana](https://drive.google.com/file/d/1t0eLEsSOc5p5hYuREv-hEEW6Rt0KXJqI/view?usp=sharing) - Click to download
+* [Iguana](https://drive.google.com/file/d/1sR46eu90i2Huv1K76VnBK1fG4nvxcyaK/view?usp=sharing) - Click to download
 
 (login: user | password: user )
 
@@ -24,4 +24,4 @@ See an example:
 ```
 http://HOST_IP:8000
 ```
-(login: user | password: user)
+(login: user@user | password: user)
